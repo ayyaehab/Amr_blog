@@ -1,0 +1,42 @@
+{% extends "store/basestore.html" %}
+{% load static %}
+{% block nav %}
+                        <li><a href="/store">الصفحة الرئيسية </a></li>
+						<li><a href="{% url 'main' %}">الصفحة الرئيسية للموقع </a></li>
+						<li ><a href="laptops"> لاب توب</a></li>
+						<li><a href="pcs">كمبيوتر مكتبي </a></li>
+						<li><a href="shirts">تيشيرتات</a></li>
+						<li class="active"><a href="books">كتب</a></li>
+						<li><a href="mugs">مج</a></li>
+{% endblock nav %}
+{% block content %}
+<h1>
+books content
+</h1>
+<div class="grid-container">
+        {% for book in books %}
+        
+        <div class="grid-item"><a href="{% url 'bookcontent' book.slug %}">
+            <div class="a-box">
+                <div class="img-container">
+                    <div class="img-inner">
+                        <div class="inner-skew">
+                            <img src="https://picsum.photos/200">
+                            <!--<img src={{ book.thumbnail.url }}>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h3>{{ book.title }}</h3>
+                    <p>{{ book.slug }}</p>
+                    <p>{{ book.productCondition }}</p>
+                    
+
+                </div>
+            </div>
+
+
+        </a></div>
+        {% endfor %}
+    </div>
+{% endblock content %}

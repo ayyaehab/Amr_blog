@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- Page content-->
+<div class="container mt-5" style="text-align: center;margin:auto">
+    <div class="row" style="justify-content: center;display: flex;">
+        <div class="col-lg-8" style=" margin:0 auto;">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">{{post.title}}</h1>
+                    <!-- Post meta content-->
+                    <h2 class="text-muted mb-2" style="color:#D10024; padding-top: 20px;"> {{post.smalltitle}}</h2>
+                    <!--  <div class="text-muted fst-italic mb-2"> {{post.smalltitle}}</div> -->
+                    <div class="text-muted fst-italic mb-2">Posted on {{post.timestamp}}</div>
+                    <!-- Post categories-->
+                    <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a> -->
+                </header>
+                <!-- Preview image figure-->
+                <!--                        <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/900/400" alt="..." /></figure>-->
+                <figure class="mb-4"><img class="img-fluid rounded" src={{ post.thumbnail.url }}></figure>
+                <!-- Post content-->
+                <section class="mb-5" style=" font-size: 2em;">
+                    <p class="fs-5 mb-4">{{post.overview|safe}}</p>
+                </section>
+            </article>
+            <!-- Comments section-->
+
+        </div>
+
+    </div>
+</div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
+{% endblock content %}
+
+

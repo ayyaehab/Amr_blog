@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block nav %}
+<li class="active"><a href="/">الصفحة الرئيسية</a></li>
+<li><a href="videos">الفيديوهات</a></li>
+<li><a href="about">فريق العمل</a></li>
+<li><a href="store">المتجر</a></li>
+{% endblock nav %}
+{% block content %}
+<div style=" background-color: #f1f1f1; width: 100%;justify-content: center;">
+    <h2 style="text-align: center; color:#D10024; padding-top: 20px;">الصفحة الرئيسية</h2>
+    <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:20%;">
+
+    <div class="grid-container">
+        {% for b in post %}
+        <div class="grid-item"><a href="{% url 'pagepost' b.slug %}">
+            <div class="a-box">
+                <div class="img-container">
+                    <div class="img-inner">
+                        <div class="inner-skew">
+                            <img src={{ b.thumbnail.url }}>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h3>{{ b.title }}</h3>
+                    {{ b.timestamp }}
+
+                </div>
+            </div>
+
+
+        </a></div>
+        {% endfor %}
+    </div>
+    <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%;">
+    <section class="we">
+        <div class="video">
+            <iframe width="500" height="340" src="https://www.youtube.com/embed/tT8sCerP4Ac?controls=1"></iframe>
+        </div>
+
+
+        <article>
+            <h1>who are we?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, nisl in ullamcorper dapibus,
+                arcu turpis aliquam eros, nec blandit turpis quam quis metus. Etiam accumsan enim sit amet lobortis
+                scelerisque. Donec pretium magna justo, eget vulputate quam sollicitudin malesuada. Ut volutpat dolor
+                tempor tempor laoreet. Vivamus mattis finibus sollicitudin. Donec tempus erat in maximus ornare. Ut ac
+                purus quam. Phasellus sit amet neque sit amet ex suscipit vestibulum ut sed dolor. Maecenas risus
+                tellus, facilisis vel justo ac, euismod posuere mi. Vivamus venenatis nunc sed sem fringilla interdum.
+                Vivamus non nibh tellus.</p>
+        </article>
+    </section>
+    <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%;">
+
+    <div id="social-platforms">
+        <h2>Find Me On My Networks</h2>
+
+        <a class="btn btn-icon btn-facebook" href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+        <a class="btn btn-icon btn-youtube" href="#"><i class="fa fa-youtube"></i><span>youtube</span></a>
+        <a class="btn btn-icon btn-telegram" href="#"><i class="fa fa-telegram"></i><span>Telegram</span></a>
+        <a class="btn btn-icon btn-instagram" href="#"><i class="fa fa-instagram"></i><span>instagram</span></a>
+        <a class="btn btn-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+    </div>
+</div>
+{% endblock content %}
