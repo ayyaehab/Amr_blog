@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from store.models import Book,Tshirt,TshirtImg,Mug,LapTop,Pc,MugImg
+from store.models import Book,Tshirt,TshirtImg,Mug,LapTop,Pc,MugImg,PcImg,LapTopImg
 
 
 # Create your views here.
@@ -19,8 +19,11 @@ def shirts(request):
     return render(request, 'store/shirts.html', context)
 
 def shirt(request, slug):
-    shirt = Tshirt.objects.filter(slug=slug)
-    context = {'shirt': shirt}
+    tshirt = Tshirt.objects.get(slug=slug)
+    images=TshirtImg.objects.filter(tshirt = tshirt)
+    context = {'shirt': tshirt,
+               'images':images
+    }
     return render(request, 'store/shirt.html', context)
 
 def books(request):
@@ -31,7 +34,7 @@ def books(request):
     return render(request, 'store/books.html', context)
 
 def onebook(request, slug):
-    book = Book.objects.filter(slug=slug)
+    book = Book.objects.get(slug=slug)
     context = {'book': book}
     return render(request, 'store/onebook.html', context)
 
@@ -81,8 +84,10 @@ def laptops(request):
 
 
 def onelaptop(request, slug):
-    laptop = LapTop.objects.filter(slug=slug)
-    context = {'laptop': laptop}
+    lapTop = LapTop.objects.get(slug=slug)
+    images=LapTopImg.objects.filter(lapTop = lapTop)
+    context = {'laptop': lapTop,
+               'images':images}
     return render(request, 'store/onelaptop.html', context)
 #pcs
 def pcs(request):
@@ -94,8 +99,10 @@ def pcs(request):
 
 
 def pc(request, slug):
-    pc = Pc.objects.filter(slug=slug)
-    context = {'pc': pc}
+    pc = Pc.objects.get(slug=slug)
+    images=PcImg.objects.filter(pc = pc)
+    context = {'pc': pc,
+    'images':images}
     return render(request, 'store/pc.html', context)
 
     
