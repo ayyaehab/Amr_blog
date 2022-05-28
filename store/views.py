@@ -81,7 +81,7 @@ def laptops(request):
         'laptops': laptops
     }
     return render(request, 'store/laptops.html', context)
-
+ 
 
 def onelaptop(request, slug):
     lapTop = LapTop.objects.get(slug=slug)
