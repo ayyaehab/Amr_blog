@@ -1,15 +1,21 @@
 from django.shortcuts import render
 
-from store.models import Book,Tshirt,TshirtImg,Mug,LapTop,Pc,MugImg,PcImg,LapTopImg
+from store.models import Book, Tshirt, TshirtImg, Mug, LapTop, Pc, MugImg, PcImg, LapTopImg
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'store/index.html', {})
+    books = Book.objects.all()
+
+    context = {
+        'books': books
+    }
+    return render(request, 'store/index.html', context)
 
 
 def checkout(request):
     return render(request, 'store/checkout.html', {})
+
 
 def shirts(request):
     shirts = Tshirt.objects.all()
@@ -18,13 +24,15 @@ def shirts(request):
     }
     return render(request, 'store/shirts.html', context)
 
+
 def shirt(request, slug):
     tshirt = Tshirt.objects.get(slug=slug)
-    images=TshirtImg.objects.filter(tshirt = tshirt)
+    images = TshirtImg.objects.filter(tshirt=tshirt)
     context = {'shirt': tshirt,
-               'images':images
-    }
+               'images': images
+               }
     return render(request, 'store/shirt.html', context)
+
 
 def books(request):
     books = Book.objects.all()
@@ -32,6 +40,7 @@ def books(request):
         'books': books
     }
     return render(request, 'store/books.html', context)
+
 
 def onebook(request, slug):
     book = Book.objects.get(slug=slug)
@@ -59,6 +68,7 @@ def test(request):
     }
     return render(request, 'store/test.html', context)
 
+
 def mugs(request):
     mugs = Mug.objects.all()
     context = {
@@ -66,15 +76,17 @@ def mugs(request):
     }
     return render(request, 'store/mugs.html', context)
 
+
 # images=MugImg.objects.filter(mug = mug)
 def mug(request, slug):
     mug = Mug.objects.get(slug=slug)
-    images=MugImg.objects.filter(mug = mug)
+    images = MugImg.objects.filter(mug=mug)
     context = {'mug': mug,
-               'images':images}
+               'images': images}
     return render(request, 'store/mug.html', context)
-    
-#labtop
+
+
+# labtop
 def laptops(request):
     laptops = LapTop.objects.all()
     context = {
@@ -85,11 +97,13 @@ def laptops(request):
 
 def onelaptop(request, slug):
     lapTop = LapTop.objects.get(slug=slug)
-    images=LapTopImg.objects.filter(lapTop = lapTop)
+    images = LapTopImg.objects.filter(lapTop=lapTop)
     context = {'laptop': lapTop,
-               'images':images}
+               'images': images}
     return render(request, 'store/onelaptop.html', context)
-#pcs
+
+
+# pcs
 def pcs(request):
     pcs = Pc.objects.all()
     context = {
@@ -100,12 +114,7 @@ def pcs(request):
 
 def pc(request, slug):
     pc = Pc.objects.get(slug=slug)
-    images=PcImg.objects.filter(pc = pc)
+    images = PcImg.objects.filter(pc=pc)
     context = {'pc': pc,
-    'images':images}
+               'images': images}
     return render(request, 'store/pc.html', context)
-
-    
-
-    
-

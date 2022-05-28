@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'django-insecure-nb@h&-7b#yld$k(nvi+&jt2-j2&thf_!yj4332-3+or!r+&z=@
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -41,8 +39,6 @@ INSTALLED_APPS = [
     'store',
     'ckeditor',
     'rest_framework',
-
-
 
 ]
 
@@ -76,16 +72,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blogamr.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_blog',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+            'read_default_file': '/path/to/my.cnf',
+        },
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '',   # Or an IP Address that your DB is hosted on
+        'HOST': '',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
@@ -124,7 +123,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -138,15 +136,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 VENV_PATH = os.path.join(BASE_DIR)
-MEDIA_ROOT = os.path.join(BASE_DIR , "media_root")
-STATIC_ROOT = os.path.join(BASE_DIR , "static_root")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media_root")
+STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

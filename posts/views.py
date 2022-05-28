@@ -43,12 +43,6 @@ def about(request):
 
 
 
-
-def portfolio(request):
-
-    return render(request, 'portfolio.html', {})
-
-
 def videos(request):
 
     return render(request, 'videos.html', {})

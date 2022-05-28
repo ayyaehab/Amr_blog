@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from posts import api
 
-from posts.views import index, portfolio, posts, about, contact, videos,pagepost,indexx
+from posts.views import index, posts, about, contact, videos,pagepost
 from django.urls import path
 
 
