@@ -2242,7 +2242,7 @@ footer{
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 2px;
-  
+  direction: rtl;
 }
 
 .grid-item {
@@ -2483,7 +2483,8 @@ padding-top: 20px;}
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  /* height: auto; */
 }
 .rounded {
   border-radius: 0.25rem !important;
@@ -2492,6 +2493,7 @@ padding-top: 20px;}
   font-size: 1.25rem !important;
 }
 figure {
+  
   margin: 0 0 1rem;
 }
 /* etgthrhyjnnjtmujuk */

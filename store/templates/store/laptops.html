@@ -7,7 +7,7 @@
 						<li><a href="pcs">كمبيوتر مكتبي </a></li>
 						<li><a href="shirts">تيشيرتات</a></li>
 						<li><a href="books">كتب</a></li>
-						<li><a href="mugs">مج</a></li>
+						<li><a href="done">مج</a></li>
 {% endblock nav %}
 {% block content %}
 
@@ -29,10 +29,10 @@
 						<div class="row">
 							{% for laptop in laptops %}
 							<!-- product -->
-							<div class="col-md-4 col-xs-6">
+							<div class="col-md-4 col-xs-6" style="float: right;">
 								<div class="product">
 									<div class="product-img">
-										<img src={{ laptop.img.url }}>
+										<img src={{ laptop.thumbnail.url }} alt="">
 									</div>
 									<div class="product-body">
 										
