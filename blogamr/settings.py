@@ -83,7 +83,7 @@ DATABASES = {
             'read_default_file': '/path/to/my.cnf',
         },
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root_aya_2021',
         'HOST': '',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
