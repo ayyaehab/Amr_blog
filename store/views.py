@@ -12,7 +12,8 @@ def index(request):
     shirts = Tshirt.objects.all()
 
     context = {
-        'books': books,
+        'all':[books,mugs,pcs,laptops,shirt] ,
+        'books':books ,
         'mugs': mugs,
         'pcs': pcs,
         'laptops': laptops,
@@ -104,7 +105,7 @@ def laptops(request):
 
 
 def onelaptop(request, slug):
-    lapTop = LapTop.objects.filter(slug=slug)
+    lapTop = LapTop.objects.get(slug=slug)
     images = LapTopImg.objects.filter(lapTop=lapTop)
     context = {'laptop': lapTop,
                'images': images}

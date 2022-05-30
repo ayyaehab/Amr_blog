@@ -22,3 +22,4 @@ urlpatterns = [
     #for testing 
     path('test', views.test , name='test'),
 ]
+
