@@ -6,9 +6,17 @@ from store.models import Book, Tshirt, TshirtImg, Mug, LapTop, Pc, MugImg, PcImg
 # Create your views here.
 def index(request):
     books = Book.objects.all()
+    mugs = Mug.objects.all()
+    pcs = Pc.objects.all()
+    laptops = LapTop.objects.all()
+    shirts = Tshirt.objects.all()
 
     context = {
-        'books': books
+        'books': books,
+        'mugs': mugs,
+        'pcs': pcs,
+        'laptops': laptops,
+        'shirts': shirts,
     }
     return render(request, 'store/index.html', context)
 
@@ -93,10 +101,10 @@ def laptops(request):
         'laptops': laptops
     }
     return render(request, 'store/laptops.html', context)
- 
+
 
 def onelaptop(request, slug):
-    lapTop = LapTop.objects.get(slug=slug)
+    lapTop = LapTop.objects.filter(slug=slug)
     images = LapTopImg.objects.filter(lapTop=lapTop)
     context = {'laptop': lapTop,
                'images': images}

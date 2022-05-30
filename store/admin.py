@@ -11,9 +11,9 @@ admin.site.register(Pc)
 admin.site.register(PcImg)
 admin.site.register(LapTop)
 admin.site.register(LapTopImg)
-admin.site.register(Customer)
-admin.site.register(Order)
-admin.site.register(OrderItem)
-admin.site.register(ShippingAddress)
+# admin.site.register(Customer)
+# admin.site.register(Order)
+# admin.site.register(OrderItem)
+# admin.site.register(ShippingAddress)
 
 

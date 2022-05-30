@@ -6,7 +6,7 @@
                         <li><a href="reshirts">تيشيرتات</a></li>
                         <li><a href="repcs">كمبيوتر مكتبي </a></li>
                         <li class="active"><a href="relaptops"> لاب توب</a></li>
-						<li><a href="/store">الصفحة الرئيسية للمتجر </a></li>
+						<li ><a href="/store">الصفحة الرئيسية للمتجر </a></li>
 						<li><a href="{% url 'main' %}">الصفحة الرئيسية للموقع </a></li>
 {% endblock nav %}
 {% block content %}
@@ -24,7 +24,6 @@
 
 					<!-- STORE -->
 					<div id="store" class="col-md-10">
-						
 						<!-- store products -->
 						<div class="row">
 							{% for laptop in laptops %}
@@ -52,7 +51,7 @@
 										</div> -->
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										<button  data-actions-icnt="add" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 									</div>
 								</div>
 							</div>
