@@ -18,13 +18,13 @@
 				<div class="row">
 					<!-- ASIDE -->
 					 <div id="aside" class="col-md-1">
-						
-					</div> 
+
+					</div>
 					<!-- /ASIDE -->
 
 					<!-- STORE -->
 					<div id="store" class="col-md-10">
-						
+
 						<!-- store products -->
 						<div class="row">
 							 {% for book in books %}
@@ -41,7 +41,7 @@
 										<!-- <p class="product-category">Category</p> -->
 										<h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title }}</a></h3>
 										<h4 class="product-price">{{ book.price }}<del class="product-old-price">$990.00</del></h4>
-										
+
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
@@ -50,7 +50,7 @@
 							</div>
 							<!-- /product -->
                            {% endfor %}
-							
+
 							{% for mug in mugs %}
 							<!-- product -->
 							<div class="col-md-4 col-xs-6" style="float: right;">
@@ -65,7 +65,7 @@
 										<!--  <p class="product-category">Category</p> -->
 										<h3 class="product-name"><a href="{% url 'mug' mug.slug %}">{{ mug.title }}</a></h3>
 										<h4 class="product-price">{{ mug.price }}<del class="product-old-price">$990.00</del></h4>
-										
+
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
@@ -109,10 +109,10 @@
 										</div>
 									</div>
 									<div class="product-body">
-										
+
 										<h3 class="product-name"><a href="{% url 'onelaptop' laptop.slug %}">{{ laptop.title }}</a></h3>
 										<h4 class="product-price">{{ laptop.price }}<del class="product-old-price">$990.00</del></h4>
-										
+
 									</div>
 									<div class="add-to-cart">
 										<button  data-actions-icnt="add" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
@@ -133,10 +133,10 @@
 										</div>
 									</div>
 									<div class="product-body">
-										
+
 										<h3 class="product-name"><a href="{% url 'shirt' shirt.slug %}">{{ shirt.slug }}</a></h3>
 										<h4 class="product-price">{{ shirt.price }}<del class="product-old-price">$990.00</del></h4>
-										
+
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
@@ -144,19 +144,21 @@
 								</div>
 							</div>
 							<!-- /product -->
-                           {% endfor %}  
+                           {% endfor %}
 						</div>
 						<!-- /store products -->
 
 						<!-- store bottom filter -->
 						<div class="store-filter clearfix">
-							<span class="store-qty">Showing 20-100 products</span>
+<!--							<span class="store-qty">Showing 20-100 products</span>-->
 							<ul class="store-pagination">
+								{% for page in paginator.page_range  %}
 								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+<!--								<li><a href="#">2</a></li>-->
+<!--								<li><a href="#">3</a></li>-->
+<!--								<li><a href="#">4</a></li>-->
+<!--								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
+								{% endfor %}
 							</ul>
 						</div>
 						<!-- /store bottom filter -->
@@ -169,6 +171,3 @@
 		</div>
 		<!-- /SECTION -->
 {% endblock content %}
-
-
-

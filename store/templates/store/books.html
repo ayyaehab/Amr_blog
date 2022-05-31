@@ -1,102 +1,116 @@
 {% extends "store/basestore.html" %}
 {% load static %}
 {% block nav %}
-                        <li><a href="remugs">مج</a></li>
-                        <li class="active"><a href="rebooks">كتب</a></li>
-                        <li><a href="reshirts">تيشيرتات</a></li>
-                        <li><a href="repcs">كمبيوتر مكتبي </a></li>
-                        <li><a href="relaptops"> لاب توب</a></li>
-						<li ><a href="/store">الصفحة الرئيسية للمتجر </a></li>
-						<li><a href="{% url 'main' %}">الصفحة الرئيسية للموقع </a></li>
+<li><a href="remugs">مج</a></li>
+<li class="active"><a href="rebooks">كتب</a></li>
+<li><a href="reshirts">تيشيرتات</a></li>
+<li><a href="repcs">كمبيوتر مكتبي </a></li>
+<li><a href="relaptops"> لاب توب</a></li>
+<li><a href="/store">الصفحة الرئيسية للمتجر </a></li>
+<li><a href="{% url 'main' %}">الصفحة الرئيسية للموقع </a></li>
 {% endblock nav %}
 {% block content %}
 <h1>
-books content
+    books content
 </h1>
 <div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- ASIDE -->
-					 <div id="aside" class="col-md-1">
-						
-					</div> 
-					<!-- /ASIDE -->
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- ASIDE -->
+            <div id="aside" class="col-md-1">
 
-					<!-- STORE -->
-					<div id="store" class="col-md-10">
-						
-						<!-- store products -->
-						<div class="row">
-							{% for book in books %}
-							<!-- product -->
-							<div class="col-md-4 col-xs-6" style="float: right;">
-								<div class="product">
-									<div class="product-img">
-										<img src={{ book.img.url }} alt="">
-                                        <div class="product-label">
-											<span class="new">{{ book.productCondition }}</span>
-										</div>
-									</div>
-									<div class="product-body">
-										<!-- <p class="product-category">Category</p> -->
-										<h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title }}</a></h3>
-										<h4 class="product-price">{{ book.price }}<del class="product-old-price">$990.00</del></h4>
-										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-                           {% endfor %}
-							
-							<!-- /product -->
-						</div>
-						<!-- /store products -->
+            </div>
+            <!-- /ASIDE -->
 
-						<!-- store bottom filter -->
-						<div class="store-filter clearfix">
-							<span class="store-qty">Showing 20-100 products</span>
-							<ul class="store-pagination">
-								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-							</ul>
-						</div>
-						<!-- /store bottom filter -->
-					</div>
-					<!-- /STORE -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
+            <!-- STORE -->
+            <div id="store" class="col-md-10">
+
+                <!-- store products -->
+                <div class="row">
+                    {% for book in books %}
+                    <!-- product -->
+                    <div class="col-md-4 col-xs-6" style="float: right;">
+                        <div class="product">
+                            <div class="product-img">
+                                <img src={{ book.img.url }} alt="">
+                                <div class="product-label">
+                                    <span class="new">{{ book.productCondition }}</span>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <!-- <p class="product-category">Category</p> -->
+                                <h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title
+                                    }}</a></h3>
+                                <h4 class="product-price">{{ book.price }}
+                                    <del class="product-old-price">$990.00</del>
+                                </h4>
+
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /product -->
+                    {% endfor %}
+
+                    <!-- /product -->
+                </div>
+                <!-- /store products -->
+
+                <!-- store bottom filter -->
+                <div class="store-filter clearfix">
+                    <!--							<span class="store-qty">Showing 20-100 products</span>-->
+                    <ul class="store-pagination">
+                        <!--								<li class="active">1</li>-->
+                        {% for page in paginator.page_range %}
+                        {% if page == books.number %}
+                        <li class="active"><a href="?page ={{page}}">{{page}}</a></li>
+                        {% else%}
+                        <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                     <!-- /store bottom filter -->
+                <!--                        <li><a href="#">{{page}}</a></li>-->
+                <!--                        <li><a href="#">{{page}}</a></li>-->
+                <!--                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
+
+                </div>
+
+            </div>
+            <!-- /STORE -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
 
 {% endblock content %}
 
 
-                            {% comment %} <div class="col-md-4 col-xs-6" style="float: right;">
-								<div class="product">
-									<div class="product-img">
-										<img src={{ book.img.url }} alt="">
-                                        <div class="product-label">
-											<span class="new">{{ book.productCondition }}</span>
-										</div>
-									</div>
-									<div class="product-body">
-										<!-- <p class="product-category">Category</p> -->
-										<h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title }}</a></h3>
-										<h4 class="product-price">{{ book.price }}<del class="product-old-price">$990.00</del></h4>
-										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-									</div>
-								</div>
-							</div> {% endcomment %}
+{% comment %}
+<div class="col-md-4 col-xs-6" style="float: right;">
+    <div class="product">
+        <div class="product-img">
+            <img src={{ book.img.url }} alt="">
+            <div class="product-label">
+                <span class="new">{{ book.productCondition }}</span>
+            </div>
+        </div>
+        <div class="product-body">
+            <!-- <p class="product-category">Category</p> -->
+            <h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title }}</a></h3>
+            <h4 class="product-price">{{ book.price }}
+                <del class="product-old-price">$990.00</del>
+            </h4>
+
+        </div>
+        <div class="add-to-cart">
+            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+        </div>
+    </div>
+</div> {% endcomment %}
