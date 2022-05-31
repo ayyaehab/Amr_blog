@@ -58,7 +58,7 @@ def checkout(request):
 
 
 def shirts(request):
-    shirts = Tshirt.objects.all()
+    shirts = Tshirt.objects.all().order_by('id')
     page = request.GET.get('page')
     paginator = Paginator(shirts, 1)
     try:
@@ -86,7 +86,7 @@ def shirt(request, slug):
 
 
 def books(request):
-    books = Book.objects.all()
+    books = Book.objects.all().order_by('id')
     page = request.GET.get('page')
     paginator = Paginator(books, 3)
 
@@ -129,7 +129,7 @@ def test(request):
 
 
 def mugs(request):
-    mugs = Mug.objects.all()
+    mugs = Mug.objects.all().order_by('id')
     page = request.GET.get('page')
     paginator = Paginator(mugs, 3)
 
@@ -163,7 +163,7 @@ def mug(request, slug):
 
 # labtop
 def laptops(request):
-    laptops = LapTop.objects.all()
+    laptops = LapTop.objects.all().order_by('id')
     page = request.GET.get('page')
     paginator = Paginator(laptops, 1)
 
@@ -192,7 +192,7 @@ def onelaptop(request, slug):
 
 # pcs
 def pcs(request):
-    pcs = Pc.objects.all()
+    pcs = Pc.objects.all().order_by('id')
     page = request.GET.get('page')
     paginator = Paginator(pcs, 1)
     try:
