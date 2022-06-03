@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Electro - HTML Ecommerce Template</title>
+		<title>Coders Store </title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -39,7 +39,7 @@
 	<body>
 		<!-- HEADER -->
 		<header>
-			
+
 
 			<!-- MAIN HEADER -->
 			<div id="header">
@@ -81,16 +81,17 @@
 									<a href="#">
 										<i class="fa fa-phone"></i>
 										<span> +021-95-51-84</span>
-									 </a>  
+									 </a>
 								</div>
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
 								<div class="dropdown">
-									<a href="#">
-										<i class="fa fa-envelope-o"></i>
-										<span>email@email.com</span>
-									 </a>
+									<a  class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<span>عربة التسوق</span>
+										<div class="qty" >3</div>
+									</a>
 								</div>
 								<!-- /Cart -->
 
@@ -123,7 +124,7 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
                      {% block nav %}
-						
+
                      {% endblock nav %}
 					</ul>
 					<!-- /NAV -->
