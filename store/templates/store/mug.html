@@ -28,7 +28,7 @@ from one mug
                 <div id="product-imgs">
                     {% for image in images %}
                        <div class="product-preview">
-                            <img src={{ image.img.url }}>
+                            <img src={{ image.thumbnail.url }}>
                         </div>
     
                     {% endfor %}
@@ -43,7 +43,7 @@ from one mug
                     <h2 class="product-name">{{ mug.title }}</h2>
                     <div>
                         <h3 class="product-price">{{ mug.price }}
-                            <del class="product-old-price">$990.00</del>
+                            <del class="product-old-price">{{ mug.oldPrice }}</del>
                         </h3>
                          <span class="product-available">{{ mug.productCondition }}</span> 
                     </div>
@@ -52,7 +52,7 @@ from one mug
 								<label>
 									Color
 									<select class="input-select">
-										<option value="0">{{ mug.color }}</option>
+										<option value="0">{{ mug.brand }}</option>
 									</select>
 								</label>
 							</div>

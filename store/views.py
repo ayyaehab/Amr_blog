@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import json
-from store.models import Product
+from store.models import Product,ProductImg
 from .utils import cookieCart, cartData
 
 def store(request):
@@ -32,10 +32,84 @@ def checkout(request):
 	context = {'cartItems':cartItems}
 	return render(request, 'store/checkout.html', context)
 
+# ----------------mug--------------
+def mugs(request):
+    mugs = Product.objects.filter(category__name="mug")
+    context = {
+        'mugs': mugs
+    }
+    return render(request, 'store/mugs.html', context)
 
 
+def mug(request, slug):
+    mug = Product.objects.get(slug=slug)
+    images = ProductImg.objects.filter(product=mug)
+    context = {'mug': mug,
+               'images': images}
+    return render(request, 'store/mug.html', context)
+
+# ----------------shirt--------------
+def shirts(request):
+    shirts = Product.objects.filter(category__name="shirt")
+    context = {
+        'shirts': shirts
+    }
+    return render(request, 'store/shirts.html', context)
 
 
+def shirt(request, slug):
+    shirt = Product.objects.get(slug=slug)
+    images = ProductImg.objects.filter(product=shirt)
+    
+    context = {'shirt': shirt,
+               'images': images
+               }
+    return render(request, 'store/shirt.html', context)
+
+# ----------------book--------------
+def books(request):
+    books = Product.objects.filter(category__name="book")
+    context = {
+        'books': books
+    }
+    return render(request, 'store/books.html', context)
+
+def onebook(request, slug):
+    book = Product.objects.get(slug=slug)
+    images = ProductImg.objects.filter(product=book)
+    context = {'book': book,
+               'images':images}
+    return render(request, 'store/onebook.html', context)
+# ----------------laptop--------------
+def laptops(request):
+    laptops = Product.objects.filter(category__name="laptop")
+    context = {
+        'laptops': laptops
+    }
+    return render(request, 'store/laptops.html', context)
+
+
+def onelaptop(request, slug):
+    laptop = Product.objects.get(slug=slug)
+    images = ProductImg.objects.filter(product=laptop)
+    context = {'laptop': laptop,
+               'images': images}
+    return render(request, 'store/onelaptop.html', context)
+# ----------------pc--------------
+def pcs(request):
+    pcs = Product.objects.filter(category__name="pc")
+    context = {
+        'pcs': pcs
+    }
+    return render(request, 'store/pcs.html', context)
+
+
+def pc(request, slug):
+    pc = Product.objects.get(slug=slug)
+    images = ProductImg.objects.filter(product=pc)
+    context = {'pc': pc,
+               'images': images}
+    return render(request, 'store/pc.html', context)
 
 # def cart(request):
 
