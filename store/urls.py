@@ -28,7 +28,7 @@ urlpatterns = [
     
     
     # path('product', views.product , name='product'),
-    # path('store1', views.store1 , name='store1'),
+    # path('store', views.store , name='store'),
     # for testing
     # path('test', views.test , name='test'),
 ]
