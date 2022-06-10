@@ -7,8 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Electro - HTML Ecommerce Template</title>
+		<title>Coders Store </title>
+{% block css %}
 
+                     
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
@@ -27,7 +29,7 @@
 
  		<!-- Custom stlylesheet -->
  		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
-
+{% endblock css %}
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -39,7 +41,7 @@
 	<body>
 		<!-- HEADER -->
 		<header>
-			
+
 
 			<!-- MAIN HEADER -->
 			<div id="header">
@@ -81,16 +83,17 @@
 									<a href="#">
 										<i class="fa fa-phone"></i>
 										<span> +021-95-51-84</span>
-									 </a>  
+									 </a>
 								</div>
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
 								<div class="dropdown">
-									<a href="#">
-										<i class="fa fa-envelope-o"></i>
-										<span>email@email.com</span>
-									 </a>
+									<a aria-expanded="true" href="{% url 'cart' %}">
+										<i class="fa fa-shopping-cart"></i>
+										<span>عربة التسوق</span>
+										<div class="qty" >{{cartItems}}</div>
+									</a>
 								</div>
 								<!-- /Cart -->
 
@@ -123,7 +126,7 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
                      {% block nav %}
-						
+
                      {% endblock nav %}
 					</ul>
 					<!-- /NAV -->
@@ -232,12 +235,45 @@
 		</footer>
 		<!-- /FOOTER -->
 		<!-- jQuery Plugins -->
+		 <script>
+		function getCookie(name) {
+		    // Split cookie string and get all individual name=value pairs in an array
+		    var cookieArr = document.cookie.split(";");
+
+		    // Loop through the array elements
+		    for(var i = 0; i < cookieArr.length; i++) {
+		        var cookiePair = cookieArr[i].split("=");
+
+		        /* Removing whitespace at the beginning of the cookie name
+		        and compare it with the given string */
+		        if(name == cookiePair[0].trim()) {
+		            // Decode the cookie value and return
+		            return decodeURIComponent(cookiePair[1]);
+		        }
+		    }
+
+		    // Return null if not found
+		    return null;
+		}
+		var cart = JSON.parse(getCookie('cart'))
+
+		if (cart == undefined){
+			cart = {}
+			console.log('Cart Created!', cart)
+			document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+		}
+		console.log('Cart:', cart)
+	
+	</script>
+
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'js/slick.min.js' %}"></script>
 		<script src="{% static 'js/nouislider.min.js' %}"></script>
 		<script src="{% static 'js/jquery.zoom.min.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'js/cart.js' %}"></script> 
+		{% block js %}{% endblock js %}
 
 	</body>
 </html>

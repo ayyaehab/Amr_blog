@@ -15,7 +15,7 @@ from one laptop
                 <div id="product-main-img">
                       {% for image in images %}
                        <div class="product-preview">
-                            <img src={{ image.img.url }}>
+                            <img src={{ image.thumbnail.url }}>
                         </div>
     
                     {% endfor %}
@@ -28,7 +28,7 @@ from one laptop
                 <div id="product-imgs">
                     {% for image in images %}
                        <div class="product-preview">
-                            <img src={{ image.img.url }}>
+                            <img src={{ image.thumbnail.url }}>
                         </div>
     
                     {% endfor %}

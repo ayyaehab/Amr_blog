@@ -14,7 +14,7 @@ from one book
             <div class="col-md-5 col-md-push-2">
                 <div id="product-main-img">
                     <div class="product-preview">
-                        <img src={{ book.img.url }} alt="">
+                        <img src={{ book.thumbnail.url }} alt="">
                     </div>
  
                 </div>
@@ -33,7 +33,7 @@ from one book
                     <h2 class="product-name">{{ book.title }}</h2>
                     <div>
                         <h3 class="product-price">{{ book.price }}
-                            <del class="product-old-price">$990.00</del>
+                            <del class="product-old-price">${{ mug.oldPrice }}</del>
                         </h3>
                          <span class="product-available">{{ book.productCondition }}</span> 
                     </div>
