@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'store',
     'ckeditor',
     'rest_framework',
+    'django_filters',
 
 ]
 
