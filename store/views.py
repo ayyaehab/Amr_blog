@@ -26,8 +26,8 @@ def store(request):
     context = {
         'products': products,
         'cartItems': cartItems,
-        # 'myfilter': myfilter,
-        # 'paginator': paginator
+        'myfilter': myfilter,
+        'paginator': paginator
     }
     return render(request, 'store/index.html', context)
 
@@ -54,8 +54,11 @@ def checkout(request):
 
 # ----------------mug--------------
 def mugs(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
     mugs = Product.objects.filter(category__name="mug")
     context = {
+        'cartItems': cartItems,
         'mugs': mugs
     }
     return render(request, 'store/mugs.html', context)
@@ -71,6 +74,8 @@ def mug(request, slug):
 
 # ----------------shirt--------------
 def shirts(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
     shirts = Product.objects.filter(category__name="shirt")
     page = request.GET.get('page')
     paginator = Paginator(shirts, 1)
@@ -83,6 +88,7 @@ def shirts(request):
         shirts = paginator.page(page)
 
     context = {
+        'cartItems': cartItems,
         'shirts': shirts,
         'paginator': paginator,
     }
@@ -102,6 +108,8 @@ def shirt(request, slug):
 
 # ----------------book--------------
 def books(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
     books = Product.objects.filter(category__name="book")
     page = request.GET.get('page')
     paginator = Paginator(books, 1)
@@ -114,6 +122,7 @@ def books(request):
         books = paginator.page(page)
 
     context = {
+        'cartItems': cartItems,
         'books': books,
         'paginator': paginator,
     }
@@ -131,6 +140,8 @@ def onebook(request, slug):
 
 # ----------------laptop--------------
 def laptops(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
     laptops = Product.objects.filter(category__name="laptop")
     page = request.GET.get('page')
     paginator = Paginator(laptops, 1)
@@ -143,6 +154,7 @@ def laptops(request):
         laptops = paginator.page(page)
 
     context = {
+        'cartItems': cartItems,
         'laptops': laptops,
         'paginator': paginator,
     }
@@ -160,6 +172,8 @@ def onelaptop(request, slug):
 
 # ----------------pc--------------
 def pcs(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
     pcs = Product.objects.filter(category__name="pc")
     page = request.GET.get('page')
     paginator = Paginator(pcs, 1)
@@ -172,6 +186,7 @@ def pcs(request):
         pcs = paginator.page(page)
 
     context = {
+        'cartItems': cartItems,
         'pcs': pcs,
         'paginator': paginator,
     }
