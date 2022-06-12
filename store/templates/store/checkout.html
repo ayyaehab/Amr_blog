@@ -17,11 +17,11 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12 checkout-header">
-						<h3 class="breadcrumb-header">Checkout</h3>
+						<h3 class="breadcrumb-header">الدفع</h3>
 						<ul class="breadcrumb-tree">
-							<li><a href="/store">Home</a></li>
-							<li><a href="/store/cart">Cart</a></li>
-							<li class="active">Checkout</li>
+							<li><a href="/store">المتحر</a></li>
+							<li><a href="/store/cart">عربة التسوق</a></li>
+							<li class="active">الدفع</li>
 						</ul>
 					</div>
 				</div>
@@ -43,12 +43,12 @@
 					<!-- Order Details -->
 					<div class="col-md-5 order-details">
 						<div class="section-title text-center">
-							<h3 class="title">Your Order</h3>
+							<h3 class="title">ملخص الطلب </h3>
 						</div>
 						<div class="order-summary">
 							<div class="order-col">
-								<div><strong>PRODUCT</strong></div>
-								<div><strong>TOTAL</strong></div>
+								<div><strong>المنتج</strong></div>
+								<div><strong>السعر</strong></div>
 							</div>
 							<div class="order-products">
 							    {% for item in items %}
@@ -67,7 +67,7 @@
 								<div><strong>FREE</strong></div>
 							</div>
 							<div class="order-col">
-								<div><strong>TOTAL</strong></div>
+								<div><strong>مجموع الشحنه</strong></div>
 								<div><strong class="order-total">{{order.get_cart_total|floatformat:2}} L.E</strong></div>
 							</div>
 						</div>
@@ -110,14 +110,14 @@
 								I've read and accept the <a href="#">terms & conditions</a>
 							</label>
 						</div>{% endcomment %}
-						<a href="#" class="primary-btn order-submit">Place order</a>
+						<a href="#" class="primary-btn order-submit">اتمام عملية الشحن</a>
 					</div>
 					<!-- /Order Details -->
 					<div class="col-md-7 checkout-7">
 						<!-- Billing Details -->
 						<div class="billing-details">
 							<div class="section-title">
-								<h3 class="title">Billing address</h3>
+								<h3 class="title">معلومات لتوصيل الشحنه</h3>
 							</div>
 							<div class="form-group">
 								<input class="input" type="text" name="first-name" placeholder="الإسم بالكامل">
@@ -162,7 +162,7 @@
 						<!-- Shiping Details -->
 						<div class="shiping-details">
 							<div class="section-title">
-								<h3 class="title">Order Notes</h3>
+								<h3 class="title">اترك ملاحظة</h3>
 							</div>
 							<!-- <div class="input-checkbox">
 								 <input type="checkbox" id="shiping-address">
