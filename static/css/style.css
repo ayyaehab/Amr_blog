@@ -368,7 +368,7 @@ textarea.input {
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-right: 15px;
+  margin-left: 15px;
   text-transform: uppercase;
 }
 
@@ -391,7 +391,7 @@ textarea.input {
   content: '/';
   display: inline-block;
   color: #8D99AE;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #breadcrumb .breadcrumb-tree li a {
@@ -1229,6 +1229,9 @@ textarea.input {
 /*----------------------------*\
 	Aside
 \*----------------------------*/
+#aside{
+  direction: rtl;
+}
 
 .aside+.aside {
   margin-top: 30px;
@@ -1860,14 +1863,19 @@ textarea.input {
 /*=========================================================
 	09 -> CHECKOUT PAGE
 ===========================================================*/
-
+.checkout-header{
+  direction: rtl;
+}
+.checkout-7{
+  direction: rtl;
+}
 .billing-details {
   margin-bottom: 30px;
 }
 
-.shiping-details {
+/* .shiping-details {
   margin-bottom: 30px;
-}
+} */
 
 .order-details {
   position: relative;

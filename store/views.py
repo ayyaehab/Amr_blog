@@ -47,8 +47,15 @@ def checkout(request):
     data = cartData(request)
 
     cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
 
-    context = {'cartItems': cartItems}
+    context = {'items': items, 'order': order, 'cartItems': cartItems}
+    # data = cartData(request)
+
+    # cartItems = data['cartItems']
+
+    # context = {'cartItems': cartItems}
     return render(request, 'store/checkout.html', context)
 
 
