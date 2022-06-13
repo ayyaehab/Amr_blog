@@ -1,20 +1,32 @@
 from django.shortcuts import render
 import json
-from store.models import Product, ProductImg
+from store.models import Product, ProductImg,Category
 from .utils import cookieCart, cartData
 from .filters import ProductFilter
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
+
+
 def store(request):
+    if 'q' in request.GET:
+        q = request.GET['q']
+        products = Product.objects.filter(title__icontains=q)
+    else:
+        products = Product.objects.all()
+
+    category = Category.objects.all()
+    categ = request.GET.get('category')
+    if categ :
+        products = Product.objects.filter(category =categ)
+    else:
+        products = Product.objects.all()
     data = cartData(request)
     cartItems = data['cartItems']
-    products = Product.objects.all()
-
     myfilter = ProductFilter(request.GET, queryset=products)
     product_list = myfilter.qs
     page = request.GET.get('page')
-    paginator = Paginator(product_list, 2)
+    paginator = Paginator(product_list, 15)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -27,6 +39,7 @@ def store(request):
         'products': products,
         'cartItems': cartItems,
         'myfilter': myfilter,
+        'category': category,
         'paginator': paginator
     }
     return render(request, 'store/index.html', context)
@@ -85,7 +98,7 @@ def shirts(request):
     cartItems = data['cartItems']
     shirts = Product.objects.filter(category__name="shirt")
     page = request.GET.get('page')
-    paginator = Paginator(shirts, 1)
+    paginator = Paginator(shirts, 12)
     try:
         shirts = paginator.page(page)
     except PageNotAnInteger:
@@ -119,7 +132,7 @@ def books(request):
     cartItems = data['cartItems']
     books = Product.objects.filter(category__name="book")
     page = request.GET.get('page')
-    paginator = Paginator(books, 1)
+    paginator = Paginator(books, 12)
     try:
         books = paginator.page(page)
     except PageNotAnInteger:
@@ -151,7 +164,7 @@ def laptops(request):
     cartItems = data['cartItems']
     laptops = Product.objects.filter(category__name="laptop")
     page = request.GET.get('page')
-    paginator = Paginator(laptops, 1)
+    paginator = Paginator(laptops, 12)
     try:
         laptops = paginator.page(page)
     except PageNotAnInteger:
@@ -183,7 +196,7 @@ def pcs(request):
     cartItems = data['cartItems']
     pcs = Product.objects.filter(category__name="pc")
     page = request.GET.get('page')
-    paginator = Paginator(pcs, 1)
+    paginator = Paginator(pcs, 12)
     try:
         pcs = paginator.page(page)
     except PageNotAnInteger:
@@ -201,7 +214,6 @@ def pcs(request):
     return render(request, 'store/pcs.html', context)
 
 
-
 def pc(request, slug):
     pc = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=pc)
@@ -210,15 +222,12 @@ def pc(request, slug):
     return render(request, 'store/pc.html', context)
 
 
-
-
-
 def accessories(request):
     data = cartData(request)
     cartItems = data['cartItems']
     accessories = Product.objects.filter(category__name="accessories")
     page = request.GET.get('page')
-    paginator = Paginator(accessories, 1)
+    paginator = Paginator(accessories, 12)
     try:
         accessories = paginator.page(page)
     except PageNotAnInteger:
@@ -236,14 +245,12 @@ def accessories(request):
     return render(request, 'store/accessories.html', context)
 
 
-
-
 def offers(request):
     data = cartData(request)
     cartItems = data['cartItems']
     offers = Product.objects.filter(category__name="offers")
     page = request.GET.get('page')
-    paginator = Paginator(offers, 1)
+    paginator = Paginator(offers, 12)
     try:
         offers = paginator.page(page)
     except PageNotAnInteger:
@@ -259,14 +266,3 @@ def offers(request):
     }
 
     return render(request, 'store/offers.html', context)
-
-
-
-
-
-
-
-
-
-
-

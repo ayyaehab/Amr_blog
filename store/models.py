@@ -21,6 +21,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    name = models.CharField(max_length=45)
     title = models.CharField(max_length=45)
     description = models.TextField(max_length=3000)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
@@ -31,17 +32,22 @@ class Product(models.Model):
     productCondition = models.CharField(max_length=45, null=True, blank=True)
     thumbnail = models.ImageField(upload_to='static/imgs/product/%Y/%m/%d', default=True, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(null=True, blank=True)
+    slug = models.SlugField(allow_unicode=True, unique=True, null=True, blank=True)
 
     class Meta:
         ordering = ['-id']
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.slug:
+            self.slug = slugify(self.title)
+            if not self.slug:
+                self.slug = slugify(self.title)
         super(Product, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.title)
+
+
 
 
 class Order(models.Model):
