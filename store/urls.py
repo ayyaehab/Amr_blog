@@ -20,6 +20,11 @@ urlpatterns = [
 
      path('relaptops', views.laptops , name='laptops'),
      path('laptop-<slug:slug>', views.onelaptop, name='onelaptop'),
+
+     path('accessories', views.accessories, name='accessories'),
+     path('offers', views.offers, name='offers'),
+     path('offers-<slug:slug>', views.onelaptop, name='offers'),
+     path('accessore-<slug:slug>', views.onelaptop, name='accessore'),
     # path('blank', views.blank , name='blank'),
     
     

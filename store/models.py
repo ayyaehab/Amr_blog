@@ -99,8 +99,6 @@ class OrderItem(models.Model):
 
 
 @property
-
-
 def get_cart_items(self):
     orderitems = self.orderitem_set.all()
     total = sum([item.quantity for item in orderitems])
@@ -121,7 +119,7 @@ class CheckOut(models.Model):
     address = models.CharField(max_length=200)
     phone = models.CharField(max_length=11)
     whats_number = models.CharField(max_length=11)
-    notes = models.CharField(max_length=300 ,null=True, blank=True)
+    notes = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
         return str(self.name)

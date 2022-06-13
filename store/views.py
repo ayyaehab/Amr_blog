@@ -201,10 +201,72 @@ def pcs(request):
     return render(request, 'store/pcs.html', context)
 
 
+
 def pc(request, slug):
     pc = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=pc)
     context = {'pc': pc,
                'images': images}
     return render(request, 'store/pc.html', context)
+
+
+
+
+
+def accessories(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
+    accessories = Product.objects.filter(category__name="accessories")
+    page = request.GET.get('page')
+    paginator = Paginator(accessories, 1)
+    try:
+        accessories = paginator.page(page)
+    except PageNotAnInteger:
+        accessories = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        accessories = paginator.page(page)
+
+    context = {
+        'cartItems': cartItems,
+        'accessories': accessories,
+        'paginator': paginator,
+    }
+
+    return render(request, 'store/accessories.html', context)
+
+
+
+
+def offers(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
+    offers = Product.objects.filter(category__name="offers")
+    page = request.GET.get('page')
+    paginator = Paginator(offers, 1)
+    try:
+        offers = paginator.page(page)
+    except PageNotAnInteger:
+        offers = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        offers = paginator.page(page)
+
+    context = {
+        'cartItems': cartItems,
+        'offers': offers,
+        'paginator': paginator,
+    }
+
+    return render(request, 'store/offers.html', context)
+
+
+
+
+
+
+
+
+
+
 
