@@ -25,6 +25,8 @@ urlpatterns = [
      path('offers', views.offers, name='offers'),
      path('offers-<slug:slug>', views.onelaptop, name='offers'),
      path('accessore-<slug:slug>', views.onelaptop, name='accessore'),
+
+     path('processorder', views.processOrder, name='processorder'),
     # path('blank', views.blank , name='blank'),
     
     

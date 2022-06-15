@@ -49,29 +49,35 @@ def cartData(request):
     items = cookieData['items']
     return {'cartItems': cartItems, 'order': order, 'items': items}
 
-# def guestOrder(request, data):
-# 	name = data['form']['name']
-# 	email = data['form']['email']
+def guestOrder(request, data, transaction_id):
+    fullname = data['shipping']['fullname']
+    address = data['shipping']['address']
+    phone = data['shipping']['phone']
+    whatsapp = data['shipping']['whatsapp']
+    city = data['shipping']['city']
+    notes = data['shipping']['notes']
+    total = data['shipping']['total']
+    shipping_cost = data['shipping']['shipping_cost']
+    cookieData = cookieCart(request)
+    items = cookieData['items']
 
-# 	cookieData = cookieCart(request)
-# 	items = cookieData['items']
-
-# 	customer, created = Customer.objects.get_or_create(
-# 			email=email,
-# 			)
-# 	customer.name = name
-# 	customer.save()
-
-# 	order = Order.objects.create(
-# 		customer=customer,
-# 		complete=False,
-# 		)
-
-# 	for item in items:
-# 		product = Product.objects.get(id=item['id'])
-# 		orderItem = OrderItem.objects.create(
-# 			product=product,
-# 			order=order,
-# 			quantity=(item['quantity'] if item['quantity']>0 else -1*item['quantity']), # negative quantity = freebies
-# 		)
-# 	return customer, order
+    customer, created = CheckOut.objects.get_or_create(
+            transaction_id= transaction_id,
+            fullname=fullname,
+            address=address,
+            phone=phone,
+            whatsapp=whatsapp,
+            city=city,
+            notes=notes,
+            shipping_cost=total,
+            products_cost=shipping_cost,
+            complete=False,
+            )
+    for item in items:
+        product = Product.objects.get(id=item['id'])
+        orderItem = OrderItem.objects.create(
+            product=product,
+            checkout=customer,
+            quantity=(item['quantity'] if item['quantity']>0 else -1*item['quantity']), # negative quantity = freebies
+        )
+    return customer, orderItem

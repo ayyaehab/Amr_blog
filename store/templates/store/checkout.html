@@ -64,11 +64,11 @@
 							</div>
 							<div class="order-col">
 								<div>Shiping</div>
-								<div><strong>FREE</strong></div>
+								<div><strong id="myid">اختر محافظتك الأول</strong></div>
 							</div>
 							<div class="order-col">
 								<div><strong>مجموع الشحنه</strong></div>
-								<div><strong class="order-total">{{order.get_cart_total|floatformat:2}} L.E</strong></div>
+								<div><strong class="order-total"><span id='totalpay'>{{order.get_cart_total|floatformat:2}}</span>L.E</strong></div>
 							</div>
 						</div>
 						{% comment %} <div class="payment-method">
@@ -110,7 +110,10 @@
 								I've read and accept the <a href="#">terms & conditions</a>
 							</label>
 						</div>{% endcomment %}
-						<a href="#" class="primary-btn order-submit">اتمام عملية الشحن</a>
+			<form id="form">
+			  {% csrf_token %}
+			            <button class="primary-btn order-submit" type="submit" id='order-submit'>Submit form</button>
+						{% comment %} <a href="#" class="primary-btn order-submit" type="submit" id="order-submit">اتمام عملية الشحن</a> {% endcomment %}
 					</div>
 					<!-- /Order Details -->
 					<div class="col-md-7 checkout-7">
@@ -120,42 +123,25 @@
 								<h3 class="title">معلومات لتوصيل الشحنه</h3>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="الإسم بالكامل">
+								<input required class="input" type="text" name="fullname" placeholder="الإسم بالكامل">
+							</div>
+							
+							<div class="form-group">
+								<select id="cities" class="form-group" required>
+                                 <option value="">--إختر محافظتك--</option>
+                                </select>
+							</div>
+				
+							<div class="form-group">
+								<input required class="input" type="text" name="address" placeholder="العنوان بالتفاصيل">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="last-name" placeholder="المحافظة">
+								<input required class="input" type="tel" name="phone" placeholder="رقم الهاتف">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="email" placeholder="المدينه">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="العنوان بالتفاصيل">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="city" placeholder="رقم الهاتف">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="country" placeholder="رقم هاتف به واتس">
-							</div>
-							{% comment %} <div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="tel" placeholder="Telephone">
-							</div> {% endcomment %}
-							{% comment %} <div class="form-group">
-								<div class="input-checkbox">
-									<input type="checkbox" id="create-account">
-									<label for="create-account">
-										<span></span>
-										Create Account?
-									</label>
-									<div class="caption">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										<input class="input" type="password" name="password" placeholder="Enter Your Password">
-									</div>
-								</div>
-							</div> {% endcomment %}
+								<input required class="input" type="tel" name="whatsapp" placeholder="رقم هاتف به واتس">
+							</div> 
+						
 						</div>
 						<!-- /Billing Details -->
 
@@ -164,46 +150,16 @@
 							<div class="section-title">
 								<h3 class="title">اترك ملاحظة</h3>
 							</div>
-							<!-- <div class="input-checkbox">
-								 <input type="checkbox" id="shiping-address">
-								<label for="shiping-address">
-									<span></span>
-									Ship to a diffrent address?
-								</label> 
-								<div class="caption">
-									<div class="form-group">
-										<input class="input" type="text" name="first-name" placeholder="First Name">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="last-name" placeholder="Last Name">
-									</div>
-									<div class="form-group">
-										<input class="input" type="email" name="email" placeholder="Email">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="address" placeholder="Address">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="city" placeholder="City">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="country" placeholder="Country">
-									</div>
-									 <div class="form-group">
-										<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-									</div>
-									<div class="form-group">
-										<input class="input" type="tel" name="tel" placeholder="Telephone">
-									</div> 
-							</div> -->
+							
 						</div>
 						<!-- /Shiping Details -->
 
 						<!-- Order notes -->
 						<div class="order-notes">
-							<textarea class="input" placeholder="Order Notes"></textarea>
-						</div>
+							<textarea class="input" name="notes" placeholder="Order Notes"></textarea>
+						</div> 
 						<!-- /Order notes -->
+				</form>
 					</div>
 				</div>
 				<!-- /row -->
@@ -212,6 +168,72 @@
 		</div>
 		<!-- /SECTION -->
 
-		
 
+	<script type="text/javascript">
+	
+	var total = '{{order.get_cart_total}}'
+	var form = document.getElementById('form')
+	csrftoken =form.getElementsByTagName('input')[0].value
+	//console.log('token:',form.getElementsByTagName('input')[0].value)
+	form.addEventListener('submit', function(e){
+		   e.preventDefault()
+	    	submitFormData(csrftoken)})
+	     
+	function submitFormData(){
+		   const shipping_cost = document.getElementById('myid');
+		   
+	    	console.log('Payment button clicked')
+
+			var shippingInfo = {
+				'fullname':null,
+				'address':null,
+				'phone':null,
+				'whatsapp':null,
+				'city':null,
+				'notes':null,
+				'total':total,
+				'shipping_cost':shipping_cost.textContent
+			}
+            shippingInfo.fullname = form.fullname.value
+			shippingInfo.address = form.address.value
+			shippingInfo.phone = form.phone.value
+            shippingInfo.whatsapp = form.whatsapp.value
+            shippingInfo.notes = form.notes.value
+
+		    var select = document.getElementById('cities');
+            var city = select.options[select.selectedIndex].value;
+			shippingInfo.city = city
+            
+	    	console.log('Shipping Info:', shippingInfo)
+
+
+	    	var url = "processorder"
+	    	fetch(url, {
+	    		method:'POST',
+	    		headers:{
+	    			'Content-Type':'applicaiton/json',
+					'X-CSRFToken':csrftoken,
+	    		}, 
+	    		body:JSON.stringify({'shipping':shippingInfo}),
+	    		
+	    	})
+
+	    	.then((response) => response.text())
+	    	.then((data) => { 
+				//console.log('Success:', data);
+				alert('Transaction completed');  
+					
+                cart = {}
+				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+		
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script src="{% static 'js/checkout.js' %}" id="helper" data-name='{{order.get_cart_total}}'></script>
 {% endblock content %}
+

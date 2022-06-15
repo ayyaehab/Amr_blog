@@ -3,9 +3,16 @@ from django.forms import forms
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 
-
+CATEGORIES = [
+    ('book', 'book'),
+    ('laptop', 'laptop'),
+    ('pc', 'pc'),
+    ('shirt', 'shirt'),
+    ('mug', 'mug'),
+    ('laptop', 'laptop'),
+]
 class Category(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, choices=CATEGORIES,default='')
     slug = models.SlugField(max_length=80, unique=True, null=True, blank=True)
 
     def __str__(self):
@@ -47,33 +54,6 @@ class Product(models.Model):
     def __str__(self):
         return str(self.title)
 
-
-
-
-class Order(models.Model):
-    date_ordered = models.DateTimeField(auto_now_add=True)
-    complete = models.BooleanField(default=False)
-    transaction_id = models.CharField(max_length=100, null=True)
-
-    def __str__(self):
-        return str(self.id)
-
-    @property
-    def shipping(self):
-        shipping = False
-        orderitems = self.orderitem_set.all()
-        for i in orderitems:
-            if i.product.digital == False:
-                shipping = True
-        return shipping
-
-    @property
-    def get_cart_total(self):
-        orderitems = self.orderitem_set.all()
-        total = sum([item.get_total for item in orderitems])
-        return total
-
-
 class ProductImg(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     img = models.ImageField(upload_to='static/imgs/product', default=True)
@@ -91,13 +71,36 @@ class ProductImg(models.Model):
     def __str__(self):
         return str(self.product)
 
+class CheckOut(models.Model):
+    date_ordered = models.DateTimeField(auto_now_add=True)
+    complete = models.BooleanField(default=False)
+    transaction_id = models.CharField(max_length=100)
+    fullname = models.CharField(max_length=255)
+    address = models.TextField(max_length=300)
+    phone = models.CharField(max_length=11)
+    whatsapp = models.CharField(max_length=11)
+    city = models.CharField(max_length=60)
+    notes = models.TextField(max_length=300, null=True, blank=True)
+    shipping_cost=models.DecimalField(max_digits=10,decimal_places=2)
+    products_cost=models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f'{self.id} {self.fullname}'
+    @property
+    def get_cart_total(self):
+        orderitems = self.orderitem_set.all()
+        total = sum([item.get_total for item in orderitems])
+        return total
+
 
 class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+    checkout = models.ForeignKey(CheckOut, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
-
+    
+    def __str__(self):
+        return f'{self.product} {self.checkout}'
     @property
     def get_total(self):
         total = self.product.price * self.quantity
@@ -111,21 +114,3 @@ def get_cart_items(self):
     return total
 
 
-Counties_CHOICES = [
-    ('egypt', 'Egypt'),
-    ('alex', 'Alexandria')
-]
-
-
-class CheckOut(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
-    name = models.CharField(max_length=60)
-    area = models.CharField(default='ما هي محافظتك ؟', choices=Counties_CHOICES, max_length=6)
-    country = models.CharField(max_length=60)
-    address = models.CharField(max_length=200)
-    phone = models.CharField(max_length=11)
-    whats_number = models.CharField(max_length=11)
-    notes = models.CharField(max_length=300, null=True, blank=True)
-
-    def __str__(self):
-        return str(self.name)

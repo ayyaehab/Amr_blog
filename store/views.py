@@ -1,12 +1,12 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 import json
-from store.models import Product, ProductImg,Category
-from .utils import cookieCart, cartData
+from store.models import CheckOut, Product, ProductImg,Category
+from .utils import cookieCart, cartData, guestOrder
 from .filters import ProductFilter
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-
-
+import datetime
 
 def store(request):
     if 'q' in request.GET:
@@ -16,11 +16,11 @@ def store(request):
         products = Product.objects.all()
 
     category = Category.objects.all()
-    categ = request.GET.get('category')
-    if categ :
-        products = Product.objects.filter(category =categ)
-    else:
-        products = Product.objects.all()
+    # categ = request.GET.get('category')
+    # if categ :
+    #     products = Product.objects.filter(category =categ)
+    # else:
+    #     products = Product.objects.all()
     data = cartData(request)
     cartItems = data['cartItems']
     myfilter = ProductFilter(request.GET, queryset=products)
@@ -64,11 +64,7 @@ def checkout(request):
     items = data['items']
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
-    # data = cartData(request)
 
-    # cartItems = data['cartItems']
-
-    # context = {'cartItems': cartItems}
     return render(request, 'store/checkout.html', context)
 
 
@@ -266,3 +262,15 @@ def offers(request):
     }
 
     return render(request, 'store/offers.html', context)
+
+
+def processOrder(request):
+    transaction_id = datetime.datetime.now().timestamp()
+    data = json.loads(request.body)
+    customer, order = guestOrder(request, data, transaction_id)
+    total = float(data['shipping']['total'])
+    if total == customer.get_cart_total:
+        customer.complete = True
+    customer.save()
+
+    return JsonResponse('Payment submitted..', safe=False)
