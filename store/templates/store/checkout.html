@@ -172,12 +172,21 @@
 	<script type="text/javascript">
 	
 	var total = '{{order.get_cart_total}}'
+	console.log('cart empty',total)
 	var form = document.getElementById('form')
 	csrftoken =form.getElementsByTagName('input')[0].value
 	//console.log('token:',form.getElementsByTagName('input')[0].value)
 	form.addEventListener('submit', function(e){
-		   e.preventDefault()
-	    	submitFormData(csrftoken)})
+		   if (total == 0){
+			e.preventDefault()
+			alert('عربة التسوق فاضية!! إملاها وتعالى'); 
+			window.location.href = "{% url 'store' %}"
+		   }
+		   else{
+			e.preventDefault()
+	    	submitFormData(csrftoken)
+		   }
+		   })
 	     
 	function submitFormData(){
 		   const shipping_cost = document.getElementById('myid');
@@ -204,7 +213,7 @@
             var city = select.options[select.selectedIndex].value;
 			shippingInfo.city = city
             
-	    	console.log('Shipping Info:', shippingInfo)
+	    	//console.log('Shipping Info:', shippingInfo)
 
 
 	    	var url = "processorder"

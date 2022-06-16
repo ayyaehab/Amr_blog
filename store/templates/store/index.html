@@ -18,13 +18,13 @@
     <div class="container">
         <!-- row -->
         <div class="row">
-            {% comment %} <!-- ASIDE -->
+             <!-- ASIDE -->
             <div id="" class="col-md-1">
             </div>
-            <!-- /ASIDE --> {% endcomment %}
+            <!-- /ASIDE --> 
 
             <!-- STORE -->
-            <div id="store" class="col-md-9">
+            <div id="store" class="col-md-10">
 
                 <!-- store products -->
                 <div class="row">
@@ -81,7 +81,7 @@
             </div>
             <!-- /STORE -->
             <!-- ASIDE -->
-            <div id="aside" class="col-md-3">
+            {% comment %} <div id="aside" class="col-md-3">
                 <!-- aside Widget -->
                 <div class="aside">
 
@@ -123,7 +123,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> {% endcomment %}
             <!-- /ASIDE -->
         </div>
         <!-- /row -->
@@ -131,4 +131,8 @@
     <!-- /container -->
 </div>
 <!-- /SECTION -->
+{% comment %} <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script src="{% static 'js/storeindex.js' %}" id="script" data-name='{{ product.category }}'></script> {% endcomment %}
 {% endblock content %}

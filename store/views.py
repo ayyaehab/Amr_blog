@@ -81,10 +81,17 @@ def mugs(request):
 
 
 def mug(request, slug):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    
     mug = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=mug)
     context = {'mug': mug,
-               'images': images}
+               'images': images,'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/mug.html', context)
 
 
@@ -113,12 +120,18 @@ def shirts(request):
 
 
 def shirt(request, slug):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
     shirt = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=shirt)
 
     context = {'shirt': shirt,
                'images': images
-               }
+               ,'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/shirt.html', context)
 
 
@@ -147,10 +160,17 @@ def books(request):
 
 
 def onebook(request, slug):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
     book = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=book)
     context = {'book': book,
-               'images': images}
+               'images': images
+               ,'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/onebook.html', context)
 
 
@@ -179,10 +199,17 @@ def laptops(request):
 
 
 def onelaptop(request, slug):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
     laptop = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=laptop)
     context = {'laptop': laptop,
-               'images': images}
+               'images': images
+               ,'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/onelaptop.html', context)
 
 
@@ -211,10 +238,17 @@ def pcs(request):
 
 
 def pc(request, slug):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
     pc = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=pc)
     context = {'pc': pc,
-               'images': images}
+               'images': images
+               ,'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/pc.html', context)
 
 

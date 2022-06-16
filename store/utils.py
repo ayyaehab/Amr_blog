@@ -73,6 +73,7 @@ def guestOrder(request, data, transaction_id):
             products_cost=shipping_cost,
             complete=False,
             )
+
     for item in items:
         product = Product.objects.get(id=item['id'])
         orderItem = OrderItem.objects.create(
