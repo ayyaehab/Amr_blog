@@ -2,9 +2,7 @@
 {% load static %}
 {% block content %}
 
-<h1>
-from one Product
-</h1>
+
 <div class="section">
     <!-- container -->
     <div class="container">
@@ -13,18 +11,26 @@ from one Product
             <!-- Product main img -->
             <div class="col-md-5 col-md-push-2">
                 <div id="product-main-img">
+                      {% if product.thumbnail %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail1 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail1.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail2 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail2.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail3 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail3.url }}>
                       </div>
+                      {% endif %}
 
                     
                 </div>
@@ -34,18 +40,26 @@ from one Product
             <!-- Product thumb imgs -->
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
-                    <div class="product-preview">
+                    {% if product.thumbnail %}
+                      <div class="product-preview">
                             <img src={{ product.thumbnail.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail1 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail1.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail2 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail2.url }}>
                       </div>
+                      {% endif %}
+                      {% if product.thumbnail3 %}
                       <div class="product-preview">
                             <img src={{ product.thumbnail3.url }}>
                       </div>
+                      {% endif %}
 
                 </div>
             </div>
