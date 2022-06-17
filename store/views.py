@@ -31,7 +31,6 @@ def store(request):
     context = {
         'products': products,
         'cartItems': cartItems,
-        # 'myfilter': myfilter,
         'category': category,
         'paginator': paginator
     }
@@ -75,20 +74,6 @@ def mugs(request):
     return render(request, 'store/mugs.html', context)
 
 
-def mug(request, slug):
-    data = cartData(request)
-
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
-
-    mug = Product.objects.get(slug=slug)
-    images = ProductImg.objects.filter(product=mug)
-    context = {'mug': mug,
-               'images': images, 'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'store/mug.html', context)
-
-
 # ----------------shirt--------------
 def shirts(request):
     data = cartData(request)
@@ -121,36 +106,14 @@ def oneproduct(request, slug):
     items = data['items']
 
     product = Product.objects.get(slug=slug)
-    # images = ProductImg.objects.filter(product=product)
 
     context = {
         'product': product,
-        # 'images': images,
         'items': items,
         'order': order,
         'cartItems': cartItems
     }
     return render(request, 'store/one_product.html', context)
-
-
-# def shirt(request, slug):
-#     data = cartData(request)
-#
-#     cartItems = data['cartItems']
-#     order = data['order']
-#     items = data['items']
-#
-#     product = Product.objects.get(slug=slug)
-#     images = ProductImg.objects.filter(product=product)
-#
-#     context = {
-#         'product': product,
-#         'images': images,
-#         'items': items,
-#         'order': order,
-#         'cartItems': cartItems
-#     }
-#     return render(request, 'store/shirt.html', context)
 
 
 # ----------------book--------------
@@ -177,21 +140,6 @@ def books(request):
     return render(request, 'store/books.html', context)
 
 
-def onebook(request, slug):
-    data = cartData(request)
-
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
-
-    book = Product.objects.get(slug=slug)
-    images = ProductImg.objects.filter(product=book)
-    context = {'book': book,
-               'images': images
-        , 'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'store/onebook.html', context)
-
-
 # ----------------laptop--------------
 def laptops(request):
     data = cartData(request)
@@ -216,22 +164,6 @@ def laptops(request):
     return render(request, 'store/laptops.html', context)
 
 
-def onelaptop(request, slug):
-    data = cartData(request)
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
-
-    laptop = Product.objects.get(slug=slug)
-    images = ProductImg.objects.filter(product=laptop)
-    context = {
-        'laptop': laptop,
-        'images': images
-        , 'items': items,
-        'order': order, 'cartItems': cartItems}
-    return render(request, 'store/onelaptop.html', context)
-
-
 # ----------------pc--------------
 def pcs(request):
     data = cartData(request)
@@ -254,21 +186,6 @@ def pcs(request):
     }
 
     return render(request, 'store/pcs.html', context)
-
-
-def pc(request, slug):
-    data = cartData(request)
-
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
-
-    pc = Product.objects.get(slug=slug)
-    images = ProductImg.objects.filter(product=pc)
-    context = {'pc': pc,
-               'images': images
-        , 'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'store/pc.html', context)
 
 
 def accessories(request):

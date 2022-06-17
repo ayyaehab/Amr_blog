@@ -18,10 +18,10 @@
     <div class="container">
         <!-- row -->
         <div class="row">
-             <!-- ASIDE -->
+            <!-- ASIDE -->
             <div id="" class="col-md-1">
             </div>
-            <!-- /ASIDE --> 
+            <!-- /ASIDE -->
 
             <!-- STORE -->
             <div id="store" class="col-md-10">
@@ -40,7 +40,8 @@
                             </div>
                             <div class="product-body">
                                 <p class="product-category">{{ product.category }}</p>
-                                <h3 class="product-name"><a href="{% url 'oneproduct' product.slug %}">{{ product.title }}</a></h3>
+                                <h3 class="product-name"><a href="{% url 'oneproduct' product.slug %}">{{ product.title
+                                    }}</a></h3>
                                 <h4 class="product-price">{{ product.price }}
                                     <del class="product-old-price">{{ product.old_price }}</del>
                                 </h4>
@@ -81,7 +82,8 @@
             </div>
             <!-- /STORE -->
             <!-- ASIDE -->
-            {% comment %} <div id="aside" class="col-md-3">
+            {% comment %}
+            <div id="aside" class="col-md-3">
                 <!-- aside Widget -->
                 <div class="aside">
 
@@ -123,7 +125,8 @@
                     </div>
                 </div>
 
-            </div> {% endcomment %}
+            </div>
+            {% endcomment %}
             <!-- /ASIDE -->
         </div>
         <!-- /row -->
@@ -131,26 +134,26 @@
     <!-- /container -->
 </div>
 <!-- /SECTION -->
-{% comment %} <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+{% comment %}
+<script src=
+                "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
 <script src="{% static 'js/storeindex.js' %}" id="script" data-name='{{ product.category }}'></script> {% endcomment %}
 {% endblock content %}
 
 
-
 {% comment %} {% if product.category == 'laptop' %}
-                                <h3 class="product-name"><a href="{% url 'onelaptop' laptop.slug %}">{{ product.title }} NEW</a></h3>
-                                    
-                                {% elif  product.category == book %}
-                                <h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ product.title }} NEW</a></h3>
+<h3 class="product-name"><a href="{% url 'onelaptop' laptop.slug %}">{{ product.title }} NEW</a></h3>
 
-                                {% elif  product.category == 'mug'%}
-                                <h3 class="product-name"><a href="{% url 'mug' mug.slug %}">{{ product.title }} NEW</a></h3>
-                                {% elif  product.category == 'pc'%}
-                                <h3 class="product-name"><a href="{% url 'pc' pc.slug %}">{{ product.title }} NEW</a></h3>
-                                {% elif  product.category == 'shirt'%}
-                                <h3 class="product-name"><a href="{% url 'shirt' shirt.slug %}">{{ product.title }} NEW</a></h3>
-    
-                            
-                                {% endif %} {% endcomment %}
+{% elif  product.category == book %}
+<h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ product.title }} NEW</a></h3>
+
+{% elif  product.category == 'mug'%}
+<h3 class="product-name"><a href="{% url 'mug' mug.slug %}">{{ product.title }} NEW</a></h3>
+{% elif  product.category == 'pc'%}
+<h3 class="product-name"><a href="{% url 'pc' pc.slug %}">{{ product.title }} NEW</a></h3>
+{% elif  product.category == 'shirt'%}
+<h3 class="product-name"><a href="{% url 'shirt' shirt.slug %}">{{ product.title }} NEW</a></h3>
+
+
+{% endif %} {% endcomment %}
