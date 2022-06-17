@@ -49,6 +49,7 @@ def cartData(request):
     items = cookieData['items']
     return {'cartItems': cartItems, 'order': order, 'items': items}
 
+
 def guestOrder(request, data, transaction_id):
     fullname = data['shipping']['fullname']
     address = data['shipping']['address']
@@ -62,23 +63,24 @@ def guestOrder(request, data, transaction_id):
     items = cookieData['items']
 
     customer, created = CheckOut.objects.get_or_create(
-            transaction_id= transaction_id,
-            fullname=fullname,
-            address=address,
-            phone=phone,
-            whatsapp=whatsapp,
-            city=city,
-            notes=notes,
-            shipping_cost=total,
-            products_cost=shipping_cost,
-            complete=False,
-            )
+        transaction_id=transaction_id,
+        fullname=fullname,
+        address=address,
+        phone=phone,
+        whatsapp=whatsapp,
+        city=city,
+        notes=notes,
+        shipping_cost=total,
+        products_cost=shipping_cost,
+        complete=False,
+    )
 
     for item in items:
         product = Product.objects.get(id=item['id'])
         orderItem = OrderItem.objects.create(
             product=product,
             checkout=customer,
-            quantity=(item['quantity'] if item['quantity']>0 else -1*item['quantity']), # negative quantity = freebies
+            quantity=(item['quantity'] if item['quantity'] > 0 else -1 * item['quantity']),
+            # negative quantity = freebies
         )
     return customer, orderItem

@@ -28,18 +28,17 @@
             <div id="store" class="col-md-10">
                 <!-- store products -->
                 <div class="row">
-                    {% for laptop in laptops %}
+                    {% for accessory in accessories %}
                     <!-- product -->
                     <div class="col-md-4 col-xs-6" style="float: right;">
                         <div class="product">
                             <div class="product-img">
-                                <img src={{ laptop.thumbnail.url }} alt="">
+                                <img src={{ accessory.thumbnail.url }} alt="">
                             </div>
                             <div class="product-body">
 
-                                <h3 class="product-name"><a href="{% url 'onelaptop' laptop.slug %}">{{ laptop.title
-                                    }}</a></h3>
-                                <h4 class="product-price">{{ laptop.price }}
+                                <h3 class="product-name"><a href="{% url 'oneproduct' accessory.slug %}">{{ accessory.title }}</a></h3>
+                                <h4 class="product-price">{{ accessory.price }}
                                     <del class="product-old-price">$990.00</del>
                                 </h4>
                                 <!-- <div class="product-rating">

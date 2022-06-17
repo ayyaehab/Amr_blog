@@ -1,12 +1,12 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 import json
-from store.models import CheckOut, Product, ProductImg,Category
+from store.models import CheckOut, Product, Category
 from .utils import cookieCart, cartData, guestOrder
-from .filters import ProductFilter
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 import datetime
+
 
 def store(request):
     if 'q' in request.GET:
@@ -16,17 +16,10 @@ def store(request):
         products = Product.objects.all()
 
     category = Category.objects.all()
-    # categ = request.GET.get('category')
-    # if categ :
-    #     products = Product.objects.filter(category =categ)
-    # else:
-    #     products = Product.objects.all()
     data = cartData(request)
     cartItems = data['cartItems']
-    myfilter = ProductFilter(request.GET, queryset=products)
-    product_list = myfilter.qs
     page = request.GET.get('page')
-    paginator = Paginator(product_list, 15)
+    paginator = Paginator(products, 6)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -38,7 +31,7 @@ def store(request):
     context = {
         'products': products,
         'cartItems': cartItems,
-        'myfilter': myfilter,
+        # 'myfilter': myfilter,
         'category': category,
         'paginator': paginator
     }
@@ -47,11 +40,9 @@ def store(request):
 
 def cart(request):
     data = cartData(request)
-
     cartItems = data['cartItems']
     order = data['order']
     items = data['items']
-
     context = {'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/cart.html', context)
 
@@ -64,7 +55,11 @@ def checkout(request):
     items = data['items']
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
+    # data = cartData(request)
 
+    # cartItems = data['cartItems']
+
+    # context = {'cartItems': cartItems}
     return render(request, 'store/checkout.html', context)
 
 
@@ -87,11 +82,10 @@ def mug(request, slug):
     order = data['order']
     items = data['items']
 
-    
     mug = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=mug)
     context = {'mug': mug,
-               'images': images,'items': items, 'order': order, 'cartItems': cartItems}
+               'images': images, 'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/mug.html', context)
 
 
@@ -101,7 +95,7 @@ def shirts(request):
     cartItems = data['cartItems']
     shirts = Product.objects.filter(category__name="shirt")
     page = request.GET.get('page')
-    paginator = Paginator(shirts, 12)
+    paginator = Paginator(shirts, 9)
     try:
         shirts = paginator.page(page)
     except PageNotAnInteger:
@@ -119,20 +113,44 @@ def shirts(request):
     return render(request, 'store/shirts.html', context)
 
 
-def shirt(request, slug):
+def oneproduct(request, slug):
     data = cartData(request)
 
     cartItems = data['cartItems']
     order = data['order']
     items = data['items']
 
-    shirt = Product.objects.get(slug=slug)
-    images = ProductImg.objects.filter(product=shirt)
+    product = Product.objects.get(slug=slug)
+    # images = ProductImg.objects.filter(product=product)
 
-    context = {'shirt': shirt,
-               'images': images
-               ,'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'store/shirt.html', context)
+    context = {
+        'product': product,
+        # 'images': images,
+        'items': items,
+        'order': order,
+        'cartItems': cartItems
+    }
+    return render(request, 'store/one_product.html', context)
+
+
+# def shirt(request, slug):
+#     data = cartData(request)
+#
+#     cartItems = data['cartItems']
+#     order = data['order']
+#     items = data['items']
+#
+#     product = Product.objects.get(slug=slug)
+#     images = ProductImg.objects.filter(product=product)
+#
+#     context = {
+#         'product': product,
+#         'images': images,
+#         'items': items,
+#         'order': order,
+#         'cartItems': cartItems
+#     }
+#     return render(request, 'store/shirt.html', context)
 
 
 # ----------------book--------------
@@ -170,7 +188,7 @@ def onebook(request, slug):
     images = ProductImg.objects.filter(product=book)
     context = {'book': book,
                'images': images
-               ,'items': items, 'order': order, 'cartItems': cartItems}
+        , 'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/onebook.html', context)
 
 
@@ -200,16 +218,17 @@ def laptops(request):
 
 def onelaptop(request, slug):
     data = cartData(request)
-
     cartItems = data['cartItems']
     order = data['order']
     items = data['items']
 
     laptop = Product.objects.get(slug=slug)
     images = ProductImg.objects.filter(product=laptop)
-    context = {'laptop': laptop,
-               'images': images
-               ,'items': items, 'order': order, 'cartItems': cartItems}
+    context = {
+        'laptop': laptop,
+        'images': images
+        , 'items': items,
+        'order': order, 'cartItems': cartItems}
     return render(request, 'store/onelaptop.html', context)
 
 
@@ -248,7 +267,7 @@ def pc(request, slug):
     images = ProductImg.objects.filter(product=pc)
     context = {'pc': pc,
                'images': images
-               ,'items': items, 'order': order, 'cartItems': cartItems}
+        , 'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/pc.html', context)
 
 
