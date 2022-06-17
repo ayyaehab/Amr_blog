@@ -43,7 +43,7 @@
                             </div>
                             <div class="product-body">
                                 <!-- <p class="product-category">Category</p> -->
-                                <h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ book.title }}</a></h3>
+                                <h3 class="product-name"><a href="{% url 'oneproduct' book.slug %}">{{ book.title }}</a></h3>
                                 <h4 class="product-price">{{ book.price }}
                                     <del class="product-old-price">{{ book.oldPrice }}</del>
                                 </h4>
