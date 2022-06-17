@@ -33,7 +33,7 @@ from one book
                     <h2 class="product-name">{{ book.title }}</h2>
                     <div>
                         <h3 class="product-price">{{ book.price }}
-                            <del class="product-old-price">${{ mug.oldPrice }}</del>
+                            <del class="product-old-price">${{ book.oldPrice }}</del>
                         </h3>
                          <span class="product-available">{{ book.productCondition }}</span> 
                     </div>
@@ -42,7 +42,7 @@ from one book
 								
 					</div>
                     <div class="add-to-cart">
-                        <button class="add-to-cart-btn update-cart" ata-product="{{book.id}}" data-action="add"><i class="fa fa-shopping-cart"></i> order the product</button>
+                        <button class="add-to-cart-btn update-cart" data-product="{{book.id}}" data-action="add"><i class="fa fa-shopping-cart"></i> order the product</button>
                     </div>
                     
                 </div>

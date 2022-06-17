@@ -15,14 +15,14 @@ from one pc
                 <div id="product-main-img">
                       {% for image in images %}
                        <div class="product-preview">
-                            <img src={{ image.thumbnail.url }}>
+                            <img src={{ image.img.url }}>
                         </div>
     
                     {% endfor %}
                 </div>
             </div>
             <!-- /Product main img -->
-
+{% comment %} {{ image.thumbnail.url }} {% endcomment %}
             <!-- Product thumb imgs -->
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
