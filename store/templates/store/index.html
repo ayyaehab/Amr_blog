@@ -131,26 +131,4 @@
     <!-- /container -->
 </div>
 <!-- /SECTION -->
-{% comment %} <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-<script src="{% static 'js/storeindex.js' %}" id="script" data-name='{{ product.category }}'></script> {% endcomment %}
 {% endblock content %}
-
-
-
-{% comment %} {% if product.category == 'laptop' %}
-                                <h3 class="product-name"><a href="{% url 'onelaptop' laptop.slug %}">{{ product.title }} NEW</a></h3>
-                                    
-                                {% elif  product.category == book %}
-                                <h3 class="product-name"><a href="{% url 'bookcontent' book.slug %}">{{ product.title }} NEW</a></h3>
-
-                                {% elif  product.category == 'mug'%}
-                                <h3 class="product-name"><a href="{% url 'mug' mug.slug %}">{{ product.title }} NEW</a></h3>
-                                {% elif  product.category == 'pc'%}
-                                <h3 class="product-name"><a href="{% url 'pc' pc.slug %}">{{ product.title }} NEW</a></h3>
-                                {% elif  product.category == 'shirt'%}
-                                <h3 class="product-name"><a href="{% url 'shirt' shirt.slug %}">{{ product.title }} NEW</a></h3>
-    
-                            
-                                {% endif %} {% endcomment %}
