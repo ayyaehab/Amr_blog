@@ -1,7 +1,7 @@
 {% extends "store/basestore.html" %}
 {% load static %}
 {% block nav %}
-<li  class="active"><a href="offers">عروض</a></li>
+<li class="active"><a href="offers">عروض</a></li>
 <li><a href="accessories">اكسسوارات</a></li>
 <li><a href="remugs">مج</a></li>
 <li><a href="rebooks">كتب</a></li>
@@ -37,7 +37,8 @@
                             </div>
                             <div class="product-body">
 
-                                <h3 class="product-name"><a href="{% url 'oneproduct' offer.slug %}">{{ offer.title }}</a></h3>
+                                <h3 class="product-name"><a href="{% url 'oneproduct' offer.slug %}">{{ offer.title
+                                    }}</a></h3>
                                 <h4 class="product-price">{{ offer.price }}
                                     <del class="product-old-price">{{ offer.oldPrice }}</del>
                                 </h4>

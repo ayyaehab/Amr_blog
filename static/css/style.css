@@ -511,7 +511,7 @@ textarea.input {
 }
 
 .header-ctn>div+div {
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .header-ctn>div>a {
@@ -2070,7 +2070,9 @@ footer{
 .footer-links li a:hover {
   color: #D10024;
 }
-
+.section_copyright {
+  padding-top: 0px;
+}
 .copyright {
   margin-top: 30px;
   display: block;

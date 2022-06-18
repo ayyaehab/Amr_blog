@@ -18,10 +18,10 @@
     <div class="container">
         <!-- row -->
         <div class="row">
-             <!-- ASIDE -->
+            <!-- ASIDE -->
             <div id="" class="col-md-1">
             </div>
-            <!-- /ASIDE --> 
+            <!-- /ASIDE -->
 
             <!-- STORE -->
             <div id="store" class="col-md-10">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="product-body">
                                 <p class="product-category">{{ product.category }}</p>
-                                <h3 class="product-name"><a href="{% url 'oneproduct' product.slug %}">{{ product.title }}</a></h3>
+                                <h3 class="product-name"><a href="{% url 'oneproduct' product.slug %}">{{ product.title}}</a></h3>
                                 <h4 class="product-price">{{ product.price }}
                                     <del class="product-old-price">{{ product.old_price }}</del>
                                 </h4>
@@ -81,7 +81,8 @@
             </div>
             <!-- /STORE -->
             <!-- ASIDE -->
-            {% comment %} <div id="aside" class="col-md-3">
+            {% comment %}
+            <div id="aside" class="col-md-3">
                 <!-- aside Widget -->
                 <div class="aside">
 
@@ -123,7 +124,8 @@
                     </div>
                 </div>
 
-            </div> {% endcomment %}
+            </div>
+            {% endcomment %}
             <!-- /ASIDE -->
         </div>
         <!-- /row -->
