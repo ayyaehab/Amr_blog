@@ -19,7 +19,7 @@ def store(request):
     data = cartData(request)
     cartItems = data['cartItems']
     page = request.GET.get('page')
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 9)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -67,9 +67,20 @@ def mugs(request):
     data = cartData(request)
     cartItems = data['cartItems']
     mugs = Product.objects.filter(category__name="mug")
+    page = request.GET.get('page')
+    paginator = Paginator(mugs, 1)
+    try:
+        mugs = paginator.page(page)
+    except PageNotAnInteger:
+        mugs = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        mugs = paginator.page(page)
+
     context = {
         'cartItems': cartItems,
-        'mugs': mugs
+        'mugs': mugs,
+        'paginator': paginator
     }
     return render(request, 'store/mugs.html', context)
 

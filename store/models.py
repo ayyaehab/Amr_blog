@@ -31,6 +31,11 @@ class Category(models.Model):
         return Category.objects.all()
 
 
+def image_Path(instance, filename):
+    imagename, extension = filename.split(".")
+    return "static/imgs/product/%s/%s.%s" % (instance.name, instance.name, extension)
+
+
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=45)
@@ -41,10 +46,10 @@ class Product(models.Model):
     brand = models.CharField(max_length=20, null=True, blank=True)
     product_information = models.TextField(max_length=3000, null=True, blank=True)
     productCondition = models.CharField(max_length=45, null=True, blank=True)
-    thumbnail = models.ImageField(upload_to='static/imgs/product/%Y/%m/%d', null=True, blank=True)
-    thumbnail1 = models.ImageField(upload_to='static/imgs/product/%Y/%m/%d', null=True, blank=True)
-    thumbnail2 = models.ImageField(upload_to='static/imgs/product/%Y/%m/%d', null=True, blank=True)
-    thumbnail3 = models.ImageField(upload_to='static/imgs/product/%Y/%m/%d', null=True, blank=True)
+    thumbnail = models.ImageField(upload_to=image_Path, blank=True)
+    thumbnail1 = models.ImageField(upload_to=image_Path, null=True, blank=True)
+    thumbnail2 = models.ImageField(upload_to=image_Path, null=True, blank=True)
+    thumbnail3 = models.ImageField(upload_to=image_Path, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(allow_unicode=True, unique=True, null=True, blank=True)
 
@@ -60,6 +65,21 @@ class Product(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+    @property
+    def imageURL(self):
+        try:
+            thumbnail1 = self.thumbnail1.url
+            thumbnail2 = self.thumbnail2.url
+            thumbnail3 = self.thumbnail3.url
+
+        except:
+
+            thumbnail1 = ''
+            thumbnail2 = ''
+            thumbnail3 = ''
+
+        return thumbnail1, thumbnail2, thumbnail3
 
 
 # class ProductImg(models.Model):

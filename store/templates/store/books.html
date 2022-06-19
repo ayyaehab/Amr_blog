@@ -3,7 +3,7 @@
 {% block nav %}
 <li><a href="offers">عروض</a></li>
 <li><a href="accessories">اكسسوارات</a></li>
-<li><a href="remugs">مج</a></li>
+{%comment%}<!--<li><a href="remugs">مج</a></li>-->{% endcomment %}
 <li class="active"><a href="rebooks">كتب</a></li>
 <li><a href="reshirts">تيشيرتات</a></li>
 <li><a href="repcs">كمبيوتر مكتبي </a></li>
@@ -43,14 +43,17 @@
                             </div>
                             <div class="product-body">
                                 <!-- <p class="product-category">Category</p> -->
-                                <h3 class="product-name"><a href="{% url 'oneproduct' book.slug %}">{{ book.title }}</a></h3>
+                                <h3 class="product-name"><a href="{% url 'oneproduct' book.slug %}">{{ book.title }}</a>
+                                </h3>
                                 <h4 class="product-price">{{ book.price }}
                                     <del class="product-old-price">{{ book.oldPrice }}</del>
                                 </h4>
 
                             </div>
                             <div class="add-to-cart">
-                                <button class="add-to-cart-btn update-cart" data-product="{{book.id}}" data-action="add" ><i class="fa fa-shopping-cart"></i>اضف الى السله</button>
+                                <button class="add-to-cart-btn update-cart" data-product="{{book.id}}"
+                                        data-action="add"><i class="fa fa-shopping-cart"></i>اضف الى السله
+                                </button>
                             </div>
                         </div>
                     </div>
