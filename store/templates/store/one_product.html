@@ -7,8 +7,54 @@
     <div class="container">
         <!-- row -->
         <div class="row">
+            <!-- Product details -->
+            <div class="col-md-5" style="direction:rtl;">
+                <div class="product-details">
+                    
+                    <h2 class="product-name" style="display:inline;">{{ product.title }}</h2>
+                    <div>
+                      {% if product.productCondition %}
+                      <div class="product-rating">
+                         <span class="product-available">____{{ product.productCondition }}____</span>
+                      </div>
+                      {% endif %}
+                    </div>
+                    {% if product.brand %}
+                    <h5 class="">{{ product.brand }}</h5>
+                    {% endif %}
+                    <div>
+                        <h3 class="product-price">{{ product.price }}
+                             {% if product.oldPrice %}
+                            <del class="product-old-price">{{ product.oldPrice }}</del>
+                            {% endif %}
+                        </h3>
+                        
+                    </div>
+                    {% if product.description %}
+                    <p>{{ product.description }}</p>
+                    {% endif %}
+                    <div class="product-options">
+                            {% if product.product_information %}
+                            <label style="color:#D10024;">product_information</label>
+                            <p>{{ product.product_information }}</p>
+                            {% endif %}
+								{% comment %} <label>
+									Color
+									<select class="input-select">
+										<option value="0">We need to add color</option>
+									</select>
+								</label> {% endcomment %}
+							</div>
+                    <div class="add-to-cart">
+                        <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i class="fa fa-shopping-cart"></i> order the product</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Product details -->
+            
             <!-- Product main img -->
-            <div class="col-md-5 col-md-push-2">
+            <div class="col-md-5 col-md-push-2" style="right:0px;">
                 <div id="product-main-img">
                       {% if product.thumbnail %}
                       <div class="product-preview">
@@ -33,7 +79,6 @@
                 </div>
             </div>
             <!-- /Product main img -->
-
             <!-- Product thumb imgs -->
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
@@ -60,32 +105,8 @@
                 </div>
             </div>
             <!-- /Product thumb imgs -->
-            <!-- Product details -->
-            <div class="col-md-5">
-                <div class="product-details">
-                    <h2 class="product-name">{{ product.title }}</h2>
-                    <div>
-                        <h3 class="product-price">{{ product.price }}
-                            <del class="product-old-price">$990.00</del>
-                        </h3>
-                         <span class="product-available">{{ product.productCondition }}</span>
-                    </div>
-                    <p>{{ product.description }}</p>
-                    <div class="product-options">
-								<label>
-									Color
-									<select class="input-select">
-										<option value="0">We need to add color</option>
-									</select>
-								</label>
-							</div>
-                    <div class="add-to-cart">
-                        <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i class="fa fa-shopping-cart"></i> order the product</button>
-                    </div>
-
-                </div>
-            </div>
-            <!-- /Product details -->
+            
+            
 
         </div>
         <!-- /row -->
