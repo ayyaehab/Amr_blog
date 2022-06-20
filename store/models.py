@@ -2,7 +2,7 @@ from django.db import models
 from django.forms import forms
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
-
+from ckeditor.fields import RichTextField
 CATEGORIES = [
     ('book', 'book'),
     ('laptop', 'laptop'),
@@ -40,11 +40,11 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=45)
     title = models.CharField(max_length=45)
-    description = models.TextField(max_length=3000)
+    description = RichTextField(blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     oldPrice = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     brand = models.CharField(max_length=20, null=True, blank=True)
-    product_information = models.TextField(max_length=3000, null=True, blank=True)
+    product_information = RichTextField(blank=True, null=True)
     productCondition = models.CharField(max_length=45, null=True, blank=True)
     thumbnail = models.ImageField(upload_to=image_Path, blank=True)
     thumbnail1 = models.ImageField(upload_to=image_Path, null=True, blank=True)

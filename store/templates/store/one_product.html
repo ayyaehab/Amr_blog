@@ -10,72 +10,78 @@
             <!-- Product details -->
             <div class="col-md-5" style="direction:rtl;">
                 <div class="product-details">
-                    
+
                     <h2 class="product-name" style="display:inline;">{{ product.title }}</h2>
                     <div>
-                      {% if product.productCondition %}
-                      <div class="product-rating">
-                         <span class="product-available">____{{ product.productCondition }}____</span>
-                      </div>
-                      {% endif %}
+                        <br>
+                        <br>
+                        {% if product.productCondition %}
+                        <div class="product-rating">
+                            <span class="product-available">____{{ product.productCondition }}____</span>
+                        </div>
+                        {% endif %}
                     </div>
                     {% if product.brand %}
-                    <h5 class="">{{ product.brand }}</h5>
+                    <h5 class=""> الماركه : {{ product.brand }}</h5>
                     {% endif %}
                     <div>
-                        <h3 class="product-price">{{ product.price }}
-                             {% if product.oldPrice %}
-                            <del class="product-old-price">{{ product.oldPrice }}</del>
+                        <del class="product-old-price"> قبل الخصم : {{ product.oldPrice }}</del>
+                        <br>
+                        <h3 class="product-price"> السعر : {{ product.price }}
+
+                            &nbsp;&nbsp; {% if product.oldPrice %}
                             {% endif %}
                         </h3>
-                        
+
                     </div>
                     {% if product.description %}
-                    <p>{{ product.description }}</p>
+                    <p> {{ product.description |safe }}</p>
                     {% endif %}
                     <div class="product-options">
-                            {% if product.product_information %}
-                            <label style="color:#D10024;">product_information</label>
-                            <p>{{ product.product_information }}</p>
-                            {% endif %}
-								{% comment %} <label>
-									Color
-									<select class="input-select">
-										<option value="0">We need to add color</option>
-									</select>
-								</label> {% endcomment %}
-							</div>
+                        {% if product.product_information  %}
+                        <label style="color:#D10024;">تفاصيل عن المنتج :</label>
+                        <p>{{ product.product_information |safe}}</p>
+                        {% endif %}
+                        {% comment %} <label>
+                        Color
+                        <select class="input-select">
+                            <option value="0">We need to add color</option>
+                        </select>
+                    </label> {% endcomment %}
+                    </div>
                     <div class="add-to-cart">
-                        <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i class="fa fa-shopping-cart"></i> order the product</button>
+                        <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i
+                                class="fa fa-shopping-cart"></i> order the product
+                        </button>
                     </div>
 
                 </div>
             </div>
             <!-- /Product details -->
-            
+
             <!-- Product main img -->
             <div class="col-md-5 col-md-push-2" style="right:0px;">
                 <div id="product-main-img">
-                      {% if product.thumbnail %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail1 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail1.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail2 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail2.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail3 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail3.url }}>
-                      </div>
-                      {% endif %}  
+                    {% if product.thumbnail %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail1 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail1.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail2 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail2.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail3 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail3.url }}>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <!-- /Product main img -->
@@ -83,30 +89,29 @@
             <div class="col-md-2  col-md-pull-5">
                 <div id="product-imgs">
                     {% if product.thumbnail %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail1 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail1.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail2 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail2.url }}>
-                      </div>
-                      {% endif %}
-                      {% if product.thumbnail3 %}
-                      <div class="product-preview">
-                            <img src={{ product.thumbnail3.url }}>
-                      </div>
-                      {% endif %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail1 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail1.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail2 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail2.url }}>
+                    </div>
+                    {% endif %}
+                    {% if product.thumbnail3 %}
+                    <div class="product-preview">
+                        <img src={{ product.thumbnail3.url }}>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <!-- /Product thumb imgs -->
-            
-            
+
 
         </div>
         <!-- /row -->
