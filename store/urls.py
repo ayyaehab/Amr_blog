@@ -28,6 +28,7 @@ urlpatterns = [
      # path('accessore-<slug:slug>', views.onelaptop, name='accessore'),
 
      path('processorder', views.processOrder, name='processorder'),
+     path('productCondition', views.productCondition, name='productCondition'),
     # path('blank', views.blank , name='blank'),
     
     

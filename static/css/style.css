@@ -64,7 +64,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #2B2D42;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 30px;
 }
 
 a {
@@ -884,7 +884,7 @@ textarea.input {
 
 .product .product-img {
   position: relative;
-  height: 300px;
+  height: 280px;
 
 }
 
@@ -1490,7 +1490,7 @@ textarea.input {
 
 .product-details .product-name {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 40px;
 }
 
 .product-details .product-rating {
@@ -1525,7 +1525,7 @@ textarea.input {
 }
 
 .product-details .product-available {
-  font-size: 12px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 700;
   margin-left: 30px;
@@ -1539,7 +1539,7 @@ textarea.input {
 
 .product-details .product-options label {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 30px;
   text-transform: uppercase;
   margin-right: 15px;
   margin-bottom: 0px;

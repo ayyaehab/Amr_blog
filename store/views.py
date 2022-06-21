@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 import json
-from store.models import CheckOut, Product, Category
+from store.models import CheckOut, Product, Category, Condition
 from .utils import cookieCart, cartData, guestOrder
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -173,6 +173,14 @@ def laptops(request):
     }
 
     return render(request, 'store/laptops.html', context)
+
+
+def productCondition(request):
+    productCondition = Condition.objects.all()
+    context = {
+        'productCondition': productCondition,
+    }
+    return render(request, 'store/productcondition.html', context)
 
 
 # ----------------pc--------------
