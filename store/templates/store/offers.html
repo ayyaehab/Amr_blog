@@ -74,7 +74,7 @@
                     <ul class="store-pagination">
                         <!--								<li class="active">1</li>-->
                         {% for page in paginator.page_range %}
-                        {% if page == laptops.number %}
+                        {% if page == offers.number %}
                         <li class="active"><a href="?page ={{page}}">{{page}}</a></li>
                         {% else%}
                         <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>

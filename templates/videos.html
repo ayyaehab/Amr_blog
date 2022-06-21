@@ -35,13 +35,13 @@
                 <!-- /store products -->
 
                 <!-- store bottom filter -->
-                {%comment%}
+
                 <div class="store-filter clearfix">
                     <!--							<span class="store-qty">Showing 20-100 products</span>-->
                     <ul class="store-pagination">
                         <!--								<li class="active">1</li>-->
                         {% for page in paginator.page_range %}
-                        {% if page == laptops.number %}
+                        {% if page == videos.number %}
                         <li class="active"><a href="?page ={{page}}">{{page}}</a></li>
                         {% else%}
                         <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
@@ -54,7 +54,7 @@
                     <!--                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
 
                 </div>
-                {% endcomment%}
+
                 <!-- /store bottom filter -->
             </div>
             <!-- /STORE -->

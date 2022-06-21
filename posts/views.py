@@ -7,7 +7,7 @@ from posts.models import Post, videosYoutube
 from django.core.paginator import Paginator
 
 from posts.serializer import PostSerializer
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     queryset = Post.objects.all()
@@ -41,8 +41,19 @@ def about(request):
 
 def videos(request):
     videos = videosYoutube.objects.all()
+    page = request.GET.get('page')
+    paginator = Paginator(videos, 12)
+    try:
+        videos = paginator.page(page)
+    except PageNotAnInteger:
+        videos = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        videos = paginator.page(page)
+
     context = {
-        'videos': videos
+        'videos': videos,
+        'paginator': paginator
     }
     return render(request, 'videos.html', context)
 
