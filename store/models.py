@@ -3,6 +3,7 @@ from django.forms import forms
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+
 CATEGORIES = [
     ('book', 'book'),
     ('laptop', 'laptop'),
@@ -12,6 +13,13 @@ CATEGORIES = [
     ('laptop', 'laptop'),
     ('accessories', 'accessories'),
     ('offers', 'offers'),
+]
+
+CONDITION = [
+    ('جديد', 'جديد'),
+    ('مستعمل بحالة الجديد', 'مستعمل بحالة الجديد'),
+    ('مستعمل', 'مستعمل'),
+
 ]
 
 
@@ -45,7 +53,7 @@ class Product(models.Model):
     oldPrice = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     brand = models.CharField(max_length=20, null=True, blank=True)
     product_information = RichTextField(blank=True, null=True)
-    productCondition = models.CharField(max_length=45, null=True, blank=True)
+    productCondition = models.CharField(max_length=50, choices=CONDITION, null=True, blank=True)
     thumbnail = models.ImageField(upload_to=image_Path, blank=True)
     thumbnail1 = models.ImageField(upload_to=image_Path, null=True, blank=True)
     thumbnail2 = models.ImageField(upload_to=image_Path, null=True, blank=True)
@@ -80,24 +88,6 @@ class Product(models.Model):
             thumbnail3 = ''
 
         return thumbnail1, thumbnail2, thumbnail3
-
-
-# class ProductImg(models.Model):
-#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-#     img = models.ImageField(upload_to='static/imgs/product', default=True)
-#
-#     @property
-#     def imageURL(self):
-#         try:
-#             product = self.img.url
-#
-#         except:
-#             product = ''
-#
-#         return product
-#
-#     def __str__(self):
-#         return str(self.product)
 
 
 class CheckOut(models.Model):
@@ -143,3 +133,14 @@ def get_cart_items(self):
     orderitems = self.orderitem_set.all()
     total = sum([item.quantity for item in orderitems])
     return total
+
+
+# _________________productCondition______________.
+
+
+class Condition(models.Model):
+    title = models.CharField(max_length=45)
+    description = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return str(self.title)

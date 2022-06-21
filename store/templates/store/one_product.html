@@ -14,16 +14,18 @@
                     <h2 class="product-name" style="display:inline;">{{ product.title }}</h2>
                     <div>
                         <br>
-                        <br>
+
                         {% if product.productCondition %}
                         <div class="product-rating">
-                            <span class="product-available">____{{ product.productCondition }}____</span>
+                            <span class="product-available">{{ product.productCondition }}</span>
                         </div>
                         {% endif %}
                     </div>
+                    <br>
                     {% if product.brand %}
                     <h5 class=""> الماركه : {{ product.brand }}</h5>
                     {% endif %}
+
                     <div>
                         <del class="product-old-price"> قبل الخصم : {{ product.oldPrice }}</del>
                         <br>
@@ -38,7 +40,7 @@
                     <p> {{ product.description |safe }}</p>
                     {% endif %}
                     <div class="product-options">
-                        {% if product.product_information  %}
+                        {% if product.product_information %}
                         <label style="color:#D10024;">تفاصيل عن المنتج :</label>
                         <p>{{ product.product_information |safe}}</p>
                         {% endif %}
@@ -51,7 +53,7 @@
                     </div>
                     <div class="add-to-cart">
                         <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i
-                                class="fa fa-shopping-cart"></i> order the product
+                                class="fa fa-shopping-cart"></i> اضف الى السلة
                         </button>
                     </div>
 
@@ -115,6 +117,14 @@
 
         </div>
         <!-- /row -->
+    </div>
+    <div class="col-md-5" style="direction:rtl;">
+         <label style="color:#D10024;">شروط الشراء وارتجاع المنتجات من الموقع</label>
+        <div>
+            <br>
+            <h6 class="product-price"> fasfasf</h6>
+
+        </div>
     </div>
     <!-- /container -->
 </div>

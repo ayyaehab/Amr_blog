@@ -1,0 +1,20 @@
+{% extends "store/basestore.html" %}
+{% load static %}
+{% block content %}
+
+{% for con in productCondition %}
+<div class="container mt-5" style="text-align: center;margin:auto">
+    <div class="col-md-11" >
+        <label style="color:#D10024;"></label>
+        <div>
+            <br>
+            <h5 class="product-price"> {{ con.description|safe }}</h5>
+
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+<!-- /SECTION -->
+
+{% endblock content %}
