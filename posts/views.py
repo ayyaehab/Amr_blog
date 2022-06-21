@@ -3,10 +3,11 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from posts.models import Post
+from posts.models import Post, videosYoutube
 from django.core.paginator import Paginator
 
 from posts.serializer import PostSerializer
+
 
 def index(request):
     queryset = Post.objects.all()
@@ -34,24 +35,20 @@ def contact(request):
     return render(request, 'contact.html', {})
 
 
-def indexx(request):
-    return render(request, 'indexx.html', {})
-
-
 def about(request):
     return render(request, 'about.html', {})
 
 
-
 def videos(request):
-
-    return render(request, 'videos.html', {})
+    videos = videosYoutube.objects.all()
+    context = {
+        'videos': videos
+    }
+    return render(request, 'videos.html', context)
 
 
 @api_view(['GET'])
 def postlistapi(request):
-      all_posts = Post.objects.all()
-      data = PostSerializer(all_posts, many=True).data
-      return Response({'data': data})
-
-
+    all_posts = Post.objects.all()
+    data = PostSerializer(all_posts, many=True).data
+    return Response({'data': data})

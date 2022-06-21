@@ -118,8 +118,8 @@
         <!-- Page content-->
 
         {% block content %}{% endblock content %}
-<!-- FOOTER -->
-		<footer id="footer">
+
+<footer id="footer">
 			<!-- top footer -->
 			<div class="section">
 				<!-- container -->
@@ -140,11 +140,11 @@
 							<div class="footer">
 								<h3 class="footer-title">الاقسام</h3>
 								<ul class="footer-links">
-									<li><a href="#">عروض</a></li>
-									<li><a href="#">لاب توب</a></li>
-									<li><a href="#">اكسسوارات</a></li>
-									<li><a href="#">كمبيوتر مكتبي</a></li>
-									<li><a href="#">تيشيرتات</a></li>
+									<li><a href="offers">عروض</a></li>
+									<li><a href="relaptops">لاب توب</a></li>
+									<li><a href="rebooks">كتب</a></li>
+									<li><a href="accessories">اكسسوارات</a></li>
+									<li><a href="repcs">كمبيوتر مكتبي</a></li>
 								</ul>
 							</div>
 						</div>
@@ -157,8 +157,8 @@
 								<ul class="footer-links">
 									<li><a href="#">من نحن ؟</a></li>
 									<li><a href="#">التواصل معانا</a></li>
-									<li><a href="#">الشروط والاحكام</a></li>
-									<li><a href="#">الطلبات المرتجعه</a></li>
+									<li><a href="productCondition">الشروط والاحكام</a></li>
+									<li><a href="productCondition">الطلبات المرتجعه</a></li>
 
 								</ul>
 							</div>
@@ -168,9 +168,11 @@
 							<div class="footer">
 								<h3 class="footer-title">الخدمات</h3>
 								<ul class="footer-links">
-									<li><a href="#">عربة التسوق</a></li>
+									<li><a href="cart">عربة التسوق</a></li>
+									{% comment%}
 									<li><a href="#">تتبع طلبك</a></li>
 									<li><a href="#">المساعده</a></li>
+									{% endcomment%}
 								</ul>
 							</div>
 						</div>
@@ -180,6 +182,7 @@
 				<!-- /container -->
 			</div>
 			<!-- /top footer -->
+
 
 			<!-- bottom footer -->
 			<div id="bottom-footer" class="section section_copyright">
@@ -199,7 +202,7 @@
 				<!-- /container -->
 			</div>
 			<!-- /bottom footer -->
-
+		</footer>
         
         <!-- jQuery Plugins -->
 		<script src="{% static 'js/jquery.min.js' %}"></script>

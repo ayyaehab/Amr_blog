@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
+from embed_video.fields import EmbedVideoField
 
 
 class Post(models.Model):
@@ -20,3 +21,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class videosYoutube(models.Model):
+    video = EmbedVideoField()

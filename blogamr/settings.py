@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'rest_framework',
     'django_filters',
+    'embed_video',
 
 ]
 
@@ -84,7 +85,7 @@ DATABASES = {
             'read_default_file': '/path/to/my.cnf',
         },
         'USER': 'root',
-        'PASSWORD': 'root_aya_2021',
+        'PASSWORD': '',
         'HOST': '',  # Or an IP Address that your DB is hosted on root_aya_2021
         'PORT': '3306',
     }

@@ -1,15 +1,67 @@
 {% extends "base.html" %}
 {% block nav %}
 
-
+{% load embed_video_tags %}
 <li><a href="store">المتجر</a></li>
 <li><a href="about">فريق العمل</a></li>
 <li class="active"><a href="videos">الفيديوهات</a></li>
 <li><a href="/">الصفحة الرئيسية</a></li>
 {% endblock nav %}
 {% block content %}
-<h2>Content for videos</h2>
-<p>Lorem ipsum dolor sit amet. Ad sint aperiam et voluptatem pariatur et alias autem ut voluptatibus officiis non quia
-    consequatur. Sed autem dolorem qui sequi dolorem est repellendus natus vel commodi laudantium sit ipsa modi in
-    similique ipsum ut unde beatae.</p>
+
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- ASIDE -->
+            <div id="aside" class="col-md-1">
+
+            </div>
+            <!-- /ASIDE -->
+
+            <!-- STORE -->
+            <div id="posts" class="col-md-10">
+                <!-- store products -->
+                <div class="row">
+
+                    <!-- product -->
+
+                    {% for i in videos %}
+                    {% video i.video 'small' %}
+                    {% endfor %}
+                </div>
+                <!-- /store products -->
+
+                <!-- store bottom filter -->
+                {%comment%}
+                <div class="store-filter clearfix">
+                    <!--							<span class="store-qty">Showing 20-100 products</span>-->
+                    <ul class="store-pagination">
+                        <!--								<li class="active">1</li>-->
+                        {% for page in paginator.page_range %}
+                        {% if page == laptops.number %}
+                        <li class="active"><a href="?page ={{page}}">{{page}}</a></li>
+                        {% else%}
+                        <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <!-- /store bottom filter -->
+                    <!--                        <li><a href="#">{{page}}</a></li>-->
+                    <!--                        <li><a href="#">{{page}}</a></li>-->
+                    <!--                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
+
+                </div>
+                {% endcomment%}
+                <!-- /store bottom filter -->
+            </div>
+            <!-- /STORE -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+
 {% endblock content %}
