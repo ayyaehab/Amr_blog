@@ -42,7 +42,7 @@ def about(request):
 def videos(request):
     videos = videosYoutube.objects.all()
     page = request.GET.get('page')
-    paginator = Paginator(videos, 12)
+    paginator = Paginator(videos, 1)
     try:
         videos = paginator.page(page)
     except PageNotAnInteger:

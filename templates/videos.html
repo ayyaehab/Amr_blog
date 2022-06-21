@@ -15,13 +15,6 @@
     <div class="container">
         <!-- row -->
         <div class="row">
-            <!-- ASIDE -->
-            <div id="aside" class="col-md-1">
-
-            </div>
-            <!-- /ASIDE -->
-
-            <!-- STORE -->
             <div id="posts" class="col-md-10">
                 <!-- store products -->
                 <div class="row">
@@ -32,12 +25,8 @@
                     {% video i.video 'small' %}
                     {% endfor %}
                 </div>
-                <!-- /store products -->
-
-                <!-- store bottom filter -->
 
                 <div class="store-filter clearfix">
-                    <!--							<span class="store-qty">Showing 20-100 products</span>-->
                     <ul class="store-pagination">
                         <!--								<li class="active">1</li>-->
                         {% for page in paginator.page_range %}
@@ -47,11 +36,8 @@
                         <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
                         {% endif %}
                         {% endfor %}
+
                     </ul>
-                    <!-- /store bottom filter -->
-                    <!--                        <li><a href="#">{{page}}</a></li>-->
-                    <!--                        <li><a href="#">{{page}}</a></li>-->
-                    <!--                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
 
                 </div>
 
