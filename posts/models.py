@@ -25,3 +25,6 @@ class Post(models.Model):
 
 class videosYoutube(models.Model):
     video = EmbedVideoField()
+
+    class Meta:
+        ordering = ['-id']

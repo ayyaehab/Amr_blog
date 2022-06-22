@@ -19,7 +19,7 @@ def store(request):
     data = cartData(request)
     cartItems = data['cartItems']
     page = request.GET.get('page')
-    paginator = Paginator(products, 1)
+    paginator = Paginator(products, 12)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:

@@ -42,7 +42,7 @@ def about(request):
 def videos(request):
     videos = videosYoutube.objects.all()
     page = request.GET.get('page')
-    paginator = Paginator(videos, 1)
+    paginator = Paginator(videos, 15)
     try:
         videos = paginator.page(page)
     except PageNotAnInteger:
@@ -58,8 +58,8 @@ def videos(request):
     return render(request, 'videos.html', context)
 
 
-@api_view(['GET'])
-def postlistapi(request):
-    all_posts = Post.objects.all()
-    data = PostSerializer(all_posts, many=True).data
-    return Response({'data': data})
+# @api_view(['GET'])
+# def postlistapi(request):
+#     all_posts = Post.objects.all()
+#     data = PostSerializer(all_posts, many=True).data
+#     return Response({'data': data})

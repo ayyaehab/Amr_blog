@@ -11,7 +11,7 @@ $(document).on('change','#cities',function(){
         for(var i = 0; i < data.length; i++) {
             if(data[i].city==city_id){
                 //console.log(data[i].lat)
-                var myNumbers=parseFloat(data[i].lat).toFixed(2);
+                var myNumbers=parseFloat(data[i].costShaping).toFixed(2);
                 $('#myid').text(myNumbers);
                 var all = document.getElementById("helper").getAttribute("data-name");
                 $('#totalpay').text(+all + +myNumbers);
