@@ -18,8 +18,7 @@ CATEGORIES = [
 CONDITION = [
     ('جديد', 'جديد'),
     ('مستعمل بحالة الجديد', 'مستعمل بحالة الجديد'),
-    ('مستعمل', 'مستعمل'),
-
+    ('مستعمل بحالة الجيد', 'مستعمل بحالة الجيد'),
 ]
 
 
@@ -27,16 +26,12 @@ class Category(models.Model):
     name = models.CharField(max_length=50, choices=CATEGORIES, default='')
     slug = models.SlugField(max_length=80, unique=True, null=True, blank=True)
 
-    def __str__(self):
-        return self.name
-
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
-    @staticmethod
-    def get_all_categories():
-        return Category.objects.all()
+    def __str__(self):
+        return self.name
 
 
 def image_Path(instance, filename):
@@ -44,8 +39,29 @@ def image_Path(instance, filename):
     return "static/imgs/product/%s/%s.%s" % (instance.name, instance.name, extension)
 
 
+Companies = [
+    ('Shraby Company', 'Shraby Company '),
+    ('New Vision', 'New Vision'),
+    ('BookStore', 'BookStore'),
+
+]
+
+
+class Company(models.Model):
+    name = models.CharField(max_length=50, choices=Companies, default='')
+    slug = models.SlugField(max_length=80, unique=True, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Company, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, default=1, blank=True, null=True)
     name = models.CharField(max_length=45)
     title = models.CharField(max_length=45)
     description = RichTextField(blank=True, null=True)

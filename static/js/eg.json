@@ -1,950 +1,2774 @@
 [
   {
-    "city": "القاهره",
-    "lat": "30.0561",
-    "lng": "31.2394",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Qāhirah",
-    "capital": "primary",
-    "population": "19372000",
-    "population_proper": "9500000"
-  },
-  {
-    "city": "الجيزه",
-    "lat": "29.9870",
-    "lng": "31.2118",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Jīzah",
-    "capital": "admin",
-    "population": "5598402",
-    "population_proper": "5598402"
-  },
-  {
-    "city": "الإسكندرية",
-    "lat": "31.2000",
-    "lng": "29.9167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Iskandarīyah",
-    "capital": "admin",
-    "population": "4870000",
-    "population_proper": "4870000"
-  },
-  {
-    "city": "مدينة السادس من اكتوبر",
-    "lat": "29.9361",
-    "lng": "30.9269",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Jīzah",
-    "capital": "",
-    "population": "1500000",
-    "population_proper": "1500000"
-  },
-  {
-    "city": "شبرا الخيمه",
-    "lat": "30.1286",
-    "lng": "31.2422",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Qalyūbīyah",
-    "capital": "",
-    "population": "1025569",
-    "population_proper": "1025569"
-  },
-  {
-    "city": "المنصورة",
-    "lat": "31.0500",
-    "lng": "31.3833",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ad Daqahlīyah",
-    "capital": "admin",
-    "population": "960423",
-    "population_proper": "960423"
-  },
-  {
-    "city": "حلوان",
-    "lat": "29.8419",
-    "lng": "31.3342",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Qāhirah",
-    "capital": "",
-    "population": "619293",
-    "population_proper": "619293"
-  },
-  {
-    "city": "المحلة الكبرى",
-    "lat": "30.9667",
-    "lng": "31.1667",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Gharbīyah",
-    "capital": "",
-    "population": "543271",
-    "population_proper": "543271"
-  },
-  {
-    "city": "بورتوا سعيد",
-    "lat": "31.2500",
-    "lng": "32.2833",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Būr Sa‘īd",
-    "capital": "admin",
-    "population": "524433",
-    "population_proper": "524433"
-  },
-  {
-    "city": "السويس",
-    "lat": "29.9667",
-    "lng": "32.5333",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "As Suways",
-    "capital": "admin",
-    "population": "485342",
-    "population_proper": "485342"
-  },
-  {
-    "city": "طنطا",
-    "lat": "30.7833",
-    "lng": "31.0000",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Gharbīyah",
-    "capital": "admin",
-    "population": "429503",
-    "population_proper": "429503"
-  },
-  {
-    "city": "اسيوط",
-    "lat": "27.1869",
-    "lng": "31.1714",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Asyūţ",
-    "capital": "admin",
-    "population": "389307",
-    "population_proper": "389307"
-  },
-  {
-    "city": "الفيوم",
-    "lat": "29.3000",
-    "lng": "30.8333",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Fayyūm",
-    "capital": "admin",
-    "population": "315940",
-    "population_proper": "315940"
-  },
-  {
-    "city": "الزقازيق",
-    "lat": "30.5667",
-    "lng": "31.5000",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "admin",
-    "population": "302840",
-    "population_proper": "302840"
-  },
-  {
-    "city": "الاسماعلية",
-    "lat": "30.5833",
-    "lng": "32.2667",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Ismā‘īlīyah",
-    "capital": "admin",
-    "population": "293184",
-    "population_proper": "293184"
-  },
-  {
-    "city": "اسوان",
-    "lat": "24.0889",
-    "lng": "32.8997",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Aswān",
-    "capital": "admin",
-    "population": "267913",
-    "population_proper": "267913"
-  },
-  {
-    "city": "كفر الدوار",
-    "lat": "31.1417",
-    "lng": "30.1272",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Buḩayrah",
-    "capital": "",
-    "population": "262748",
-    "population_proper": "262748"
-  },
-  {
-    "city": "دمنهور",
-    "lat": "31.0500",
-    "lng": "30.4667",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Buḩayrah",
-    "capital": "admin",
-    "population": "244043",
-    "population_proper": "244043"
-  },
-  {
-    "city": "المنيا",
-    "lat": "28.0833",
-    "lng": "30.7500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "admin",
-    "population": "236043",
-    "population_proper": "236043"
-  },
-  {
-    "city": "دمياط",
-    "lat": "31.4167",
-    "lng": "31.8214",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Dumyāţ",
-    "capital": "admin",
-    "population": "206664",
-    "population_proper": "206664"
-  },
-  {
-    "city": "الاقصر",
-    "lat": "25.6969",
-    "lng": "32.6422",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Uqşur",
-    "capital": "admin",
-    "population": "202232",
-    "population_proper": "202232"
-  },
-  {
-    "city": "قنا",
-    "lat": "26.1667",
-    "lng": "32.7167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Qinā",
-    "capital": "admin",
-    "population": "201191",
-    "population_proper": "201191"
-  },
-  {
-    "city": "سوهاج",
-    "lat": "26.5606",
-    "lng": "31.6917",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Sūhāj",
-    "capital": "admin",
-    "population": "193931",
-    "population_proper": "193931"
-  },
-  {
-    "city": "بني سويف",
-    "lat": "29.0667",
-    "lng": "31.0833",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Banī Suwayf",
-    "capital": "admin",
-    "population": "193048",
-    "population_proper": "193048"
-  },
-  {
-    "city": "شبين الكوم",
-    "lat": "30.5920",
-    "lng": "30.9000",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minūfīyah",
-    "capital": "admin",
-    "population": "182900",
-    "population_proper": "182900"
-  },
-  {
-    "city": "العريش",
-    "lat": "31.1249",
-    "lng": "33.8006",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Shamāl Sīnā’",
-    "capital": "admin",
-    "population": "178651",
-    "population_proper": "128855"
-  },
-  {
-    "city": "الغردقة",
-    "lat": "27.2578",
-    "lng": "33.8117",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Baḩr al Aḩmar",
-    "capital": "admin",
-    "population": "160901",
-    "population_proper": "160901"
-  },
-  {
-    "city": "بنها",
-    "lat": "30.4628",
-    "lng": "31.1797",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Qalyūbīyah",
-    "capital": "admin",
-    "population": "157701",
-    "population_proper": "157701"
-  },
-  {
-    "city": "كفر الشيخ",
-    "lat": "31.1000",
-    "lng": "30.9500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Kafr ash Shaykh",
-    "capital": "admin",
-    "population": "147393",
-    "population_proper": "147393"
-  },
-  {
-    "city": "دسوق",
-    "lat": "31.1308",
-    "lng": "30.6479",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Kafr ash Shaykh",
-    "capital": "",
-    "population": "143404",
-    "population_proper": "143404"
-  },
-  {
-    "city": "بلبيس",
-    "lat": "30.4167",
-    "lng": "31.5667",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "",
-    "population": "141285",
-    "population_proper": "141285"
-  },
-  {
-    "city": "ملوي",
-    "lat": "27.7306",
-    "lng": "30.8425",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "139929",
-    "population_proper": "139929"
-  },
-  {
-    "city": "ادفوا",
-    "lat": "24.9781",
-    "lng": "32.8789",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Aswān",
-    "capital": "",
-    "population": "133772",
-    "population_proper": "133772"
-  },
-  {
-    "city": "ميت غمر",
-    "lat": "30.7192",
-    "lng": "31.2628",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ad Daqahlīyah",
-    "capital": "",
-    "population": "121039",
-    "population_proper": "121039"
-  },
-  {
-    "city": "المنوفيه",
-    "lat": "30.4667",
-    "lng": "30.9333",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minūfīyah",
-    "capital": "",
-    "population": "117240",
-    "population_proper": "117240"
-  },
-  {
-    "city": "جرجا",
-    "lat": "26.3419",
-    "lng": "31.8894",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Sūhāj",
-    "capital": "",
-    "population": "102597",
-    "population_proper": "102597"
-  },
-  {
-    "city": "اخميم",
-    "lat": "26.5642",
-    "lng": "31.7461",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Sūhāj",
-    "capital": "",
-    "population": "101509",
-    "population_proper": "101509"
-  },
-  {
-    "city": "زفتى",
-    "lat": "30.7119",
-    "lng": "31.2394",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Gharbīyah",
-    "capital": "",
-    "population": "93740",
-    "population_proper": "93740"
-  },
-  {
-    "city": "سملوط",
-    "lat": "28.3000",
-    "lng": "30.7167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "91475",
-    "population_proper": "91475"
-  },
-  {
-    "city": "منفلوط",
-    "lat": "27.3128",
-    "lng": "30.9703",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Asyūţ",
-    "capital": "",
-    "population": "82585",
-    "population_proper": "82585"
-  },
-  {
-    "city": "بني مزار",
-    "lat": "28.5000",
-    "lng": "30.8000",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "79553",
-    "population_proper": "79553"
-  },
-  {
-    "city": "أرمنت",
-    "lat": "25.6167",
-    "lng": "32.5333",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Qinā",
-    "capital": "",
-    "population": "76457",
-    "population_proper": "76457"
-  },
-  {
-    "city": "مركز مغاغة",
-    "lat": "28.6483",
-    "lng": "30.8422",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "75657",
-    "population_proper": "75657"
-  },
-  {
-    "city": "كوم أمبو",
-    "lat": "24.4667",
-    "lng": "32.9500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Aswān",
-    "capital": "",
-    "population": "71596",
-    "population_proper": "71596"
-  },
-  {
-    "city": "بور فؤاد",
-    "lat": "31.2314",
-    "lng": "32.3253",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Būr Sa‘īd",
-    "capital": "",
-    "population": "70417",
-    "population_proper": "70417"
-  },
-  {
-    "city": "القوصية",
-    "lat": "27.4403",
-    "lng": "30.8183",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Asyūţ",
-    "capital": "",
-    "population": "69388",
-    "population_proper": "69388"
-  },
-  {
-    "city": "رشيد",
-    "lat": "31.4014",
-    "lng": "30.4194",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Buḩayrah",
-    "capital": "",
-    "population": "68947",
-    "population_proper": "68947"
-  },
-  {
-    "city": "إسنا",
-    "lat": "25.2933",
-    "lng": "32.5564",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Qinā",
-    "capital": "",
-    "population": "68656",
-    "population_proper": "68656"
-  },
-  {
-    "city": "مرسى مطروح",
-    "lat": "31.3333",
-    "lng": "27.2333",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Maţrūḩ",
-    "capital": "",
-    "population": "68339",
-    "population_proper": "68339"
-  },
-  {
-    "city": "أبنوب",
-    "lat": "27.2667",
-    "lng": "31.1500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Asyūţ",
-    "capital": "",
-    "population": "67526",
-    "population_proper": "67526"
-  },
-  {
-    "city": "ههيا",
-    "lat": "30.6687",
-    "lng": "31.5904",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "",
-    "population": "66702",
-    "population_proper": "66702"
-  },
-  {
-    "city": "سمنود",
-    "lat": "30.9622",
-    "lng": "31.2425",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Gharbīyah",
-    "capital": "",
-    "population": "57177",
-    "population_proper": "57177"
-  },
-  {
-    "city": "دندرة",
-    "lat": "26.1422",
-    "lng": "32.6697",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Qinā",
-    "capital": "",
-    "population": "53109",
-    "population_proper": "53109"
-  },
-  {
-    "city": "الخرجة",
-    "lat": "25.4400",
-    "lng": "30.5500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Wādī al Jadīd",
-    "capital": "admin",
-    "population": "49991",
-    "population_proper": "49991"
-  },
-  {
-    "city": "البلينا",
-    "lat": "26.2329",
-    "lng": "31.9993",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Sūhāj",
-    "capital": "",
-    "population": "46997",
-    "population_proper": "46997"
-  },
-  {
-    "city": "Maţāy",
-    "lat": "28.4167",
-    "lng": "30.7833",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "46903",
-    "population_proper": "46903"
-  },
-  {
-    "city": "نجع حمادي",
-    "lat": "26.0500",
-    "lng": "32.2500",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Qinā",
-    "capital": "",
-    "population": "45038",
-    "population_proper": "45038"
-  },
-  {
-    "city": "صان الحجر",
-    "lat": "30.9769",
-    "lng": "31.8800",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "",
-    "population": "43157",
-    "population_proper": "43157"
-  },
-  {
-    "city": "دير مواس",
-    "lat": "27.6414",
-    "lng": "30.8494",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "40640",
-    "population_proper": "40640"
-  },
-  {
-    "city": "إهناسيا المدينة",
-    "lat": "29.0856",
-    "lng": "30.9344",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Banī Suwayf",
-    "capital": "",
-    "population": "40001",
-    "population_proper": "40001"
-  },
-  {
-    "city": "دراو",
-    "lat": "24.4003",
-    "lng": "32.9306",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Aswān",
-    "capital": "",
-    "population": "38400",
-    "population_proper": "38400"
-  },
-  {
-    "city": "أبو قير",
-    "lat": "31.3167",
-    "lng": "30.0667",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Iskandarīyah",
-    "capital": "",
-    "population": "37997",
-    "population_proper": "37997"
-  },
-  {
-    "city": "فارسكور",
-    "lat": "31.3297",
-    "lng": "31.7147",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Dumyāţ",
-    "capital": "",
-    "population": "36850",
-    "population_proper": "36850"
-  },
-  {
-    "city": "رأس غارب\n",
-    "lat": "28.3597",
-    "lng": "33.0775",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Baḩr al Aḩmar",
-    "capital": "",
-    "population": "32318",
-    "population_proper": "32318"
-  },
-  {
-    "city": "الحسنيه",
-    "lat": "30.8612",
-    "lng": "31.9190",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "",
-    "population": "30825",
-    "population_proper": "30825"
-  },
-  {
-    "city": "سفاجا",
-    "lat": "26.7517",
-    "lng": "33.9344",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Baḩr al Aḩmar",
-    "capital": "",
-    "population": "28261",
-    "population_proper": "28261"
-  },
-  {
-    "city": "قمن العروس",
-    "lat": "29.3005",
-    "lng": "31.1683",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Banī Suwayf",
-    "capital": "",
-    "population": "28246",
-    "population_proper": "28246"
-  },
-  {
-    "city": "مدينة قها",
-    "lat": "30.2833",
-    "lng": "31.2000",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Qalyūbīyah",
-    "capital": "",
-    "population": "26694",
-    "population_proper": "26694"
-  },
-  {
-    "city": "الكرنك",
-    "lat": "25.7184",
-    "lng": "32.6581",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Uqşur",
-    "capital": "",
-    "population": "26488",
-    "population_proper": "26488"
-  },
-  {
-    "city": "هرية رزنة",
-    "lat": "30.6028",
-    "lng": "31.5372",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Ash Sharqīyah",
-    "capital": "",
-    "population": "24359",
-    "population_proper": "24359"
-  },
-  {
-    "city": "القصير",
-    "lat": "26.1091",
-    "lng": "34.2760",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Baḩr al Aḩmar",
-    "capital": "",
-    "population": "24344",
-    "population_proper": "24344"
-  },
-  {
-    "city": "كفر شكر",
-    "lat": "30.5470",
-    "lng": "31.2673",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minūfīyah",
-    "capital": "",
-    "population": "23390",
-    "population_proper": "23390"
-  },
-  {
-    "city": "سيوة",
-    "lat": "29.2000",
-    "lng": "25.5167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Maţrūḩ",
-    "capital": "",
-    "population": "23080",
-    "population_proper": "23080"
-  },
-  {
-    "city": "كفر سعد",
-    "lat": "31.3557",
-    "lng": "31.6848",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Dumyāţ",
-    "capital": "",
-    "population": "22500",
-    "population_proper": "22500"
-  },
-  {
-    "city": "شارونة",
-    "lat": "28.5940",
-    "lng": "30.8516",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Al Minyā",
-    "capital": "",
-    "population": "22221",
-    "population_proper": "22221"
-  },
-  {
-    "city": "الطور",
-    "lat": "28.2333",
-    "lng": "33.6167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Janūb Sīnā’",
-    "capital": "admin",
-    "population": "12733",
-    "population_proper": "12733"
-  },
-  {
-    "city": "رفح",
-    "lat": "31.2820",
-    "lng": "34.2387",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Shamāl Sīnā’",
-    "capital": "minor",
-    "population": "",
-    "population_proper": ""
-  },
-  {
-    "city": "قسم الشيخ زويد",
-    "lat": "31.2119",
-    "lng": "34.1106",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Shamāl Sīnā’",
-    "capital": "minor",
-    "population": "",
-    "population_proper": ""
-  },
-  {
-    "city": "بير العبد",
-    "lat": "31.0000",
-    "lng": "33.0167",
-    "costShaping": "99.6666",
-    "country": "Egypt",
-    "iso2": "EG",
-    "admin_name": "Shamāl Sīnā’",
-    "capital": "minor",
-    "population": "",
-    "population_proper": ""
+    "id": "1",
+    "governorate_id": "1",
+    "city_name_ar": "15 مايو",
+    "costShaping": "99.6666",
+    "city_name_en": "15 May"
+  },
+  {
+    "id": "2",
+    "governorate_id": "1",
+    "city_name_ar": "الازبكية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Azbakeyah"
+  },
+  {
+    "id": "3",
+    "governorate_id": "1",
+    "city_name_ar": "البساتين",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Basatin"
+  },
+  {
+    "id": "4",
+    "governorate_id": "1",
+    "city_name_ar": "التبين",
+    "costShaping": "99.6666",
+    "city_name_en": "Tebin"
+  },
+  {
+    "id": "5",
+    "governorate_id": "1",
+    "city_name_ar": "الخليفة",
+    "costShaping": "99.6666",
+    "city_name_en": "El-Khalifa"
+  },
+  {
+    "id": "6",
+    "governorate_id": "1",
+    "city_name_ar": "الدراسة",
+    "costShaping": "99.6666",
+    "city_name_en": "El darrasa"
+  },
+  {
+    "id": "7",
+    "governorate_id": "1",
+    "city_name_ar": "الدرب الاحمر",
+    "costShaping": "99.6666",
+    "city_name_en": "Aldarb Alahmar"
+  },
+  {
+    "id": "8",
+    "governorate_id": "1",
+    "city_name_ar": "الزاوية الحمراء",
+    "costShaping": "99.6666",
+    "city_name_en": "Zawya al-Hamra"
+  },
+  {
+    "id": "9",
+    "governorate_id": "1",
+    "city_name_ar": "الزيتون",
+    "costShaping": "99.6666",
+    "city_name_en": "El-Zaytoun"
+  },
+  {
+    "id": "10",
+    "governorate_id": "1",
+    "city_name_ar": "الساحل",
+    "costShaping": "99.6666",
+    "city_name_en": "Sahel"
+  },
+  {
+    "id": "11",
+    "governorate_id": "1",
+    "city_name_ar": "السلام",
+    "costShaping": "99.6666",
+    "city_name_en": "El Salam"
+  },
+  {
+    "id": "12",
+    "governorate_id": "1",
+    "city_name_ar": "السيدة زينب",
+    "costShaping": "99.6666",
+    "city_name_en": "Sayeda Zeinab"
+  },
+  {
+    "id": "13",
+    "governorate_id": "1",
+    "city_name_ar": "الشرابية",
+    "costShaping": "99.6666",
+    "city_name_en": "El Sharabeya"
+  },
+  {
+    "id": "14",
+    "governorate_id": "1",
+    "city_name_ar": "مدينة الشروق",
+    "costShaping": "99.6666",
+    "city_name_en": "Shorouk"
+  },
+  {
+    "id": "15",
+    "governorate_id": "1",
+    "city_name_ar": "الظاهر",
+    "costShaping": "99.6666",
+    "city_name_en": "El Daher"
+  },
+  {
+    "id": "16",
+    "governorate_id": "1",
+    "city_name_ar": "العتبة",
+    "costShaping": "99.6666",
+    "city_name_en": "Ataba"
+  },
+  {
+    "id": "17",
+    "governorate_id": "1",
+    "city_name_ar": "القاهرة الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Cairo"
+  },
+  {
+    "id": "18",
+    "governorate_id": "1",
+    "city_name_ar": "المرج",
+    "costShaping": "99.6666",
+    "city_name_en": "El Marg"
+  },
+  {
+    "id": "19",
+    "governorate_id": "1",
+    "city_name_ar": "عزبة النخل",
+    "costShaping": "99.6666",
+    "city_name_en": "Ezbet el Nakhl"
+  },
+  {
+    "id": "20",
+    "governorate_id": "1",
+    "city_name_ar": "المطرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Matareya"
+  },
+  {
+    "id": "21",
+    "governorate_id": "1",
+    "city_name_ar": "المعادى",
+    "costShaping": "99.6666",
+    "city_name_en": "Maadi"
+  },
+  {
+    "id": "22",
+    "governorate_id": "1",
+    "city_name_ar": "المعصرة",
+    "costShaping": "99.6666",
+    "city_name_en": "Maasara"
+  },
+  {
+    "id": "23",
+    "governorate_id": "1",
+    "city_name_ar": "المقطم",
+    "costShaping": "99.6666",
+    "city_name_en": "Mokattam"
+  },
+  {
+    "id": "24",
+    "governorate_id": "1",
+    "city_name_ar": "المنيل",
+    "costShaping": "99.6666",
+    "city_name_en": "Manyal"
+  },
+  {
+    "id": "25",
+    "governorate_id": "1",
+    "city_name_ar": "الموسكى",
+    "costShaping": "99.6666",
+    "city_name_en": "Mosky"
+  },
+  {
+    "id": "26",
+    "governorate_id": "1",
+    "city_name_ar": "النزهة",
+    "costShaping": "99.6666",
+    "city_name_en": "Nozha"
+  },
+  {
+    "id": "27",
+    "governorate_id": "1",
+    "city_name_ar": "الوايلى",
+    "costShaping": "99.6666",
+    "city_name_en": "Waily"
+  },
+  {
+    "id": "28",
+    "governorate_id": "1",
+    "city_name_ar": "باب الشعرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Bab al-Shereia"
+  },
+  {
+    "id": "29",
+    "governorate_id": "1",
+    "city_name_ar": "بولاق",
+    "costShaping": "99.6666",
+    "city_name_en": "Bolaq"
+  },
+  {
+    "id": "30",
+    "governorate_id": "1",
+    "city_name_ar": "جاردن سيتى",
+    "costShaping": "99.6666",
+    "city_name_en": "Garden City"
+  },
+  {
+    "id": "31",
+    "governorate_id": "1",
+    "city_name_ar": "حدائق القبة",
+    "costShaping": "99.6666",
+    "city_name_en": "Hadayek El-Kobba"
+  },
+  {
+    "id": "32",
+    "governorate_id": "1",
+    "city_name_ar": "حلوان",
+    "costShaping": "99.6666",
+    "city_name_en": "Helwan"
+  },
+  {
+    "id": "33",
+    "governorate_id": "1",
+    "city_name_ar": "دار السلام",
+    "costShaping": "99.6666",
+    "city_name_en": "Dar Al Salam"
+  },
+  {
+    "id": "34",
+    "governorate_id": "1",
+    "city_name_ar": "شبرا",
+    "costShaping": "99.6666",
+    "city_name_en": "Shubra"
+  },
+  {
+    "id": "35",
+    "governorate_id": "1",
+    "city_name_ar": "طره",
+    "costShaping": "99.6666",
+    "city_name_en": "Tura"
+  },
+  {
+    "id": "36",
+    "governorate_id": "1",
+    "city_name_ar": "عابدين",
+    "costShaping": "99.6666",
+    "city_name_en": "Abdeen"
+  },
+  {
+    "id": "37",
+    "governorate_id": "1",
+    "city_name_ar": "عباسية",
+    "costShaping": "99.6666",
+    "city_name_en": "Abaseya"
+  },
+  {
+    "id": "38",
+    "governorate_id": "1",
+    "city_name_ar": "عين شمس",
+    "costShaping": "99.6666",
+    "city_name_en": "Ain Shams"
+  },
+  {
+    "id": "39",
+    "governorate_id": "1",
+    "city_name_ar": "مدينة نصر",
+    "costShaping": "99.6666",
+    "city_name_en": "Nasr City"
+  },
+  {
+    "id": "40",
+    "governorate_id": "1",
+    "city_name_ar": "مصر الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Heliopolis"
+  },
+  {
+    "id": "41",
+    "governorate_id": "1",
+    "city_name_ar": "مصر القديمة",
+    "costShaping": "99.6666",
+    "city_name_en": "Masr Al Qadima"
+  },
+  {
+    "id": "42",
+    "governorate_id": "1",
+    "city_name_ar": "منشية ناصر",
+    "costShaping": "99.6666",
+    "city_name_en": "Mansheya Nasir"
+  },
+  {
+    "id": "43",
+    "governorate_id": "1",
+    "city_name_ar": "مدينة بدر",
+    "costShaping": "99.6666",
+    "city_name_en": "Badr City"
+  },
+  {
+    "id": "44",
+    "governorate_id": "1",
+    "city_name_ar": "مدينة العبور",
+    "costShaping": "99.6666",
+    "city_name_en": "Obour City"
+  },
+  {
+    "id": "45",
+    "governorate_id": "1",
+    "city_name_ar": "وسط البلد",
+    "costShaping": "99.6666",
+    "city_name_en": "Cairo Downtown"
+  },
+  {
+    "id": "46",
+    "governorate_id": "1",
+    "city_name_ar": "الزمالك",
+    "costShaping": "99.6666",
+    "city_name_en": "Zamalek"
+  },
+  {
+    "id": "47",
+    "governorate_id": "1",
+    "city_name_ar": "قصر النيل",
+    "costShaping": "99.6666",
+    "city_name_en": "Kasr El Nile"
+  },
+  {
+    "id": "48",
+    "governorate_id": "1",
+    "city_name_ar": "الرحاب",
+    "costShaping": "99.6666",
+    "city_name_en": "Rehab"
+  },
+  {
+    "id": "49",
+    "governorate_id": "1",
+    "city_name_ar": "القطامية",
+    "costShaping": "99.6666",
+    "city_name_en": "Katameya"
+  },
+  {
+    "id": "50",
+    "governorate_id": "1",
+    "city_name_ar": "مدينتي",
+    "costShaping": "99.6666",
+    "city_name_en": "Madinty"
+  },
+  {
+    "id": "51",
+    "governorate_id": "1",
+    "city_name_ar": "روض الفرج",
+    "costShaping": "99.6666",
+    "city_name_en": "Rod Alfarag"
+  },
+  {
+    "id": "52",
+    "governorate_id": "1",
+    "city_name_ar": "شيراتون",
+    "costShaping": "99.6666",
+    "city_name_en": "Sheraton"
+  },
+  {
+    "id": "53",
+    "governorate_id": "1",
+    "city_name_ar": "الجمالية",
+    "costShaping": "99.6666",
+    "city_name_en": "El-Gamaleya"
+  },
+  {
+    "id": "54",
+    "governorate_id": "1",
+    "city_name_ar": "العاشر من رمضان",
+    "costShaping": "99.6666",
+    "city_name_en": "10th of Ramadan City"
+  },
+  {
+    "id": "55",
+    "governorate_id": "1",
+    "city_name_ar": "الحلمية",
+    "costShaping": "99.6666",
+    "city_name_en": "Helmeyat Alzaytoun"
+  },
+  {
+    "id": "56",
+    "governorate_id": "1",
+    "city_name_ar": "النزهة الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Nozha"
+  },
+  {
+    "id": "57",
+    "governorate_id": "1",
+    "city_name_ar": "العاصمة الإدارية",
+    "costShaping": "99.6666",
+    "city_name_en": "Capital New"
+  },
+  {
+    "id": "58",
+    "governorate_id": "2",
+    "city_name_ar": "الجيزة",
+    "costShaping": "99.6666",
+    "city_name_en": "Giza"
+  },
+  {
+    "id": "59",
+    "governorate_id": "2",
+    "city_name_ar": "السادس من أكتوبر",
+    "costShaping": "99.6666",
+    "city_name_en": "Sixth of October"
+  },
+  {
+    "id": "60",
+    "governorate_id": "2",
+    "city_name_ar": "الشيخ زايد",
+    "costShaping": "99.6666",
+    "city_name_en": "Cheikh Zayed"
+  },
+  {
+    "id": "61",
+    "governorate_id": "2",
+    "city_name_ar": "الحوامدية",
+    "costShaping": "99.6666",
+    "city_name_en": "Hawamdiyah"
+  },
+  {
+    "id": "62",
+    "governorate_id": "2",
+    "city_name_ar": "البدرشين",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Badrasheen"
+  },
+  {
+    "id": "63",
+    "governorate_id": "2",
+    "city_name_ar": "الصف",
+    "costShaping": "99.6666",
+    "city_name_en": "Saf"
+  },
+  {
+    "id": "64",
+    "governorate_id": "2",
+    "city_name_ar": "أطفيح",
+    "costShaping": "99.6666",
+    "city_name_en": "Atfih"
+  },
+  {
+    "id": "65",
+    "governorate_id": "2",
+    "city_name_ar": "العياط",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Ayat"
+  },
+  {
+    "id": "66",
+    "governorate_id": "2",
+    "city_name_ar": "الباويطي",
+    "costShaping": "99.6666",
+    "city_name_en": "Al-Bawaiti"
+  },
+  {
+    "id": "67",
+    "governorate_id": "2",
+    "city_name_ar": "منشأة القناطر",
+    "costShaping": "99.6666",
+    "city_name_en": "ManshiyetAl Qanater"
+  },
+  {
+    "id": "68",
+    "governorate_id": "2",
+    "city_name_ar": "أوسيم",
+    "costShaping": "99.6666",
+    "city_name_en": "Oaseem"
+  },
+  {
+    "id": "69",
+    "governorate_id": "2",
+    "city_name_ar": "كرداسة",
+    "costShaping": "99.6666",
+    "city_name_en": "Kerdasa"
+  },
+  {
+    "id": "70",
+    "governorate_id": "2",
+    "city_name_ar": "أبو النمرس",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Nomros"
+  },
+  {
+    "id": "71",
+    "governorate_id": "2",
+    "city_name_ar": "كفر غطاطي",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr Ghati"
+  },
+  {
+    "id": "72",
+    "governorate_id": "2",
+    "city_name_ar": "منشأة البكاري",
+    "costShaping": "99.6666",
+    "city_name_en": "Manshiyet Al Bakari"
+  },
+  {
+    "id": "73",
+    "governorate_id": "2",
+    "city_name_ar": "الدقى",
+    "costShaping": "99.6666",
+    "city_name_en": "Dokki"
+  },
+  {
+    "id": "74",
+    "governorate_id": "2",
+    "city_name_ar": "العجوزة",
+    "costShaping": "99.6666",
+    "city_name_en": "Agouza"
+  },
+  {
+    "id": "75",
+    "governorate_id": "2",
+    "city_name_ar": "الهرم",
+    "costShaping": "99.6666",
+    "city_name_en": "Haram"
+  },
+  {
+    "id": "76",
+    "governorate_id": "2",
+    "city_name_ar": "الوراق",
+    "costShaping": "99.6666",
+    "city_name_en": "Warraq"
+  },
+  {
+    "id": "77",
+    "governorate_id": "2",
+    "city_name_ar": "امبابة",
+    "costShaping": "99.6666",
+    "city_name_en": "Imbaba"
+  },
+  {
+    "id": "78",
+    "governorate_id": "2",
+    "city_name_ar": "بولاق الدكرور",
+    "costShaping": "99.6666",
+    "city_name_en": "Boulaq Dakrour"
+  },
+  {
+    "id": "79",
+    "governorate_id": "2",
+    "city_name_ar": "الواحات البحرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Wahat Al Baharia"
+  },
+  {
+    "id": "80",
+    "governorate_id": "2",
+    "city_name_ar": "العمرانية",
+    "costShaping": "99.6666",
+    "city_name_en": "Omraneya"
+  },
+  {
+    "id": "81",
+    "governorate_id": "2",
+    "city_name_ar": "المنيب",
+    "costShaping": "99.6666",
+    "city_name_en": "Moneeb"
+  },
+  {
+    "id": "82",
+    "governorate_id": "2",
+    "city_name_ar": "بين السرايات",
+    "costShaping": "99.6666",
+    "city_name_en": "Bin Alsarayat"
+  },
+  {
+    "id": "83",
+    "governorate_id": "2",
+    "city_name_ar": "الكيت كات",
+    "costShaping": "99.6666",
+    "city_name_en": "Kit Kat"
+  },
+  {
+    "id": "84",
+    "governorate_id": "2",
+    "city_name_ar": "المهندسين",
+    "costShaping": "99.6666",
+    "city_name_en": "Mohandessin"
+  },
+  {
+    "id": "85",
+    "governorate_id": "2",
+    "city_name_ar": "فيصل",
+    "costShaping": "99.6666",
+    "city_name_en": "Faisal"
+  },
+  {
+    "id": "86",
+    "governorate_id": "2",
+    "city_name_ar": "أبو رواش",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Rawash"
+  },
+  {
+    "id": "87",
+    "governorate_id": "2",
+    "city_name_ar": "حدائق الأهرام",
+    "costShaping": "99.6666",
+    "city_name_en": "Hadayek Alahram"
+  },
+  {
+    "id": "88",
+    "governorate_id": "2",
+    "city_name_ar": "الحرانية",
+    "costShaping": "99.6666",
+    "city_name_en": "Haraneya"
+  },
+  {
+    "id": "89",
+    "governorate_id": "2",
+    "city_name_ar": "حدائق اكتوبر",
+    "costShaping": "99.6666",
+    "city_name_en": "Hadayek October"
+  },
+  {
+    "id": "90",
+    "governorate_id": "2",
+    "city_name_ar": "صفط اللبن",
+    "costShaping": "99.6666",
+    "city_name_en": "Saft Allaban"
+  },
+  {
+    "id": "91",
+    "governorate_id": "2",
+    "city_name_ar": "القرية الذكية",
+    "costShaping": "99.6666",
+    "city_name_en": "Smart Village"
+  },
+  {
+    "id": "92",
+    "governorate_id": "2",
+    "city_name_ar": "ارض اللواء",
+    "costShaping": "99.6666",
+    "city_name_en": "Ard Ellwaa"
+  },
+  {
+    "id": "93",
+    "governorate_id": "3",
+    "city_name_ar": "ابو قير",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Qir"
+  },
+  {
+    "id": "94",
+    "governorate_id": "3",
+    "city_name_ar": "الابراهيمية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Ibrahimeyah"
+  },
+  {
+    "id": "95",
+    "governorate_id": "3",
+    "city_name_ar": "الأزاريطة",
+    "costShaping": "99.6666",
+    "city_name_en": "Azarita"
+  },
+  {
+    "id": "96",
+    "governorate_id": "3",
+    "city_name_ar": "الانفوشى",
+    "costShaping": "99.6666",
+    "city_name_en": "Anfoushi"
+  },
+  {
+    "id": "97",
+    "governorate_id": "3",
+    "city_name_ar": "الدخيلة",
+    "costShaping": "99.6666",
+    "city_name_en": "Dekheila"
+  },
+  {
+    "id": "98",
+    "governorate_id": "3",
+    "city_name_ar": "السيوف",
+    "costShaping": "99.6666",
+    "city_name_en": "El Soyof"
+  },
+  {
+    "id": "99",
+    "governorate_id": "3",
+    "city_name_ar": "العامرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Ameria"
+  },
+  {
+    "id": "100",
+    "governorate_id": "3",
+    "city_name_ar": "اللبان",
+    "costShaping": "99.6666",
+    "city_name_en": "El Labban"
+  },
+  {
+    "id": "101",
+    "governorate_id": "3",
+    "city_name_ar": "المفروزة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Mafrouza"
+  },
+  {
+    "id": "102",
+    "governorate_id": "3",
+    "city_name_ar": "المنتزه",
+    "costShaping": "99.6666",
+    "city_name_en": "El Montaza"
+  },
+  {
+    "id": "103",
+    "governorate_id": "3",
+    "city_name_ar": "المنشية",
+    "costShaping": "99.6666",
+    "city_name_en": "Mansheya"
+  },
+  {
+    "id": "104",
+    "governorate_id": "3",
+    "city_name_ar": "الناصرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Naseria"
+  },
+  {
+    "id": "105",
+    "governorate_id": "3",
+    "city_name_ar": "امبروزو",
+    "costShaping": "99.6666",
+    "city_name_en": "Ambrozo"
+  },
+  {
+    "id": "106",
+    "governorate_id": "3",
+    "city_name_ar": "باب شرق",
+    "costShaping": "99.6666",
+    "city_name_en": "Bab Sharq"
+  },
+  {
+    "id": "107",
+    "governorate_id": "3",
+    "city_name_ar": "برج العرب",
+    "costShaping": "99.6666",
+    "city_name_en": "Bourj Alarab"
+  },
+  {
+    "id": "108",
+    "governorate_id": "3",
+    "city_name_ar": "ستانلى",
+    "costShaping": "99.6666",
+    "city_name_en": "Stanley"
+  },
+  {
+    "id": "109",
+    "governorate_id": "3",
+    "city_name_ar": "سموحة",
+    "costShaping": "99.6666",
+    "city_name_en": "Smouha"
+  },
+  {
+    "id": "110",
+    "governorate_id": "3",
+    "city_name_ar": "سيدى بشر",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Bishr"
+  },
+  {
+    "id": "111",
+    "governorate_id": "3",
+    "city_name_ar": "شدس",
+    "costShaping": "99.6666",
+    "city_name_en": "Shads"
+  },
+  {
+    "id": "112",
+    "governorate_id": "3",
+    "city_name_ar": "غيط العنب",
+    "costShaping": "99.6666",
+    "city_name_en": "Gheet Alenab"
+  },
+  {
+    "id": "113",
+    "governorate_id": "3",
+    "city_name_ar": "فلمينج",
+    "costShaping": "99.6666",
+    "city_name_en": "Fleming"
+  },
+  {
+    "id": "114",
+    "governorate_id": "3",
+    "city_name_ar": "فيكتوريا",
+    "costShaping": "99.6666",
+    "city_name_en": "Victoria"
+  },
+  {
+    "id": "115",
+    "governorate_id": "3",
+    "city_name_ar": "كامب شيزار",
+    "costShaping": "99.6666",
+    "city_name_en": "Camp Shizar"
+  },
+  {
+    "id": "116",
+    "governorate_id": "3",
+    "city_name_ar": "كرموز",
+    "costShaping": "99.6666",
+    "city_name_en": "Karmooz"
+  },
+  {
+    "id": "117",
+    "governorate_id": "3",
+    "city_name_ar": "محطة الرمل",
+    "costShaping": "99.6666",
+    "city_name_en": "Mahta Alraml"
+  },
+  {
+    "id": "118",
+    "governorate_id": "3",
+    "city_name_ar": "مينا البصل",
+    "costShaping": "99.6666",
+    "city_name_en": "Mina El-Basal"
+  },
+  {
+    "id": "119",
+    "governorate_id": "3",
+    "city_name_ar": "العصافرة",
+    "costShaping": "99.6666",
+    "city_name_en": "Asafra"
+  },
+  {
+    "id": "120",
+    "governorate_id": "3",
+    "city_name_ar": "العجمي",
+    "costShaping": "99.6666",
+    "city_name_en": "Agamy"
+  },
+  {
+    "id": "121",
+    "governorate_id": "3",
+    "city_name_ar": "بكوس",
+    "costShaping": "99.6666",
+    "city_name_en": "Bakos"
+  },
+  {
+    "id": "122",
+    "governorate_id": "3",
+    "city_name_ar": "بولكلي",
+    "costShaping": "99.6666",
+    "city_name_en": "Boulkly"
+  },
+  {
+    "id": "123",
+    "governorate_id": "3",
+    "city_name_ar": "كليوباترا",
+    "costShaping": "99.6666",
+    "city_name_en": "Cleopatra"
+  },
+  {
+    "id": "124",
+    "governorate_id": "3",
+    "city_name_ar": "جليم",
+    "costShaping": "99.6666",
+    "city_name_en": "Glim"
+  },
+  {
+    "id": "125",
+    "governorate_id": "3",
+    "city_name_ar": "المعمورة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Mamurah"
+  },
+  {
+    "id": "126",
+    "governorate_id": "3",
+    "city_name_ar": "المندرة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Mandara"
+  },
+  {
+    "id": "127",
+    "governorate_id": "3",
+    "city_name_ar": "محرم بك",
+    "costShaping": "99.6666",
+    "city_name_en": "Moharam Bek"
+  },
+  {
+    "id": "128",
+    "governorate_id": "3",
+    "city_name_ar": "الشاطبي",
+    "costShaping": "99.6666",
+    "city_name_en": "Elshatby"
+  },
+  {
+    "id": "129",
+    "governorate_id": "3",
+    "city_name_ar": "سيدي جابر",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Gaber"
+  },
+  {
+    "id": "130",
+    "governorate_id": "3",
+    "city_name_ar": "الساحل الشمالي",
+    "costShaping": "99.6666",
+    "city_name_en": "North Coast\/sahel"
+  },
+  {
+    "id": "131",
+    "governorate_id": "3",
+    "city_name_ar": "الحضرة",
+    "costShaping": "99.6666",
+    "city_name_en": "Alhadra"
+  },
+  {
+    "id": "132",
+    "governorate_id": "3",
+    "city_name_ar": "العطارين",
+    "costShaping": "99.6666",
+    "city_name_en": "Alattarin"
+  },
+  {
+    "id": "133",
+    "governorate_id": "3",
+    "city_name_ar": "سيدي كرير",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Kerir"
+  },
+  {
+    "id": "134",
+    "governorate_id": "3",
+    "city_name_ar": "الجمرك",
+    "costShaping": "99.6666",
+    "city_name_en": "Elgomrok"
+  },
+  {
+    "id": "135",
+    "governorate_id": "3",
+    "city_name_ar": "المكس",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Max"
+  },
+  {
+    "id": "136",
+    "governorate_id": "3",
+    "city_name_ar": "مارينا",
+    "costShaping": "99.6666",
+    "city_name_en": "Marina"
+  },
+  {
+    "id": "137",
+    "governorate_id": "4",
+    "city_name_ar": "المنصورة",
+    "costShaping": "99.6666",
+    "city_name_en": "Mansoura"
+  },
+  {
+    "id": "138",
+    "governorate_id": "4",
+    "city_name_ar": "طلخا",
+    "costShaping": "99.6666",
+    "city_name_en": "Talkha"
+  },
+  {
+    "id": "139",
+    "governorate_id": "4",
+    "city_name_ar": "ميت غمر",
+    "costShaping": "99.6666",
+    "city_name_en": "Mitt Ghamr"
+  },
+  {
+    "id": "140",
+    "governorate_id": "4",
+    "city_name_ar": "دكرنس",
+    "costShaping": "99.6666",
+    "city_name_en": "Dekernes"
+  },
+  {
+    "id": "141",
+    "governorate_id": "4",
+    "city_name_ar": "أجا",
+    "costShaping": "99.6666",
+    "city_name_en": "Aga"
+  },
+  {
+    "id": "142",
+    "governorate_id": "4",
+    "city_name_ar": "منية النصر",
+    "costShaping": "99.6666",
+    "city_name_en": "Menia El Nasr"
+  },
+  {
+    "id": "143",
+    "governorate_id": "4",
+    "city_name_ar": "السنبلاوين",
+    "costShaping": "99.6666",
+    "city_name_en": "Sinbillawin"
+  },
+  {
+    "id": "144",
+    "governorate_id": "4",
+    "city_name_ar": "الكردي",
+    "costShaping": "99.6666",
+    "city_name_en": "El Kurdi"
+  },
+  {
+    "id": "145",
+    "governorate_id": "4",
+    "city_name_ar": "بني عبيد",
+    "costShaping": "99.6666",
+    "city_name_en": "Bani Ubaid"
+  },
+  {
+    "id": "146",
+    "governorate_id": "4",
+    "city_name_ar": "المنزلة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Manzala"
+  },
+  {
+    "id": "147",
+    "governorate_id": "4",
+    "city_name_ar": "تمي الأمديد",
+    "costShaping": "99.6666",
+    "city_name_en": "tami al'amdid"
+  },
+  {
+    "id": "148",
+    "governorate_id": "4",
+    "city_name_ar": "الجمالية",
+    "costShaping": "99.6666",
+    "city_name_en": "aljamalia"
+  },
+  {
+    "id": "149",
+    "governorate_id": "4",
+    "city_name_ar": "شربين",
+    "costShaping": "99.6666",
+    "city_name_en": "Sherbin"
+  },
+  {
+    "id": "150",
+    "governorate_id": "4",
+    "city_name_ar": "المطرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Mataria"
+  },
+  {
+    "id": "151",
+    "governorate_id": "4",
+    "city_name_ar": "بلقاس",
+    "costShaping": "99.6666",
+    "city_name_en": "Belqas"
+  },
+  {
+    "id": "152",
+    "governorate_id": "4",
+    "city_name_ar": "ميت سلسيل",
+    "costShaping": "99.6666",
+    "city_name_en": "Meet Salsil"
+  },
+  {
+    "id": "153",
+    "governorate_id": "4",
+    "city_name_ar": "جمصة",
+    "costShaping": "99.6666",
+    "city_name_en": "Gamasa"
+  },
+  {
+    "id": "154",
+    "governorate_id": "4",
+    "city_name_ar": "محلة دمنة",
+    "costShaping": "99.6666",
+    "city_name_en": "Mahalat Damana"
+  },
+  {
+    "id": "155",
+    "governorate_id": "4",
+    "city_name_ar": "نبروه",
+    "costShaping": "99.6666",
+    "city_name_en": "Nabroh"
+  },
+  {
+    "id": "156",
+    "governorate_id": "5",
+    "city_name_ar": "الغردقة",
+    "costShaping": "99.6666",
+    "city_name_en": "Hurghada"
+  },
+  {
+    "id": "157",
+    "governorate_id": "5",
+    "city_name_ar": "رأس غارب",
+    "costShaping": "99.6666",
+    "city_name_en": "Ras Ghareb"
+  },
+  {
+    "id": "158",
+    "governorate_id": "5",
+    "city_name_ar": "سفاجا",
+    "costShaping": "99.6666",
+    "city_name_en": "Safaga"
+  },
+  {
+    "id": "159",
+    "governorate_id": "5",
+    "city_name_ar": "القصير",
+    "costShaping": "99.6666",
+    "city_name_en": "El Qusiar"
+  },
+  {
+    "id": "160",
+    "governorate_id": "5",
+    "city_name_ar": "مرسى علم",
+    "costShaping": "99.6666",
+    "city_name_en": "Marsa Alam"
+  },
+  {
+    "id": "161",
+    "governorate_id": "5",
+    "city_name_ar": "الشلاتين",
+    "costShaping": "99.6666",
+    "city_name_en": "Shalatin"
+  },
+  {
+    "id": "162",
+    "governorate_id": "5",
+    "city_name_ar": "حلايب",
+    "costShaping": "99.6666",
+    "city_name_en": "Halaib"
+  },
+  {
+    "id": "163",
+    "governorate_id": "5",
+    "city_name_ar": "الدهار",
+    "costShaping": "99.6666",
+    "city_name_en": "Aldahar"
+  },
+  {
+    "id": "164",
+    "governorate_id": "6",
+    "city_name_ar": "دمنهور",
+    "costShaping": "99.6666",
+    "city_name_en": "Damanhour"
+  },
+  {
+    "id": "165",
+    "governorate_id": "6",
+    "city_name_ar": "كفر الدوار",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr El Dawar"
+  },
+  {
+    "id": "166",
+    "governorate_id": "6",
+    "city_name_ar": "رشيد",
+    "costShaping": "99.6666",
+    "city_name_en": "Rashid"
+  },
+  {
+    "id": "167",
+    "governorate_id": "6",
+    "city_name_ar": "إدكو",
+    "costShaping": "99.6666",
+    "city_name_en": "Edco"
+  },
+  {
+    "id": "168",
+    "governorate_id": "6",
+    "city_name_ar": "أبو المطامير",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu al-Matamir"
+  },
+  {
+    "id": "169",
+    "governorate_id": "6",
+    "city_name_ar": "أبو حمص",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Homs"
+  },
+  {
+    "id": "170",
+    "governorate_id": "6",
+    "city_name_ar": "الدلنجات",
+    "costShaping": "99.6666",
+    "city_name_en": "Delengat"
+  },
+  {
+    "id": "171",
+    "governorate_id": "6",
+    "city_name_ar": "المحمودية",
+    "costShaping": "99.6666",
+    "city_name_en": "Mahmoudiyah"
+  },
+  {
+    "id": "172",
+    "governorate_id": "6",
+    "city_name_ar": "الرحمانية",
+    "costShaping": "99.6666",
+    "city_name_en": "Rahmaniyah"
+  },
+  {
+    "id": "173",
+    "governorate_id": "6",
+    "city_name_ar": "إيتاي البارود",
+    "costShaping": "99.6666",
+    "city_name_en": "Itai Baroud"
+  },
+  {
+    "id": "174",
+    "governorate_id": "6",
+    "city_name_ar": "حوش عيسى",
+    "costShaping": "99.6666",
+    "city_name_en": "Housh Eissa"
+  },
+  {
+    "id": "175",
+    "governorate_id": "6",
+    "city_name_ar": "شبراخيت",
+    "costShaping": "99.6666",
+    "city_name_en": "Shubrakhit"
+  },
+  {
+    "id": "176",
+    "governorate_id": "6",
+    "city_name_ar": "كوم حمادة",
+    "costShaping": "99.6666",
+    "city_name_en": "Kom Hamada"
+  },
+  {
+    "id": "177",
+    "governorate_id": "6",
+    "city_name_ar": "بدر",
+    "costShaping": "99.6666",
+    "city_name_en": "Badr"
+  },
+  {
+    "id": "178",
+    "governorate_id": "6",
+    "city_name_ar": "وادي النطرون",
+    "costShaping": "99.6666",
+    "city_name_en": "Wadi Natrun"
+  },
+  {
+    "id": "179",
+    "governorate_id": "6",
+    "city_name_ar": "النوبارية الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Nubaria"
+  },
+  {
+    "id": "180",
+    "governorate_id": "6",
+    "city_name_ar": "النوبارية",
+    "costShaping": "99.6666",
+    "city_name_en": "Alnoubareya"
+  },
+  {
+    "id": "181",
+    "governorate_id": "7",
+    "city_name_ar": "الفيوم",
+    "costShaping": "99.6666",
+    "city_name_en": "Fayoum"
+  },
+  {
+    "id": "182",
+    "governorate_id": "7",
+    "city_name_ar": "الفيوم الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Fayoum El Gedida"
+  },
+  {
+    "id": "183",
+    "governorate_id": "7",
+    "city_name_ar": "طامية",
+    "costShaping": "99.6666",
+    "city_name_en": "Tamiya"
+  },
+  {
+    "id": "184",
+    "governorate_id": "7",
+    "city_name_ar": "سنورس",
+    "costShaping": "99.6666",
+    "city_name_en": "Snores"
+  },
+  {
+    "id": "185",
+    "governorate_id": "7",
+    "city_name_ar": "إطسا",
+    "costShaping": "99.6666",
+    "city_name_en": "Etsa"
+  },
+  {
+    "id": "186",
+    "governorate_id": "7",
+    "city_name_ar": "إبشواي",
+    "costShaping": "99.6666",
+    "city_name_en": "Epschway"
+  },
+  {
+    "id": "187",
+    "governorate_id": "7",
+    "city_name_ar": "يوسف الصديق",
+    "costShaping": "99.6666",
+    "city_name_en": "Yusuf El Sediaq"
+  },
+  {
+    "id": "188",
+    "governorate_id": "7",
+    "city_name_ar": "الحادقة",
+    "costShaping": "99.6666",
+    "city_name_en": "Hadqa"
+  },
+  {
+    "id": "189",
+    "governorate_id": "7",
+    "city_name_ar": "اطسا",
+    "costShaping": "99.6666",
+    "city_name_en": "Atsa"
+  },
+  {
+    "id": "190",
+    "governorate_id": "7",
+    "city_name_ar": "الجامعة",
+    "costShaping": "99.6666",
+    "city_name_en": "Algamaa"
+  },
+  {
+    "id": "191",
+    "governorate_id": "7",
+    "city_name_ar": "السيالة",
+    "costShaping": "99.6666",
+    "city_name_en": "Sayala"
+  },
+  {
+    "id": "192",
+    "governorate_id": "8",
+    "city_name_ar": "طنطا",
+    "costShaping": "99.6666",
+    "city_name_en": "Tanta"
+  },
+  {
+    "id": "193",
+    "governorate_id": "8",
+    "city_name_ar": "المحلة الكبرى",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Mahalla Al Kobra"
+  },
+  {
+    "id": "194",
+    "governorate_id": "8",
+    "city_name_ar": "كفر الزيات",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr El Zayat"
+  },
+  {
+    "id": "195",
+    "governorate_id": "8",
+    "city_name_ar": "زفتى",
+    "costShaping": "99.6666",
+    "city_name_en": "Zefta"
+  },
+  {
+    "id": "196",
+    "governorate_id": "8",
+    "city_name_ar": "السنطة",
+    "costShaping": "99.6666",
+    "city_name_en": "El Santa"
+  },
+  {
+    "id": "197",
+    "governorate_id": "8",
+    "city_name_ar": "قطور",
+    "costShaping": "99.6666",
+    "city_name_en": "Qutour"
+  },
+  {
+    "id": "198",
+    "governorate_id": "8",
+    "city_name_ar": "بسيون",
+    "costShaping": "99.6666",
+    "city_name_en": "Basion"
+  },
+  {
+    "id": "199",
+    "governorate_id": "8",
+    "city_name_ar": "سمنود",
+    "costShaping": "99.6666",
+    "city_name_en": "Samannoud"
+  },
+  {
+    "id": "200",
+    "governorate_id": "9",
+    "city_name_ar": "الإسماعيلية",
+    "costShaping": "99.6666",
+    "city_name_en": "Ismailia"
+  },
+  {
+    "id": "201",
+    "governorate_id": "9",
+    "city_name_ar": "فايد",
+    "costShaping": "99.6666",
+    "city_name_en": "Fayed"
+  },
+  {
+    "id": "202",
+    "governorate_id": "9",
+    "city_name_ar": "القنطرة شرق",
+    "costShaping": "99.6666",
+    "city_name_en": "Qantara Sharq"
+  },
+  {
+    "id": "203",
+    "governorate_id": "9",
+    "city_name_ar": "القنطرة غرب",
+    "costShaping": "99.6666",
+    "city_name_en": "Qantara Gharb"
+  },
+  {
+    "id": "204",
+    "governorate_id": "9",
+    "city_name_ar": "التل الكبير",
+    "costShaping": "99.6666",
+    "city_name_en": "El Tal El Kabier"
+  },
+  {
+    "id": "205",
+    "governorate_id": "9",
+    "city_name_ar": "أبو صوير",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Sawir"
+  },
+  {
+    "id": "206",
+    "governorate_id": "9",
+    "city_name_ar": "القصاصين الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Kasasien El Gedida"
+  },
+  {
+    "id": "207",
+    "governorate_id": "9",
+    "city_name_ar": "نفيشة",
+    "costShaping": "99.6666",
+    "city_name_en": "Nefesha"
+  },
+  {
+    "id": "208",
+    "governorate_id": "9",
+    "city_name_ar": "الشيخ زايد",
+    "costShaping": "99.6666",
+    "city_name_en": "Sheikh Zayed"
+  },
+  {
+    "id": "209",
+    "governorate_id": "10",
+    "city_name_ar": "شبين الكوم",
+    "costShaping": "99.6666",
+    "city_name_en": "Shbeen El Koom"
+  },
+  {
+    "id": "210",
+    "governorate_id": "10",
+    "city_name_ar": "مدينة السادات",
+    "costShaping": "99.6666",
+    "city_name_en": "Sadat City"
+  },
+  {
+    "id": "211",
+    "governorate_id": "10",
+    "city_name_ar": "منوف",
+    "costShaping": "99.6666",
+    "city_name_en": "Menouf"
+  },
+  {
+    "id": "212",
+    "governorate_id": "10",
+    "city_name_ar": "سرس الليان",
+    "costShaping": "99.6666",
+    "city_name_en": "Sars El-Layan"
+  },
+  {
+    "id": "213",
+    "governorate_id": "10",
+    "city_name_ar": "أشمون",
+    "costShaping": "99.6666",
+    "city_name_en": "Ashmon"
+  },
+  {
+    "id": "214",
+    "governorate_id": "10",
+    "city_name_ar": "الباجور",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Bagor"
+  },
+  {
+    "id": "215",
+    "governorate_id": "10",
+    "city_name_ar": "قويسنا",
+    "costShaping": "99.6666",
+    "city_name_en": "Quesna"
+  },
+  {
+    "id": "216",
+    "governorate_id": "10",
+    "city_name_ar": "بركة السبع",
+    "costShaping": "99.6666",
+    "city_name_en": "Berkat El Saba"
+  },
+  {
+    "id": "217",
+    "governorate_id": "10",
+    "city_name_ar": "تلا",
+    "costShaping": "99.6666",
+    "city_name_en": "Tala"
+  },
+  {
+    "id": "218",
+    "governorate_id": "10",
+    "city_name_ar": "الشهداء",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Shohada"
+  },
+  {
+    "id": "219",
+    "governorate_id": "11",
+    "city_name_ar": "المنيا",
+    "costShaping": "99.6666",
+    "city_name_en": "Minya"
+  },
+  {
+    "id": "220",
+    "governorate_id": "11",
+    "city_name_ar": "المنيا الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Minya El Gedida"
+  },
+  {
+    "id": "221",
+    "governorate_id": "11",
+    "city_name_ar": "العدوة",
+    "costShaping": "99.6666",
+    "city_name_en": "El Adwa"
+  },
+  {
+    "id": "222",
+    "governorate_id": "11",
+    "city_name_ar": "مغاغة",
+    "costShaping": "99.6666",
+    "city_name_en": "Magagha"
+  },
+  {
+    "id": "223",
+    "governorate_id": "11",
+    "city_name_ar": "بني مزار",
+    "costShaping": "99.6666",
+    "city_name_en": "Bani Mazar"
+  },
+  {
+    "id": "224",
+    "governorate_id": "11",
+    "city_name_ar": "مطاي",
+    "costShaping": "99.6666",
+    "city_name_en": "Mattay"
+  },
+  {
+    "id": "225",
+    "governorate_id": "11",
+    "city_name_ar": "سمالوط",
+    "costShaping": "99.6666",
+    "city_name_en": "Samalut"
+  },
+  {
+    "id": "226",
+    "governorate_id": "11",
+    "city_name_ar": "المدينة الفكرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Madinat El Fekria"
+  },
+  {
+    "id": "227",
+    "governorate_id": "11",
+    "city_name_ar": "ملوي",
+    "costShaping": "99.6666",
+    "city_name_en": "Meloy"
+  },
+  {
+    "id": "228",
+    "governorate_id": "11",
+    "city_name_ar": "دير مواس",
+    "costShaping": "99.6666",
+    "city_name_en": "Deir Mawas"
+  },
+  {
+    "id": "229",
+    "governorate_id": "11",
+    "city_name_ar": "ابو قرقاص",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Qurqas"
+  },
+  {
+    "id": "230",
+    "governorate_id": "11",
+    "city_name_ar": "ارض سلطان",
+    "costShaping": "99.6666",
+    "city_name_en": "Ard Sultan"
+  },
+  {
+    "id": "231",
+    "governorate_id": "12",
+    "city_name_ar": "بنها",
+    "costShaping": "99.6666",
+    "city_name_en": "Banha"
+  },
+  {
+    "id": "232",
+    "governorate_id": "12",
+    "city_name_ar": "قليوب",
+    "costShaping": "99.6666",
+    "city_name_en": "Qalyub"
+  },
+  {
+    "id": "233",
+    "governorate_id": "12",
+    "city_name_ar": "شبرا الخيمة",
+    "costShaping": "99.6666",
+    "city_name_en": "Shubra Al Khaimah"
+  },
+  {
+    "id": "234",
+    "governorate_id": "12",
+    "city_name_ar": "القناطر الخيرية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Qanater Charity"
+  },
+  {
+    "id": "235",
+    "governorate_id": "12",
+    "city_name_ar": "الخانكة",
+    "costShaping": "99.6666",
+    "city_name_en": "Khanka"
+  },
+  {
+    "id": "236",
+    "governorate_id": "12",
+    "city_name_ar": "كفر شكر",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr Shukr"
+  },
+  {
+    "id": "237",
+    "governorate_id": "12",
+    "city_name_ar": "طوخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Tukh"
+  },
+  {
+    "id": "238",
+    "governorate_id": "12",
+    "city_name_ar": "قها",
+    "costShaping": "99.6666",
+    "city_name_en": "Qaha"
+  },
+  {
+    "id": "239",
+    "governorate_id": "12",
+    "city_name_ar": "العبور",
+    "costShaping": "99.6666",
+    "city_name_en": "Obour"
+  },
+  {
+    "id": "240",
+    "governorate_id": "12",
+    "city_name_ar": "الخصوص",
+    "costShaping": "99.6666",
+    "city_name_en": "Khosous"
+  },
+  {
+    "id": "241",
+    "governorate_id": "12",
+    "city_name_ar": "شبين القناطر",
+    "costShaping": "99.6666",
+    "city_name_en": "Shibin Al Qanater"
+  },
+  {
+    "id": "242",
+    "governorate_id": "12",
+    "city_name_ar": "مسطرد",
+    "costShaping": "99.6666",
+    "city_name_en": "Mostorod"
+  },
+  {
+    "id": "243",
+    "governorate_id": "13",
+    "city_name_ar": "الخارجة",
+    "costShaping": "99.6666",
+    "city_name_en": "El Kharga"
+  },
+  {
+    "id": "244",
+    "governorate_id": "13",
+    "city_name_ar": "باريس",
+    "costShaping": "99.6666",
+    "city_name_en": "Paris"
+  },
+  {
+    "id": "245",
+    "governorate_id": "13",
+    "city_name_ar": "موط",
+    "costShaping": "99.6666",
+    "city_name_en": "Mout"
+  },
+  {
+    "id": "246",
+    "governorate_id": "13",
+    "city_name_ar": "الفرافرة",
+    "costShaping": "99.6666",
+    "city_name_en": "Farafra"
+  },
+  {
+    "id": "247",
+    "governorate_id": "13",
+    "city_name_ar": "بلاط",
+    "costShaping": "99.6666",
+    "city_name_en": "Balat"
+  },
+  {
+    "id": "248",
+    "governorate_id": "13",
+    "city_name_ar": "الداخلة",
+    "costShaping": "99.6666",
+    "city_name_en": "Dakhla"
+  },
+  {
+    "id": "249",
+    "governorate_id": "14",
+    "city_name_ar": "السويس",
+    "costShaping": "99.6666",
+    "city_name_en": "Suez"
+  },
+  {
+    "id": "250",
+    "governorate_id": "14",
+    "city_name_ar": "الجناين",
+    "costShaping": "99.6666",
+    "city_name_en": "Alganayen"
+  },
+  {
+    "id": "251",
+    "governorate_id": "14",
+    "city_name_ar": "عتاقة",
+    "costShaping": "99.6666",
+    "city_name_en": "Ataqah"
+  },
+  {
+    "id": "252",
+    "governorate_id": "14",
+    "city_name_ar": "العين السخنة",
+    "costShaping": "99.6666",
+    "city_name_en": "Ain Sokhna"
+  },
+  {
+    "id": "253",
+    "governorate_id": "14",
+    "city_name_ar": "فيصل",
+    "costShaping": "99.6666",
+    "city_name_en": "Faysal"
+  },
+  {
+    "id": "254",
+    "governorate_id": "15",
+    "city_name_ar": "أسوان",
+    "costShaping": "99.6666",
+    "city_name_en": "Aswan"
+  },
+  {
+    "id": "255",
+    "governorate_id": "15",
+    "city_name_ar": "أسوان الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Aswan El Gedida"
+  },
+  {
+    "id": "256",
+    "governorate_id": "15",
+    "city_name_ar": "دراو",
+    "costShaping": "99.6666",
+    "city_name_en": "Drau"
+  },
+  {
+    "id": "257",
+    "governorate_id": "15",
+    "city_name_ar": "كوم أمبو",
+    "costShaping": "99.6666",
+    "city_name_en": "Kom Ombo"
+  },
+  {
+    "id": "258",
+    "governorate_id": "15",
+    "city_name_ar": "نصر النوبة",
+    "costShaping": "99.6666",
+    "city_name_en": "Nasr Al Nuba"
+  },
+  {
+    "id": "259",
+    "governorate_id": "15",
+    "city_name_ar": "كلابشة",
+    "costShaping": "99.6666",
+    "city_name_en": "Kalabsha"
+  },
+  {
+    "id": "260",
+    "governorate_id": "15",
+    "city_name_ar": "إدفو",
+    "costShaping": "99.6666",
+    "city_name_en": "Edfu"
+  },
+  {
+    "id": "261",
+    "governorate_id": "15",
+    "city_name_ar": "الرديسية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al-Radisiyah"
+  },
+  {
+    "id": "262",
+    "governorate_id": "15",
+    "city_name_ar": "البصيلية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Basilia"
+  },
+  {
+    "id": "263",
+    "governorate_id": "15",
+    "city_name_ar": "السباعية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Sibaeia"
+  },
+  {
+    "id": "264",
+    "governorate_id": "15",
+    "city_name_ar": "ابوسمبل السياحية",
+    "costShaping": "99.6666",
+    "city_name_en": "Abo Simbl Al Siyahia"
+  },
+  {
+    "id": "265",
+    "governorate_id": "15",
+    "city_name_ar": "مرسى علم",
+    "costShaping": "99.6666",
+    "city_name_en": "Marsa Alam"
+  },
+  {
+    "id": "266",
+    "governorate_id": "16",
+    "city_name_ar": "أسيوط",
+    "costShaping": "99.6666",
+    "city_name_en": "Assiut"
+  },
+  {
+    "id": "267",
+    "governorate_id": "16",
+    "city_name_ar": "أسيوط الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Assiut El Gedida"
+  },
+  {
+    "id": "268",
+    "governorate_id": "16",
+    "city_name_ar": "ديروط",
+    "costShaping": "99.6666",
+    "city_name_en": "Dayrout"
+  },
+  {
+    "id": "269",
+    "governorate_id": "16",
+    "city_name_ar": "منفلوط",
+    "costShaping": "99.6666",
+    "city_name_en": "Manfalut"
+  },
+  {
+    "id": "270",
+    "governorate_id": "16",
+    "city_name_ar": "القوصية",
+    "costShaping": "99.6666",
+    "city_name_en": "Qusiya"
+  },
+  {
+    "id": "271",
+    "governorate_id": "16",
+    "city_name_ar": "أبنوب",
+    "costShaping": "99.6666",
+    "city_name_en": "Abnoub"
+  },
+  {
+    "id": "272",
+    "governorate_id": "16",
+    "city_name_ar": "أبو تيج",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Tig"
+  },
+  {
+    "id": "273",
+    "governorate_id": "16",
+    "city_name_ar": "الغنايم",
+    "costShaping": "99.6666",
+    "city_name_en": "El Ghanaim"
+  },
+  {
+    "id": "274",
+    "governorate_id": "16",
+    "city_name_ar": "ساحل سليم",
+    "costShaping": "99.6666",
+    "city_name_en": "Sahel Selim"
+  },
+  {
+    "id": "275",
+    "governorate_id": "16",
+    "city_name_ar": "البداري",
+    "costShaping": "99.6666",
+    "city_name_en": "El Badari"
+  },
+  {
+    "id": "276",
+    "governorate_id": "16",
+    "city_name_ar": "صدفا",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidfa"
+  },
+  {
+    "id": "277",
+    "governorate_id": "17",
+    "city_name_ar": "بني سويف",
+    "costShaping": "99.6666",
+    "city_name_en": "Bani Sweif"
+  },
+  {
+    "id": "278",
+    "governorate_id": "17",
+    "city_name_ar": "بني سويف الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Beni Suef El Gedida"
+  },
+  {
+    "id": "279",
+    "governorate_id": "17",
+    "city_name_ar": "الواسطى",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Wasta"
+  },
+  {
+    "id": "280",
+    "governorate_id": "17",
+    "city_name_ar": "ناصر",
+    "costShaping": "99.6666",
+    "city_name_en": "Naser"
+  },
+  {
+    "id": "281",
+    "governorate_id": "17",
+    "city_name_ar": "إهناسيا",
+    "costShaping": "99.6666",
+    "city_name_en": "Ehnasia"
+  },
+  {
+    "id": "282",
+    "governorate_id": "17",
+    "city_name_ar": "ببا",
+    "costShaping": "99.6666",
+    "city_name_en": "beba"
+  },
+  {
+    "id": "283",
+    "governorate_id": "17",
+    "city_name_ar": "الفشن",
+    "costShaping": "99.6666",
+    "city_name_en": "Fashn"
+  },
+  {
+    "id": "284",
+    "governorate_id": "17",
+    "city_name_ar": "سمسطا",
+    "costShaping": "99.6666",
+    "city_name_en": "Somasta"
+  },
+  {
+    "id": "285",
+    "governorate_id": "17",
+    "city_name_ar": "الاباصيرى",
+    "costShaping": "99.6666",
+    "city_name_en": "Alabbaseri"
+  },
+  {
+    "id": "286",
+    "governorate_id": "17",
+    "city_name_ar": "مقبل",
+    "costShaping": "99.6666",
+    "city_name_en": "Mokbel"
+  },
+  {
+    "id": "287",
+    "governorate_id": "18",
+    "city_name_ar": "بورسعيد",
+    "costShaping": "99.6666",
+    "city_name_en": "PorSaid"
+  },
+  {
+    "id": "288",
+    "governorate_id": "18",
+    "city_name_ar": "بورفؤاد",
+    "costShaping": "99.6666",
+    "city_name_en": "Port Fouad"
+  },
+  {
+    "id": "289",
+    "governorate_id": "18",
+    "city_name_ar": "العرب",
+    "costShaping": "99.6666",
+    "city_name_en": "Alarab"
+  },
+  {
+    "id": "290",
+    "governorate_id": "18",
+    "city_name_ar": "حى الزهور",
+    "costShaping": "99.6666",
+    "city_name_en": "Zohour"
+  },
+  {
+    "id": "291",
+    "governorate_id": "18",
+    "city_name_ar": "حى الشرق",
+    "costShaping": "99.6666",
+    "city_name_en": "Alsharq"
+  },
+  {
+    "id": "292",
+    "governorate_id": "18",
+    "city_name_ar": "حى الضواحى",
+    "costShaping": "99.6666",
+    "city_name_en": "Aldawahi"
+  },
+  {
+    "id": "293",
+    "governorate_id": "18",
+    "city_name_ar": "حى المناخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Almanakh"
+  },
+  {
+    "id": "294",
+    "governorate_id": "18",
+    "city_name_ar": "حى مبارك",
+    "costShaping": "99.6666",
+    "city_name_en": "Mubarak"
+  },
+  {
+    "id": "295",
+    "governorate_id": "19",
+    "city_name_ar": "دمياط",
+    "costShaping": "99.6666",
+    "city_name_en": "Damietta"
+  },
+  {
+    "id": "296",
+    "governorate_id": "19",
+    "city_name_ar": "دمياط الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Damietta"
+  },
+  {
+    "id": "297",
+    "governorate_id": "19",
+    "city_name_ar": "رأس البر",
+    "costShaping": "99.6666",
+    "city_name_en": "Ras El Bar"
+  },
+  {
+    "id": "298",
+    "governorate_id": "19",
+    "city_name_ar": "فارسكور",
+    "costShaping": "99.6666",
+    "city_name_en": "Faraskour"
+  },
+  {
+    "id": "299",
+    "governorate_id": "19",
+    "city_name_ar": "الزرقا",
+    "costShaping": "99.6666",
+    "city_name_en": "Zarqa"
+  },
+  {
+    "id": "300",
+    "governorate_id": "19",
+    "city_name_ar": "السرو",
+    "costShaping": "99.6666",
+    "city_name_en": "alsaru"
+  },
+  {
+    "id": "301",
+    "governorate_id": "19",
+    "city_name_ar": "الروضة",
+    "costShaping": "99.6666",
+    "city_name_en": "alruwda"
+  },
+  {
+    "id": "302",
+    "governorate_id": "19",
+    "city_name_ar": "كفر البطيخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr El-Batikh"
+  },
+  {
+    "id": "303",
+    "governorate_id": "19",
+    "city_name_ar": "عزبة البرج",
+    "costShaping": "99.6666",
+    "city_name_en": "Azbet Al Burg"
+  },
+  {
+    "id": "304",
+    "governorate_id": "19",
+    "city_name_ar": "ميت أبو غالب",
+    "costShaping": "99.6666",
+    "city_name_en": "Meet Abou Ghalib"
+  },
+  {
+    "id": "305",
+    "governorate_id": "19",
+    "city_name_ar": "كفر سعد",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr Saad"
+  },
+  {
+    "id": "306",
+    "governorate_id": "20",
+    "city_name_ar": "الزقازيق",
+    "costShaping": "99.6666",
+    "city_name_en": "Zagazig"
+  },
+  {
+    "id": "307",
+    "governorate_id": "20",
+    "city_name_ar": "العاشر من رمضان",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Ashr Men Ramadan"
+  },
+  {
+    "id": "308",
+    "governorate_id": "20",
+    "city_name_ar": "منيا القمح",
+    "costShaping": "99.6666",
+    "city_name_en": "Minya Al Qamh"
+  },
+  {
+    "id": "309",
+    "governorate_id": "20",
+    "city_name_ar": "بلبيس",
+    "costShaping": "99.6666",
+    "city_name_en": "Belbeis"
+  },
+  {
+    "id": "310",
+    "governorate_id": "20",
+    "city_name_ar": "مشتول السوق",
+    "costShaping": "99.6666",
+    "city_name_en": "Mashtoul El Souq"
+  },
+  {
+    "id": "311",
+    "governorate_id": "20",
+    "city_name_ar": "القنايات",
+    "costShaping": "99.6666",
+    "city_name_en": "Qenaiat"
+  },
+  {
+    "id": "312",
+    "governorate_id": "20",
+    "city_name_ar": "أبو حماد",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Hammad"
+  },
+  {
+    "id": "313",
+    "governorate_id": "20",
+    "city_name_ar": "القرين",
+    "costShaping": "99.6666",
+    "city_name_en": "El Qurain"
+  },
+  {
+    "id": "314",
+    "governorate_id": "20",
+    "city_name_ar": "ههيا",
+    "costShaping": "99.6666",
+    "city_name_en": "Hehia"
+  },
+  {
+    "id": "315",
+    "governorate_id": "20",
+    "city_name_ar": "أبو كبير",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Kabir"
+  },
+  {
+    "id": "316",
+    "governorate_id": "20",
+    "city_name_ar": "فاقوس",
+    "costShaping": "99.6666",
+    "city_name_en": "Faccus"
+  },
+  {
+    "id": "317",
+    "governorate_id": "20",
+    "city_name_ar": "الصالحية الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "El Salihia El Gedida"
+  },
+  {
+    "id": "318",
+    "governorate_id": "20",
+    "city_name_ar": "الإبراهيمية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Ibrahimiyah"
+  },
+  {
+    "id": "319",
+    "governorate_id": "20",
+    "city_name_ar": "ديرب نجم",
+    "costShaping": "99.6666",
+    "city_name_en": "Deirb Negm"
+  },
+  {
+    "id": "320",
+    "governorate_id": "20",
+    "city_name_ar": "كفر صقر",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr Saqr"
+  },
+  {
+    "id": "321",
+    "governorate_id": "20",
+    "city_name_ar": "أولاد صقر",
+    "costShaping": "99.6666",
+    "city_name_en": "Awlad Saqr"
+  },
+  {
+    "id": "322",
+    "governorate_id": "20",
+    "city_name_ar": "الحسينية",
+    "costShaping": "99.6666",
+    "city_name_en": "Husseiniya"
+  },
+  {
+    "id": "323",
+    "governorate_id": "20",
+    "city_name_ar": "صان الحجر القبلية",
+    "costShaping": "99.6666",
+    "city_name_en": "san alhajar alqablia"
+  },
+  {
+    "id": "324",
+    "governorate_id": "20",
+    "city_name_ar": "منشأة أبو عمر",
+    "costShaping": "99.6666",
+    "city_name_en": "Manshayat Abu Omar"
+  },
+  {
+    "id": "325",
+    "governorate_id": "21",
+    "city_name_ar": "الطور",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Toor"
+  },
+  {
+    "id": "326",
+    "governorate_id": "21",
+    "city_name_ar": "شرم الشيخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Sharm El-Shaikh"
+  },
+  {
+    "id": "327",
+    "governorate_id": "21",
+    "city_name_ar": "دهب",
+    "costShaping": "99.6666",
+    "city_name_en": "Dahab"
+  },
+  {
+    "id": "328",
+    "governorate_id": "21",
+    "city_name_ar": "نويبع",
+    "costShaping": "99.6666",
+    "city_name_en": "Nuweiba"
+  },
+  {
+    "id": "329",
+    "governorate_id": "21",
+    "city_name_ar": "طابا",
+    "costShaping": "99.6666",
+    "city_name_en": "Taba"
+  },
+  {
+    "id": "330",
+    "governorate_id": "21",
+    "city_name_ar": "سانت كاترين",
+    "costShaping": "99.6666",
+    "city_name_en": "Saint Catherine"
+  },
+  {
+    "id": "331",
+    "governorate_id": "21",
+    "city_name_ar": "أبو رديس",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Redis"
+  },
+  {
+    "id": "332",
+    "governorate_id": "21",
+    "city_name_ar": "أبو زنيمة",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Zenaima"
+  },
+  {
+    "id": "333",
+    "governorate_id": "21",
+    "city_name_ar": "رأس سدر",
+    "costShaping": "99.6666",
+    "city_name_en": "Ras Sidr"
+  },
+  {
+    "id": "334",
+    "governorate_id": "22",
+    "city_name_ar": "كفر الشيخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr El Sheikh"
+  },
+  {
+    "id": "335",
+    "governorate_id": "22",
+    "city_name_ar": "وسط البلد كفر الشيخ",
+    "costShaping": "99.6666",
+    "city_name_en": "Kafr El Sheikh Downtown"
+  },
+  {
+    "id": "336",
+    "governorate_id": "22",
+    "city_name_ar": "دسوق",
+    "costShaping": "99.6666",
+    "city_name_en": "Desouq"
+  },
+  {
+    "id": "337",
+    "governorate_id": "22",
+    "city_name_ar": "فوه",
+    "costShaping": "99.6666",
+    "city_name_en": "Fooh"
+  },
+  {
+    "id": "338",
+    "governorate_id": "22",
+    "city_name_ar": "مطوبس",
+    "costShaping": "99.6666",
+    "city_name_en": "Metobas"
+  },
+  {
+    "id": "339",
+    "governorate_id": "22",
+    "city_name_ar": "برج البرلس",
+    "costShaping": "99.6666",
+    "city_name_en": "Burg Al Burullus"
+  },
+  {
+    "id": "340",
+    "governorate_id": "22",
+    "city_name_ar": "بلطيم",
+    "costShaping": "99.6666",
+    "city_name_en": "Baltim"
+  },
+  {
+    "id": "341",
+    "governorate_id": "22",
+    "city_name_ar": "مصيف بلطيم",
+    "costShaping": "99.6666",
+    "city_name_en": "Masief Baltim"
+  },
+  {
+    "id": "342",
+    "governorate_id": "22",
+    "city_name_ar": "الحامول",
+    "costShaping": "99.6666",
+    "city_name_en": "Hamol"
+  },
+  {
+    "id": "343",
+    "governorate_id": "22",
+    "city_name_ar": "بيلا",
+    "costShaping": "99.6666",
+    "city_name_en": "Bella"
+  },
+  {
+    "id": "344",
+    "governorate_id": "22",
+    "city_name_ar": "الرياض",
+    "costShaping": "99.6666",
+    "city_name_en": "Riyadh"
+  },
+  {
+    "id": "345",
+    "governorate_id": "22",
+    "city_name_ar": "سيدي سالم",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Salm"
+  },
+  {
+    "id": "346",
+    "governorate_id": "22",
+    "city_name_ar": "قلين",
+    "costShaping": "99.6666",
+    "city_name_en": "Qellen"
+  },
+  {
+    "id": "347",
+    "governorate_id": "22",
+    "city_name_ar": "سيدي غازي",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Ghazi"
+  },
+  {
+    "id": "348",
+    "governorate_id": "23",
+    "city_name_ar": "مرسى مطروح",
+    "costShaping": "99.6666",
+    "city_name_en": "Marsa Matrouh"
+  },
+  {
+    "id": "349",
+    "governorate_id": "23",
+    "city_name_ar": "الحمام",
+    "costShaping": "99.6666",
+    "city_name_en": "El Hamam"
+  },
+  {
+    "id": "350",
+    "governorate_id": "23",
+    "city_name_ar": "العلمين",
+    "costShaping": "99.6666",
+    "city_name_en": "Alamein"
+  },
+  {
+    "id": "351",
+    "governorate_id": "23",
+    "city_name_ar": "الضبعة",
+    "costShaping": "99.6666",
+    "city_name_en": "Dabaa"
+  },
+  {
+    "id": "352",
+    "governorate_id": "23",
+    "city_name_ar": "النجيلة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al-Nagila"
+  },
+  {
+    "id": "353",
+    "governorate_id": "23",
+    "city_name_ar": "سيدي براني",
+    "costShaping": "99.6666",
+    "city_name_en": "Sidi Brani"
+  },
+  {
+    "id": "354",
+    "governorate_id": "23",
+    "city_name_ar": "السلوم",
+    "costShaping": "99.6666",
+    "city_name_en": "Salloum"
+  },
+  {
+    "id": "355",
+    "governorate_id": "23",
+    "city_name_ar": "سيوة",
+    "costShaping": "99.6666",
+    "city_name_en": "Siwa"
+  },
+  {
+    "id": "356",
+    "governorate_id": "23",
+    "city_name_ar": "مارينا",
+    "costShaping": "99.6666",
+    "city_name_en": "Marina"
+  },
+  {
+    "id": "357",
+    "governorate_id": "23",
+    "city_name_ar": "الساحل الشمالى",
+    "costShaping": "99.6666",
+    "city_name_en": "North Coast"
+  },
+  {
+    "id": "358",
+    "governorate_id": "24",
+    "city_name_ar": "الأقصر",
+    "costShaping": "99.6666",
+    "city_name_en": "Luxor"
+  },
+  {
+    "id": "359",
+    "governorate_id": "24",
+    "city_name_ar": "الأقصر الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Luxor"
+  },
+  {
+    "id": "360",
+    "governorate_id": "24",
+    "city_name_ar": "إسنا",
+    "costShaping": "99.6666",
+    "city_name_en": "Esna"
+  },
+  {
+    "id": "361",
+    "governorate_id": "24",
+    "city_name_ar": "طيبة الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Tiba"
+  },
+  {
+    "id": "362",
+    "governorate_id": "24",
+    "city_name_ar": "الزينية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al ziynia"
+  },
+  {
+    "id": "363",
+    "governorate_id": "24",
+    "city_name_ar": "البياضية",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Bayadieh"
+  },
+  {
+    "id": "364",
+    "governorate_id": "24",
+    "city_name_ar": "القرنة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Qarna"
+  },
+  {
+    "id": "365",
+    "governorate_id": "24",
+    "city_name_ar": "أرمنت",
+    "costShaping": "99.6666",
+    "city_name_en": "Armant"
+  },
+  {
+    "id": "366",
+    "governorate_id": "24",
+    "city_name_ar": "الطود",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Tud"
+  },
+  {
+    "id": "367",
+    "governorate_id": "25",
+    "city_name_ar": "قنا",
+    "costShaping": "99.6666",
+    "city_name_en": "Qena"
+  },
+  {
+    "id": "368",
+    "governorate_id": "25",
+    "city_name_ar": "قنا الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "New Qena"
+  },
+  {
+    "id": "369",
+    "governorate_id": "25",
+    "city_name_ar": "ابو طشت",
+    "costShaping": "99.6666",
+    "city_name_en": "Abu Tesht"
+  },
+  {
+    "id": "370",
+    "governorate_id": "25",
+    "city_name_ar": "نجع حمادي",
+    "costShaping": "99.6666",
+    "city_name_en": "Nag Hammadi"
+  },
+  {
+    "id": "371",
+    "governorate_id": "25",
+    "city_name_ar": "دشنا",
+    "costShaping": "99.6666",
+    "city_name_en": "Deshna"
+  },
+  {
+    "id": "372",
+    "governorate_id": "25",
+    "city_name_ar": "الوقف",
+    "costShaping": "99.6666",
+    "city_name_en": "Alwaqf"
+  },
+  {
+    "id": "373",
+    "governorate_id": "25",
+    "city_name_ar": "قفط",
+    "costShaping": "99.6666",
+    "city_name_en": "Qaft"
+  },
+  {
+    "id": "374",
+    "governorate_id": "25",
+    "city_name_ar": "نقادة",
+    "costShaping": "99.6666",
+    "city_name_en": "Naqada"
+  },
+  {
+    "id": "375",
+    "governorate_id": "25",
+    "city_name_ar": "فرشوط",
+    "costShaping": "99.6666",
+    "city_name_en": "Farshout"
+  },
+  {
+    "id": "376",
+    "governorate_id": "25",
+    "city_name_ar": "قوص",
+    "costShaping": "99.6666",
+    "city_name_en": "Quos"
+  },
+  {
+    "id": "377",
+    "governorate_id": "26",
+    "city_name_ar": "العريش",
+    "costShaping": "99.6666",
+    "city_name_en": "Arish"
+  },
+  {
+    "id": "378",
+    "governorate_id": "26",
+    "city_name_ar": "الشيخ زويد",
+    "costShaping": "99.6666",
+    "city_name_en": "Sheikh Zowaid"
+  },
+  {
+    "id": "379",
+    "governorate_id": "26",
+    "city_name_ar": "نخل",
+    "costShaping": "99.6666",
+    "city_name_en": "Nakhl"
+  },
+  {
+    "id": "380",
+    "governorate_id": "26",
+    "city_name_ar": "رفح",
+    "costShaping": "99.6666",
+    "city_name_en": "Rafah"
+  },
+  {
+    "id": "381",
+    "governorate_id": "26",
+    "city_name_ar": "بئر العبد",
+    "costShaping": "99.6666",
+    "city_name_en": "Bir al-Abed"
+  },
+  {
+    "id": "382",
+    "governorate_id": "26",
+    "city_name_ar": "الحسنة",
+    "costShaping": "99.6666",
+    "city_name_en": "Al Hasana"
+  },
+  {
+    "id": "383",
+    "governorate_id": "27",
+    "city_name_ar": "سوهاج",
+    "costShaping": "99.6666",
+    "city_name_en": "Sohag"
+  },
+  {
+    "id": "384",
+    "governorate_id": "27",
+    "city_name_ar": "سوهاج الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Sohag El Gedida"
+  },
+  {
+    "id": "385",
+    "governorate_id": "27",
+    "city_name_ar": "أخميم",
+    "costShaping": "99.6666",
+    "city_name_en": "Akhmeem"
+  },
+  {
+    "id": "386",
+    "governorate_id": "27",
+    "city_name_ar": "أخميم الجديدة",
+    "costShaping": "99.6666",
+    "city_name_en": "Akhmim El Gedida"
+  },
+  {
+    "id": "387",
+    "governorate_id": "27",
+    "city_name_ar": "البلينا",
+    "costShaping": "99.6666",
+    "city_name_en": "Albalina"
+  },
+  {
+    "id": "388",
+    "governorate_id": "27",
+    "city_name_ar": "المراغة",
+    "costShaping": "99.6666",
+    "city_name_en": "El Maragha"
+  },
+  {
+    "id": "389",
+    "governorate_id": "27",
+    "city_name_ar": "المنشأة",
+    "costShaping": "99.6666",
+    "city_name_en": "almunsha'a"
+  },
+  {
+    "id": "390",
+    "governorate_id": "27",
+    "city_name_ar": "دار السلام",
+    "costShaping": "99.6666",
+    "city_name_en": "Dar AISalaam"
+  },
+  {
+    "id": "391",
+    "governorate_id": "27",
+    "city_name_ar": "جرجا",
+    "costShaping": "99.6666",
+    "city_name_en": "Gerga"
+  },
+  {
+    "id": "392",
+    "governorate_id": "27",
+    "city_name_ar": "جهينة الغربية",
+    "costShaping": "99.6666",
+    "city_name_en": "Jahina Al Gharbia"
+  },
+  {
+    "id": "393",
+    "governorate_id": "27",
+    "city_name_ar": "ساقلته",
+    "costShaping": "99.6666",
+    "city_name_en": "Saqilatuh"
+  },
+  {
+    "id": "394",
+    "governorate_id": "27",
+    "city_name_ar": "طما",
+    "costShaping": "99.6666",
+    "city_name_en": "Tama"
+  },
+  {
+    "id": "395",
+    "governorate_id": "27",
+    "city_name_ar": "طهطا",
+    "costShaping": "99.6666",
+    "city_name_en": "Tahta"
+  },
+  {
+    "id": "396",
+    "governorate_id": "27",
+    "city_name_ar": "الكوثر",
+    "costShaping": "99.6666",
+    "city_name_en": "Alkawthar"
   }
 ]

@@ -24,7 +24,12 @@ class Post(models.Model):
 
 
 class videosYoutube(models.Model):
+    title = models.CharField(max_length=100)
+    overview = RichTextField(blank=True, null=True)
     video = EmbedVideoField()
 
     class Meta:
         ordering = ['-id']
+
+    def __str__(self):
+        return self.title
