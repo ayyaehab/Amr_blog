@@ -62,13 +62,16 @@
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+							{% block search %}
+                               <form>
 									<select class="input-select">
 										<option value="0">كل المنتجات</option>
 									</select>
 									<input class="input" name="q" placeholder="ابحث عن المنتج ">
 									<button class="search-btn">ابحث</button>
 								</form>
+                            {% endblock search %}
+								
 							</div>
 						</div>
 						<!-- /SEARCH BAR -->
@@ -187,10 +190,10 @@
 								<h3 class="footer-title">الخدمات</h3>
 								<ul class="footer-links">
 									<li><a href="cart">عربة التسوق</a></li>
-									{% comment%}
-									<li><a href="#">تتبع طلبك</a></li>
-									<li><a href="#">المساعده</a></li>
-									{% endcomment%}
+									
+									{% comment %} <li><a href="#">تتبع طلبك</a></li>
+									<li><a href="#">المساعده</a></li> {% endcomment %}
+									
 								</ul>
 							</div>
 						</div>
@@ -250,7 +253,7 @@
 			console.log('Cart Created!', cart)
 			document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
 		}
-		console.log('Cart:', cart)
+		
 	
 	</script>
 

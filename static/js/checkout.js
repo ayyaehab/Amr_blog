@@ -24,3 +24,15 @@ $(document).on('change','#cities',function(){
 })
 
     });
+
+const disableCheckBox = document.getElementById("terms");
+// Retrieve reference to button
+const submitButton = document.getElementById("order-submit");
+
+disableCheckBox.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+});

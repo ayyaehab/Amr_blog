@@ -111,9 +111,16 @@
 								I've read and accept the <a href="#">terms & conditions</a>
 							</label>
 						</div>{% endcomment %}
+						<div class="input-checkbox">
+							<input type="checkbox" id="terms">
+							<label for="terms">
+								<span></span>
+								I've read and accept the <a href="#" style="color:red;">terms & conditions</a>
+							</label>
+						</div>
 			<form id="form">
 			  {% csrf_token %}
-			            <button class="primary-btn order-submit" type="submit" id='order-submit'>اتمام عملية الشحن</button>
+			            <button class="primary-btn order-submit" type="submit" id='order-submit' disabled>اتمام عملية الشحن</button>
 						{% comment %} <a href="#" class="primary-btn order-submit" type="submit" id="order-submit">اتمام عملية الشحن</a> {% endcomment %}
 					</div>
 					<!-- /Order Details -->
@@ -173,7 +180,7 @@
 	<script type="text/javascript">
 	
 	var total = '{{order.get_cart_total}}'
-	console.log('cart empty',total)
+	//console.log('cart empty',total)
 	var form = document.getElementById('form')
 	csrftoken =form.getElementsByTagName('input')[0].value
 	//console.log('token:',form.getElementsByTagName('input')[0].value)
@@ -192,7 +199,7 @@
 	function submitFormData(){
 		   const shipping_cost = document.getElementById('myid');
 		   
-	    	console.log('Payment button clicked')
+	    	//console.log('Payment button clicked')
 
 			var shippingInfo = {
 				'fullname':null,

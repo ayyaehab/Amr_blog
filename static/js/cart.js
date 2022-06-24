@@ -22,7 +22,7 @@ for (i = 0; i < updateBtns.length; i++) {
 
 function addCookieItem(productId, action){
 	// console.log('User is not authenticated')
-	console.log('productId:', productId, 'Action:', action)
+	//console.log('productId:', productId, 'Action:', action)
 	if (action == 'add'){
 		if (cart[productId] == undefined){
 		cart[productId] = {'quantity':1}

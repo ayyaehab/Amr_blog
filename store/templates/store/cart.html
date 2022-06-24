@@ -58,19 +58,22 @@
             <div><h5><b>المنتجات</b></h5></div>
             <hr>
             <div class="row">
-                <div class="col" style="padding-left:0;">تكلفة الكل {{order.get_cart_items}}</div>
-                <div class="col text-right"> ${{order.get_cart_total|floatformat:2}}</div>
+                <div class="col" style="">${{order.get_cart_total|floatformat:2}}</div>
+                <div class="col text-right"> تكلفة المنتجات {{order.get_cart_items}}</div>
             </div>
-            <form>
-                <p>تكلفة الشحن</p>
-                <select>
-                    <option class="text-muted">L.E سعر التوصيل 5.00</option>
-                </select>
+            <hr>
+           
+             <form>
+                 <div class="row">
+                <div class="col" style="">100 L.E</div>
+                <div class="col text-right">تكلفة الشحن</div>
+            </div>
 
-            </form>
+            </form> 
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                <div class="col">تكلفة الكل</div>
-                <div class="col text-right">${{order.get_cart_total|floatformat:2}}</div>
+                <div class="col">${{order.get_cart_total|floatformat:2}}</div>
+                <div class="col text-right">تكلفة الكل</div>
+                
             </div>
             <button class="btn"><a href="{% url 'checkout' %}">اتمام عملية الدفع</a></button>
         </div>
