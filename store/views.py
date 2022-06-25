@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render
 import json
@@ -9,9 +10,40 @@ import datetime
 
 
 def store(request):
+    # if 'q' in request.GET:
+    #     q = request.GET['q']
+    #     multiple_q = Q(Q(title__icontains=q) | Q(description__icontains=q) | Q(product_information__icontains=q))
+    #     products = Product.objects.filter(multiple_q)
+    # else:
+    products = Product.objects.all()
+
+    category = Category.objects.all()
+    data = cartData(request)
+    cartItems = data['cartItems']
+    page = request.GET.get('page')
+    paginator = Paginator(products, 12)
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        products = paginator.page(page)
+
+    context = {
+        'products': products,
+        'cartItems': cartItems,
+        'category': category,
+        'paginator': paginator
+    }
+    return render(request, 'store/index.html', context)
+
+
+def search(request):
     if 'q' in request.GET:
         q = request.GET['q']
-        products = Product.objects.filter(title__icontains=q)
+        multiple_q = Q(Q(title__icontains=q) | Q(description__icontains=q) | Q(product_information__icontains=q))
+        products = Product.objects.filter(multiple_q).order_by('-id')
     else:
         products = Product.objects.all()
 
@@ -34,7 +66,7 @@ def store(request):
         'category': category,
         'paginator': paginator
     }
-    return render(request, 'store/index.html', context)
+    return render(request, 'store/search.html', context)
 
 
 def cart(request):

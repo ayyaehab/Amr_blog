@@ -53,12 +53,14 @@
                         </select>
                     </label> {% endcomment %}
                     </div>
+                    {% comment %}
                     <div>
                           {% if product.company %}
                     <h5 class=""> يباع من قبل  : {{ product.company }}</h5>
                     {% endif %}
 
                     </div>
+                    {% endcomment %}
                     <div class="add-to-cart">
                         <button class="add-to-cart-btn update-cart" data-product="{{product.id}}" data-action="add"><i
                                 class="fa fa-shopping-cart"></i> اضف الى السلة

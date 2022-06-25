@@ -63,11 +63,11 @@
 						<div class="col-md-6">
 							<div class="header-search">
 							{% block search %}
-                               <form>
+                               <form  method="get" action="/store/research">
 									<select class="input-select">
-										<option value="0">كل المنتجات</option>
+										<option >كل المنتجات</option>
 									</select>
-									<input class="input" name="q" placeholder="ابحث عن المنتج ">
+									<input id="search" class="input" name="q" placeholder="ابحث عن المنتج ">
 									<button class="search-btn">ابحث</button>
 								</form>
                             {% endblock search %}

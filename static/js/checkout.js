@@ -3,7 +3,6 @@ $(document).ready(function() {
         for(var i = 0; i < data.length; i++) {
             $("#cities").append('<option value="' + data[i].city_name_ar + '">' + data[i].city_name_ar + '</option');
         }
-       
     });
 $(document).on('change','#cities',function(){
     var city_id=$(this).val();

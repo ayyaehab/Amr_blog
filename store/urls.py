@@ -10,6 +10,8 @@ urlpatterns = [
      # path('mug-<slug:slug>',views.mug,name="mug"),
 
      path('reshirts', views.shirts, name='shirts'),
+
+     path('research', views.search, name='research'),
      # path('shirt-<slug:slug>',views.shirt,name='shirt'),
      path('oneproduct-<slug:slug>',views.oneproduct,name='oneproduct'),
 
