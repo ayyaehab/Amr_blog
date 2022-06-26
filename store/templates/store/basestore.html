@@ -63,12 +63,12 @@
 						<div class="col-md-6">
 							<div class="header-search">
 							{% block search %}
-                               <form  method="get" action="/store/research">
+                               <form  method="get" action="{% url 'research' %}">
 									<select class="input-select">
 										<option >كل المنتجات</option>
 									</select>
 									<input id="search" class="input" name="q" placeholder="ابحث عن المنتج ">
-									<button class="search-btn">ابحث</button>
+								   <button class="search-btn">ابحث</button>
 								</form>
                             {% endblock search %}
 								

@@ -10,11 +10,6 @@ import datetime
 
 
 def store(request):
-    # if 'q' in request.GET:
-    #     q = request.GET['q']
-    #     multiple_q = Q(Q(title__icontains=q) | Q(description__icontains=q) | Q(product_information__icontains=q))
-    #     products = Product.objects.filter(multiple_q)
-    # else:
     products = Product.objects.all()
 
     category = Category.objects.all()
@@ -42,8 +37,8 @@ def store(request):
 def search(request):
     if 'q' in request.GET:
         q = request.GET['q']
-        multiple_q = Q(Q(title__icontains=q) | Q(description__icontains=q) | Q(product_information__icontains=q))
-        products = Product.objects.filter(multiple_q).order_by('-id')
+        multiple_q = Q(Q(title__icontains=q) | Q(description__icontains=q))
+        products = Product.objects.filter(multiple_q)
     else:
         products = Product.objects.all()
 

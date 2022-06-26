@@ -10,6 +10,7 @@ $(document).on('change','#cities',function(){
         for(var i = 0; i < data.length; i++) {
             if(data[i].city_name_ar==city_id){
                 //console.log(data[i].lat)
+
                 var myNumbers=parseFloat(data[i].costShaping).toFixed(2);
                 $('#myid').text(myNumbers);
                 var all = document.getElementById("helper").getAttribute("data-name");
