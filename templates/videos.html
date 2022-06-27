@@ -9,9 +9,25 @@
 <li><a href="/">الصفحة الرئيسية</a></li>
 {% endblock nav %}
 {% block content %}
-
-
 <div class="section">
+    <!-- container -->
+    <div class="container">
+      {% for i in videos %}
+        <div class="row" style="background-color:#f1f1f1;">
+           <div class="col-md-7" style="direction:rtl;">
+                <h3 style="color: #D10024; padding-top:15px">{{ i.title }}</h3>
+                    {{ i.overview|safe }}
+           </div>
+           <div class="col-md-5 videoframe" style="overflow:visible;display: inline-block;">
+               {% video i.video  %}
+           </div>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%;">
+      {% endfor %}
+    </div>
+    <!-- container end -->
+</div>
+{% comment %} <div class="section">
     <!-- container -->
     <div class="container">
         <!-- row -->
@@ -50,6 +66,6 @@
         <!-- /row -->
     </div>
     <!-- /container -->
-</div>
+</div> {% endcomment %}
 
 {% endblock content %}
