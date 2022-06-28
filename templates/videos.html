@@ -1,13 +1,27 @@
 {% extends "base.html" %}
+{% load static %}
+{% block search %}
+<div class="header-search">
+    <form  method="get" action="{% url 'research' %}">
+	    <select class="input-select">
+			<option >كل المنتجات</option>
+		</select>
+		<input id="search" class="input" name="q" placeholder="ابحث عن المنتج ">
+		<button class="search-btn">ابحث</button>
+	</form>
+</div>
+{% endblock search %}
+
 {% block nav %}
-{% load youtube_thumbnail %}
-{% load embed_video_tags %}
+
 
 <li><a href="store">المتجر</a></li>
 <li><a href="about">فريق العمل</a></li>
 <li class="active"><a href="videos">الفيديوهات</a></li>
 <li><a href="/">الصفحة الرئيسية</a></li>
 {% endblock nav %}
+{% load youtube_thumbnail %}
+{% load embed_video_tags %}
 {% block content %}
 <div class="section">
     <!-- container -->
