@@ -2,22 +2,21 @@
 {% load static %}
 {% block search %}
 <div class="header-search">
-    <form  method="get" action="{% url 'research' %}">
-	    <select class="input-select">
-			<option >كل المنتجات</option>
-		</select>
-		<input id="search" class="input" name="q" placeholder="ابحث عن المنتج ">
-		<button class="search-btn">ابحث</button>
-	</form>
+    <form method="get" action="{% url 'searchvid' %}">
+        <select class="input-select">
+            <option>كل الفيديوهات</option>
+        </select>
+        <input id="revideos" class="input" name="qv" placeholder="ابحث عن فيديوا ">
+        <button class="search-btn">ابحث عن فيديوا</button>
+    </form>
 </div>
 {% endblock search %}
-
 {% block nav %}
 
 
 <li><a href="store">المتجر</a></li>
-<li><a href="about">فريق العمل</a></li>
-<li class="active"><a href="videos">الفيديوهات</a></li>
+<li><a href="reabout">فريق العمل</a></li>
+<li class="active"><a href="revideos">الفيديوهات</a></li>
 <li><a href="/">الصفحة الرئيسية</a></li>
 {% endblock nav %}
 {% load youtube_thumbnail %}
@@ -26,39 +25,20 @@
 <div class="section">
     <!-- container -->
     <div class="container">
-      {% for i in videos %}
+        {% for i in videos %}
         <div class="row" style="background-color:#f1f1f1;">
-           <div class="col-md-7" style="direction:rtl;">
+            <div class="col-md-7" style="direction:rtl;">
                 <h3 style="color: #D10024; padding-top:15px">{{ i.title }}</h3>
-                    {{ i.overview|safe }}
-           </div>
-           <div class="col-md-5 videoframe" style="overflow:visible;display: inline-block;">
-               {% video i.video  %}
-           </div>
+                {{ i.overview|safe }}
+            </div>
+            <div class="col-md-5 videoframe" style="overflow:visible;display: inline-block;">
+                {% video i.video %}
+            </div>
         </div>
         <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%;">
-      {% endfor %}
-    </div>
-    <!-- container end -->
-</div>
-{% comment %} <div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-            <div id="posts" class="col-md-10">
-                <!-- store products -->
-                <div class="row">
-
-                    <!-- product -->
-
-                    {% for i in videos %}
-
-                    {% video i.video 'small' %}
-                    {% endfor %}
-                </div>
-
-                <div class="store-filter clearfix">
+        {% endfor %}
+               <div class="store-filter clearfix">
+                    <!--							<span class="store-qty">Showing 20-100 products</span>-->
                     <ul class="store-pagination">
                         <!--								<li class="active">1</li>-->
                         {% for page in paginator.page_range %}
@@ -68,18 +48,14 @@
                         <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
                         {% endif %}
                         {% endfor %}
-
                     </ul>
+                    <!-- /store bottom filter -->
+                    <!--                        <li><a href="#">{{page}}</a></li>-->
+                    <!--                        <li><a href="#">{{page}}</a></li>-->
+                    <!--                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
 
                 </div>
-
-                <!-- /store bottom filter -->
-            </div>
-            <!-- /STORE -->
-        </div>
-        <!-- /row -->
     </div>
-    <!-- /container -->
-</div> {% endcomment %}
-
+    <!-- container end -->
+</div>
 {% endblock content %}

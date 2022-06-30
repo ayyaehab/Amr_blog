@@ -1,0 +1,49 @@
+{% extends "store/basestore.html" %}
+{% load static %}
+{% load youtube_thumbnail %}
+{% load embed_video_tags %}
+{% block nav %}
+<li><a href="store">المتجر</a></li>
+<li><a href="reabout">فريق العمل</a></li>
+<li class="active"><a href="revideos">الفيديوهات</a></li>
+<li><a href="/">الصفحة الرئيسية</a></li>
+{% endblock nav %}
+{% block content %}
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        {% if qv != ''%}
+        {% for i in videos %}
+        <div class="row" style="background-color:#f1f1f1;">
+            <div class="col-md-7" style="direction:rtl;">
+                <h3 style="color: #D10024; padding-top:15px">{{ i.title }}</h3>
+                {{ i.overview|safe }}
+            </div>
+            <div class="col-md-5 videoframe" style="overflow:visible;display: inline-block;">
+                {% video i.video %}
+            </div>
+        </div>
+        {% empty %}
+        <h4 style="float: right;"> هذا الفيديوا غير متوفر : {{ request.GET.qv }} </h4>
+        {% endfor %}
+        {% endif %}
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%;">
+        <div class="store-filter clearfix">
+            <!--							<span class="store-qty">Showing 20-100 products</span>-->
+            <ul class="store-pagination">
+                <!--								<li class="active">1</li>-->
+                {% for page in paginator.page_range %}
+                {% if page == videos.number %}
+                <li class="active"><a href="?page ={{page}}">{{page}}</a></li>
+                {% else%}
+                <li class="page-item"><a href="?page={{page}}">{{page}}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <!-- container end -->
+</div>
+<!-- /SECTION -->
+
+{% endblock content %}

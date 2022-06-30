@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 # Create your views here.
 from rest_framework.decorators import api_view
@@ -8,6 +9,7 @@ from django.core.paginator import Paginator
 
 from posts.serializer import PostSerializer
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 def index(request):
     queryset = Post.objects.all()
@@ -42,7 +44,7 @@ def about(request):
 def videos(request):
     videos = videosYoutube.objects.all()
     page = request.GET.get('page')
-    paginator = Paginator(videos, 15)
+    paginator = Paginator(videos, 10)
     try:
         videos = paginator.page(page)
     except PageNotAnInteger:
@@ -57,6 +59,29 @@ def videos(request):
     }
     return render(request, 'videos.html', context)
 
+
+def searchvideo(request):
+    if 'qv' in request.GET:
+        qv = request.GET['qv']
+        multiple_q = Q(Q(title__icontains=qv) | Q(overview__icontains=qv) | Q(video__icontains=qv))
+        videos = videosYoutube.objects.filter(multiple_q)
+    else:
+        videos = None
+    page = request.GET.get('page')
+    paginator = Paginator(videos, 12)
+    try:
+        videos = paginator.page(page)
+    except PageNotAnInteger:
+        videos = paginator.page(1)
+    except EmptyPage:
+        page = paginator.num_pages
+        videos = paginator.page(page)
+
+    context = {
+        'videos': videos,
+        'paginator': paginator,
+    }
+    return render(request, 'searchvideos.html', context)
 
 # @api_view(['GET'])
 # def postlistapi(request):

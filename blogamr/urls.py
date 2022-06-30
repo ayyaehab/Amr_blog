@@ -20,25 +20,23 @@ from django.conf import settings
 from django.conf.urls.static import static
 from posts import api
 
-from posts.views import index, posts, about, contact, videos,pagepost
+from posts.views import index, posts, about, contact, videos, pagepost, searchvideo
 from django.urls import path
 
-
-
-app_name= 'posts'
+app_name = 'posts'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index,name="main"),
-    path('posts', posts),
-    path('about', about),
-    path('contact', contact),
-    path('videos', videos),
-    path('pagepost<slug:slug>',pagepost,name="pagepost"),
-    path('store/',include('store.urls')),
-    #api
-    path('posts/api/', api.postlistapi , name='api')
+    path('', index, name="main"),
+    path('reposts', posts),
+    path('reabout', about),
+    path('recontact', contact),
+    path('revideos', videos, name="revideos"),
+    path('searchvid', searchvideo, name="searchvid"),
+    path('pagepost<slug:slug>', pagepost, name="pagepost"),
+    path('store/', include('store.urls')),
+    # api
+    path('posts/api/', api.postlistapi, name='api')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
