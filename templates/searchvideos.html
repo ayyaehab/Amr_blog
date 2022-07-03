@@ -1,7 +1,20 @@
-{% extends "store/basestore.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% load youtube_thumbnail %}
 {% load embed_video_tags %}
+{% block search %}
+
+<div class="header-search">
+    <form method="get" action="{% url 'searchvid' %}">
+        <select class="input-select">
+            <option>كل الفيديوهات</option>
+        </select>
+        <input id="revideos" class="input" name="qv" placeholder="ابحث عن فيديوا ">
+        <button class="search-btn">ابحث عن فيديوا</button>
+    </form>
+
+</div>
+{% endblock search %}
 {% block nav %}
 <li><a href="store">المتجر</a></li>
 <li><a href="reabout">فريق العمل</a></li>
